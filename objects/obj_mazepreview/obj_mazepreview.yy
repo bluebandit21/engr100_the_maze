@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_playbutton",
-    "path": "sprites/spr_playbutton/spr_playbutton.yy",
+    "name": "spr_mazepreview",
+    "path": "sprites/spr_mazepreview/spr_mazepreview.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_mazepreview","path":"objects/obj_mazepreview/obj_mazepreview.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_playbutton",
+  "name": "obj_mazepreview",
   "tags": [],
   "resourceType": "GMObject",
 }
