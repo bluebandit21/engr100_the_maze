@@ -11,7 +11,7 @@ function LoadLevel(level){
 			var tileobj = GetTileObjectFromTileType(tiletype);
 			
 			var tilex = col*room_width / level_width;
-			var tiley = col*room_height / level_height;
+			var tiley = row*room_height / level_height;
 			
 			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
 			ds_grid_set(tiles,col,row,instance);
