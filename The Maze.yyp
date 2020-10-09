@@ -40,11 +40,11 @@
     "children": [],
   },
   "RoomOrder": [
+    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
     {"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},
     {"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},
     {"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},
     {"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
