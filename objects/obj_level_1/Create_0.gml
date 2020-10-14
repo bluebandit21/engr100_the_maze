@@ -12,3 +12,4 @@ ds_grid_set_region(map,1,2,4,2,tiletypes.wall);
 ds_grid_set_region(map,6,2,7,2,tiletypes.wall);
 ds_grid_set_region(map,9,2,11,2,tiletypes.wall);
 ds_grid_set_region(map,13,2,14,2,tiletypes.wall);
+ds_grid_set(map,1,1,tiletypes.start);

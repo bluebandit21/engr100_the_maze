@@ -1,6 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//Initialize level, creating sprites as neccesary and creating instances
 function LoadLevel(level){
+	curr_level = level;
 	var level_width = ds_grid_width(level.map);
 	var level_height = ds_grid_height(level.map);
 
@@ -18,6 +18,12 @@ function LoadLevel(level){
 			
 			if(tiletype == tiletypes.start){
 				player = instance_create_depth(tilex,tiley,0,obj_player); //Initialize player on starting square
+				player.playerx = col;
+				player.playery= row;
+				var scalex = room_width / level_width / player.sprite_width;
+				player.image_xscale = scalex;
+				var scaley = room_height / level_height / player.sprite_height;
+				player.image_yscale=scaley;
 			}
 			
 			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
