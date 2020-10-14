@@ -1,7 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-globalvar tiles;
-globalvar curr_level;
-globalvar player;
+playerx = 0;
+playery = 0;
