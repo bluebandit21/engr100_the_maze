@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 //Stupidly naieve first implementation.
-playerx+=1;
+playery-=1;
