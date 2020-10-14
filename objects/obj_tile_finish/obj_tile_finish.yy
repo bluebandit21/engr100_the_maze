@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_finish",
+    "path": "sprites/spr_finish/spr_finish.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -2,4 +2,14 @@
 // You can write your code in this editor
 
 //Stupidly naieve first implementation.
-playery-=1;
+var status=GetTileStatus(playerx,playery-1);
+switch(status){
+	case tilestatus.blocked:
+		break;
+	case tilestatus.passable:
+		playery-=1;
+		break;
+	case tilestatus.interaction:
+		InteractWithTile(playerx,playery-1);
+		break;
+}

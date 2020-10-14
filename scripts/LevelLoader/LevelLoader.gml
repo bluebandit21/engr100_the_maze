@@ -17,7 +17,8 @@ function LoadLevel(level){
 			var tiley = row*room_height / level_height;
 			
 			if(tiletype == tiletypes.start){
-				player = instance_create_depth(tilex,tiley,0,obj_player); //Initialize player on starting square
+				player = instance_create_depth(tilex,tiley,-1,obj_player); //Initialize player on starting square
+				//Player starts at depth -1 so they're always rendered on top.
 				player.playerx = col;
 				player.playery= row;
 				var scalex = room_width / level_width / player.sprite_width;
