@@ -3,3 +3,4 @@
 
 
 globalvar tiles;
+globalvar curr_level;

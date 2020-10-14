@@ -3,7 +3,6 @@
     {"id":{"name":"obj_tile_empty","path":"objects/obj_tile_empty/obj_tile_empty.yy",},"order":3,},
     {"id":{"name":"Note3","path":"notes/Note3/Note3.yy",},"order":2,},
     {"id":{"name":"obj_tile_wall","path":"objects/obj_tile_wall/obj_tile_wall.yy",},"order":1,},
-    {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},"order":3,},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"order":0,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"obj_level_1","path":"objects/obj_level_1/obj_level_1.yy",},"order":0,},
@@ -12,7 +11,7 @@
     {"id":{"name":"LevelRenderer","path":"scripts/LevelRenderer/LevelRenderer.yy",},"order":0,},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},"order":0,},
     {"id":{"name":"St","path":"notes/St/St.yy",},"order":1,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_level","path":"rooms/rm_level/rm_level.yy",},"order":0,},
     {"id":{"name":"amir","path":"notes/amir/amir.yy",},"order":2,},
     {"id":{"name":"obj_mazepreview","path":"objects/obj_mazepreview/obj_mazepreview.yy",},"order":2,},
     {"id":{"name":"fnt_game","path":"fonts/fnt_game/fnt_game.yy",},"order":0,},
@@ -41,10 +40,9 @@
   },
   "RoomOrder": [
     {"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+    {"name":"rm_level","path":"rooms/rm_level/rm_level.yy",},
     {"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},
     {"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},
-    {"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
