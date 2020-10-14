@@ -2,6 +2,6 @@
 // You can write your code in this editor
 
 
-globalvar tiles;
-globalvar curr_level;
-globalvar player;
+tiles=0;
+curr_level=0;
+player=0;

@@ -23,8 +23,7 @@ function GetTileObjectFromTileType(type){
 			show_error("Invalid tiletype encountered",true);
 	}
 }
-
+globalvar level_manager;
 function Initialize(){
-	globalvar level_manager;
 	level_manager = instance_create_depth(0,0,0,obj_level_manager);
 }

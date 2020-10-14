@@ -1,10 +1,10 @@
 //Initialize level, creating sprites as neccesary and creating instances
 function LoadLevel(level){
-	curr_level = level;
+	level_manager.curr_level = level;
 	var level_width = ds_grid_width(level.map);
 	var level_height = ds_grid_height(level.map);
 
-	tiles = ds_grid_create(level_width,level_height);
+	level_manager.tiles = ds_grid_create(level_width,level_height);
 	for(var row = 0; row<level_height;row++){
 		for(var col=0; col<level_width;col++){
 			
@@ -32,7 +32,7 @@ function LoadLevel(level){
 			var scaley = room_height / level_height / instance.sprite_height;
 			instance.image_yscale=scaley;
 			
-			ds_grid_set(tiles,col,row,instance);
+			ds_grid_set(level_manager.tiles,col,row,instance);
 		}
 	}
 }
