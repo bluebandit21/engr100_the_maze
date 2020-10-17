@@ -9,7 +9,7 @@ if(booleanDown){
 					if(check_controls(string(localDown), global.array_of_controls))
 						global.array_of_controls[2] = localDown;
 					else
-						show_error("Key already assigned", true);
+						show_error("Key already assigned", false);
 			}
 	         }
 	      }

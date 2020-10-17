@@ -9,7 +9,7 @@ if(booleanRight){
 					if(check_controls(string(localRight), global.array_of_controls))
 						global.array_of_controls[4] = localRight;
 					else
-						show_error("Key already assigned", true);
+						show_error("Key already assigned", false);
 			}
 	         }
 	      }
