@@ -1,0 +1,1 @@
+global.curr_level_idx = 1;
