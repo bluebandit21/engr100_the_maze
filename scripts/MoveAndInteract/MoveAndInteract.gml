@@ -34,6 +34,6 @@ function InteractWithTile(row,column){
 		case tiletypes.finish:
 			//TODO: CHANGE!
 			show_message("YAY, YOU WON!\n(This won't quit the game in the non-demo, xD)");
-			game_end();
+			room_goto(rm_levelselect);
 	}
 }
