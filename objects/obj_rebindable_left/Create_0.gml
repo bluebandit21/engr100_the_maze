@@ -1,1 +1,0 @@
-booleanLeft = false;

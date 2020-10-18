@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_left",
-    "path": "sprites/spr_left/spr_left.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,7 +18,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_rebindable_left","path":"objects/obj_rebindable_left/obj_rebindable_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":63,"eventType":7,"collisionObjectId":null,"parent":{"name":"global_async","path":"objects/global_async/global_async.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +27,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_rebindable_left",
+  "name": "global_async",
   "tags": [],
   "resourceType": "GMObject",
 }
