@@ -6,7 +6,9 @@ enum tiletypes{
 	empty,
 	start,
 	finish,
-	wall
+	wall,
+	lever_red,
+	gate_red
 }
 
 function GetTileObjectFromTileType(type){
@@ -19,6 +21,10 @@ function GetTileObjectFromTileType(type){
 			return obj_tile_start;
 		case tiletypes.finish:
 			return obj_tile_finish;
+		case tiletypes.lever_red:
+			return obj_tile_lever_red;
+		case tiletypes.gate_red:
+			return obj_tile_gate_red;
 		default:
 			show_error("Invalid tiletype encountered",true);
 	}
