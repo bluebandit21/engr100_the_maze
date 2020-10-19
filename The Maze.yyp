@@ -1,7 +1,7 @@
 {
   "resources": [
     {"id":{"name":"ControlsConflictCheck","path":"scripts/ControlsConflictCheck/ControlsConflictCheck.yy",},"order":5,},
-    {"id":{"name":"global_async","path":"objects/global_async/global_async.yy",},"order":14,},
+    {"id":{"name":"obj_global_async","path":"objects/obj_global_async/obj_global_async.yy",},"order":14,},
     {"id":{"name":"obj_tile_empty","path":"objects/obj_tile_empty/obj_tile_empty.yy",},"order":3,},
     {"id":{"name":"spr_finish","path":"sprites/spr_finish/spr_finish.yy",},"order":5,},
     {"id":{"name":"obj_leftarrow","path":"objects/obj_leftarrow/obj_leftarrow.yy",},"order":9,},
@@ -36,7 +36,7 @@
     {"id":{"name":"InputFunction","path":"scripts/InputFunction/InputFunction.yy",},"order":6,},
     {"id":{"name":"PlayerMovement","path":"scripts/PlayerMovement/PlayerMovement.yy",},"order":4,},
     {"id":{"name":"spr_down","path":"sprites/spr_down/spr_down.yy",},"order":8,},
-    {"id":{"name":"obj_global","path":"objects/obj_global/obj_global.yy",},"order":13,},
+    {"id":{"name":"obj_initial_global","path":"objects/obj_initial_global/obj_initial_global.yy",},"order":13,},
     {"id":{"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},"order":1,},
     {"id":{"name":"spr_right","path":"sprites/spr_right/spr_right.yy",},"order":10,},
     {"id":{"name":"spr_playbutton","path":"sprites/spr_playbutton/spr_playbutton.yy",},"order":1,},

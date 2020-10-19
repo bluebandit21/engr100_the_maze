@@ -3,7 +3,7 @@
 function find_input(keyDirection, controlNumber){
 	var i_d = ds_map_find_value(async_load,"id");
 		if(i_d == keyDirection){
-		 if ds_map_find_value(async_load, "status")
+		 if ds_map_find_value(async_load, "status") >= 0
 	      {
 	      if ds_map_find_value(async_load, "result") != ""
 	         {
@@ -19,7 +19,7 @@ function find_input(keyDirection, controlNumber){
 function determine_switch(determiner){
 	switch (determiner){
 		case 1:
-			find_input(global.upKey, 1);
+			find_input(obj_rebindable_up.upKey, 1);
 			break;
 		case 2:
 			find_input(global.downKey,2);
