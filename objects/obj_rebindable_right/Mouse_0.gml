@@ -1,4 +1,4 @@
 if position_meeting(mouse_x,mouse_y,obj_rebindable_right){
-	global.rightKey = get_string_async("Enter desired rightward movement key", "D");
+	rightKey = get_string_async("Enter desired rightward movement key", "D");
 	global.key = 4;
 }
