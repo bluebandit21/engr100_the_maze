@@ -8,7 +8,11 @@ enum tiletypes{
 	finish,
 	wall,
 	lever_red,
-	gate_red
+	gate_red,
+	lever_blue,
+	gate_blue,
+	lever_green,
+	gate_green
 }
 
 function GetTileObjectFromTileType(type){
@@ -25,6 +29,14 @@ function GetTileObjectFromTileType(type){
 			return obj_tile_lever_red;
 		case tiletypes.gate_red:
 			return obj_tile_gate_red;
+		case tiletypes.gate_blue:
+			return obj_tile_gate_blue;
+		case tiletypes.lever_blue:
+			return obj_tile_lever_blue;
+		case tiletypes.lever_green:
+			return obj_tile_lever_green;
+		case tiletypes.gate_green:
+			return obj_tile_gate_green;
 		default:
 			show_error("Invalid tiletype encountered",true);
 	}

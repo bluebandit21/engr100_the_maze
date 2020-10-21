@@ -19,8 +19,12 @@ function GetTileStatus(row,column){
 			return tilestatus.blocked;
 		case tiletypes.finish:
 		case tiletypes.lever_red:
+		case tiletypes.lever_green:
+		case tiletypes.lever_blue:
 			return tilestatus.interaction;
 		case tiletypes.gate_red:
+		case tiletypes.gate_blue:
+		case tiletypes.gate_green:
 			if(curr_tile.open){
 				return tilestatus.passable;
 			}
@@ -47,6 +51,14 @@ function InteractWithTile(row,column){
 			break;
 		case tiletypes.lever_red:
 			RedLeverPull();
+			break;
+		case tiletypes.lever_green:
+			GreenLeverPull();
+			break;
+		case tiletypes.lever_blue:
+			BlueLeverPull();
+			break;
+	
 			
 	}
 }
