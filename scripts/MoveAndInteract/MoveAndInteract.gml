@@ -10,6 +10,7 @@ enum tilestatus{
 function GetTileStatus(row,column){
 	var level = level_manager.curr_level;
 	var tile = ds_grid_get(level.map,row,column);
+	var curr_tile =  ds_grid_get(level_manager.tiles,row,column);
 	switch(tile){
 		case tiletypes.empty:
 		case tiletypes.start:
@@ -17,7 +18,13 @@ function GetTileStatus(row,column){
 		case tiletypes.wall:
 			return tilestatus.blocked;
 		case tiletypes.finish:
+		case tiletypes.lever_red:
 			return tilestatus.interaction;
+		case tiletypes.gate_red:
+			if(curr_tile.open){
+				return tilestatus.passable;
+			}
+			return tilestatus.blocked;
 		default:
 			show_error("Unknown tiletype: "+string(tile),true);
 	}
@@ -25,15 +32,21 @@ function GetTileStatus(row,column){
 function InteractWithTile(row,column){
 	var level = level_manager.curr_level;
 	var tile = ds_grid_get(level.map,row,column);
+	var curr_tile =  ds_grid_get(level_manager.tiles,row,column);
 	switch(tile){
 		case tiletypes.empty:
 		case tiletypes.start:
 		case tiletypes.wall:
+		case tiletypes.gate_red:
 			//Fall-through
 			break;
 		case tiletypes.finish:
 			//TODO: CHANGE!
 			show_message("YAY, YOU WON!\n(This won't quit the game in the non-demo, xD)");
 			room_goto(rm_levelselect);
+			break;
+		case tiletypes.lever_red:
+			RedLeverPull();
+			
 	}
 }

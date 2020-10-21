@@ -33,7 +33,8 @@ function LoadLevel(level){
 			var scaley = room_height / level_height / instance.sprite_height;
 			instance.image_yscale=scaley;
 			
-			ds_grid_set(level_manager.tiles,col,row,instance);
+			ds_grid_set(level_manager.tiles,col,row,instance.id);
+			
 		}
 	}
 }
