@@ -14,7 +14,7 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":160.0,"resourceVersion":"1.0","name":"inst_45AA5F00","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":192.0,"resourceVersion":"1.0","name":"inst_253E1EEB","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Lock","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_mazepreview","path":"objects/obj_mazepreview/obj_mazepreview.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":704.0,"y":384.0,"resourceVersion":"1.0","name":"inst_2597175A","tags":[],"resourceType":"GMRInstance",},
@@ -34,7 +34,7 @@
     {"name":"inst_6D090168","path":"rooms/rm_levelselect/rm_levelselect.yy",},
     {"name":"inst_6C44EA5B","path":"rooms/rm_levelselect/rm_levelselect.yy",},
     {"name":"inst_6E280603","path":"rooms/rm_levelselect/rm_levelselect.yy",},
-    {"name":"inst_45AA5F00","path":"rooms/rm_levelselect/rm_levelselect.yy",},
+    {"name":"inst_253E1EEB","path":"rooms/rm_levelselect/rm_levelselect.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

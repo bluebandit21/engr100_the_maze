@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"order":22,},
     {"id":{"name":"obj_tile_gate_blue","path":"objects/obj_tile_gate_blue/obj_tile_gate_blue.yy",},"order":18,},
     {"id":{"name":"ControlsConflictCheck","path":"scripts/ControlsConflictCheck/ControlsConflictCheck.yy",},"order":5,},
     {"id":{"name":"obj_global_async","path":"objects/obj_global_async/obj_global_async.yy",},"order":14,},
@@ -20,6 +19,7 @@
     {"id":{"name":"obj_rebindable_right","path":"objects/obj_rebindable_right/obj_rebindable_right.yy",},"order":11,},
     {"id":{"name":"obj_tile_finish","path":"objects/obj_tile_finish/obj_tile_finish.yy",},"order":6,},
     {"id":{"name":"Utility","path":"scripts/Utility/Utility.yy",},"order":1,},
+    {"id":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"order":22,},
     {"id":{"name":"obj_rebindable_up","path":"objects/obj_rebindable_up/obj_rebindable_up.yy",},"order":8,},
     {"id":{"name":"obj_level_manager","path":"objects/obj_level_manager/obj_level_manager.yy",},"order":2,},
     {"id":{"name":"spr_up","path":"sprites/spr_up/spr_up.yy",},"order":7,},
