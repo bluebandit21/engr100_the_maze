@@ -48,9 +48,8 @@ function InteractWithTile(row,column){
 			//Fall-through
 			break;
 		case tiletypes.finish:
-			//TODO: CHANGE!
-			show_message("YAY, YOU WON!\n(This won't quit the game in the non-demo, xD)");
-			room_goto(rm_levelselect);
+			global.lock++;
+			next_room();
 			break;
 		case tiletypes.lever_red:
 			RedLeverPull();
