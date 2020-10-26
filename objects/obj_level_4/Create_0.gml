@@ -31,6 +31,8 @@ ds_grid_set_region(map,9,10,11,10,tiletypes.wall);
 ds_grid_set_region(map,9,12,9,12,tiletypes.wall);
 ds_grid_set_region(map,10,14,10,14,tiletypes.wall);
 ds_grid_set_region(map,11,12,12,12,tiletypes.wall);
+ds_grid_set_region(map,11,4,12,4,tiletypes.wall);
+ds_grid_set_region(map,11,6,11,6,tiletypes.wall);
 ds_grid_set_region(map,13,4,13,14,tiletypes.wall);
 ds_grid_set_region(map,5,3,5,3,tiletypes.lever_red);
 ds_grid_set_region(map,8,9,8,9,tiletypes.gate_red);
