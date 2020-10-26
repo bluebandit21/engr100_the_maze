@@ -6,7 +6,6 @@ enum tilestatus{
 	blocked, //Unable to move into tile; e.g. wall, closed gate
 	interaction //Tile does something; e.g. lever that opens gate
 }
-
 //TODO: BOUNDS CHECKING!
 function GetTileStatus(row,column){
 	var level = level_manager.curr_level;
@@ -24,8 +23,11 @@ function GetTileStatus(row,column){
 		case tiletypes.lever_blue:
 			return tilestatus.interaction;
 		case tiletypes.gate_red:
+		case tiletypes.gate_red_open:
 		case tiletypes.gate_blue:
+		case tiletypes.gate_blue_open:
 		case tiletypes.gate_green:
+		case tiletypes.gate_green_open:
 			if(curr_tile.open){
 				return tilestatus.passable;
 			}
@@ -46,8 +48,9 @@ function InteractWithTile(row,column){
 			//Fall-through
 			break;
 		case tiletypes.finish:
-			global.lock++;
-			next_room();
+			//TODO: CHANGE!
+			show_message("YAY, YOU WON!\n(This won't quit the game in the non-demo, xD)");
+			room_goto(rm_levelselect);
 			break;
 		case tiletypes.lever_red:
 			RedLeverPull();
