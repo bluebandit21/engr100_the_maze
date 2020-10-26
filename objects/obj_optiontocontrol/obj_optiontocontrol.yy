@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_controls",
+    "path": "sprites/spr_controls/spr_controls.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -18,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":2,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_initial_global","path":"objects/obj_initial_global/obj_initial_global.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_optiontocontrol","path":"objects/obj_optiontocontrol/obj_optiontocontrol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -27,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_initial_global",
+  "name": "obj_optiontocontrol",
   "tags": [],
   "resourceType": "GMObject",
 }
