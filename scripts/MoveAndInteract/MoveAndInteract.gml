@@ -48,6 +48,8 @@ function InteractWithTile(row,column){
 			//Fall-through
 			break;
 		case tiletypes.finish:
+		//TODO: You can replay the same level multiple times to unlock further stuff. 
+		//Fix this behavior!
 			global.lock++;
 			next_room();
 			break;
