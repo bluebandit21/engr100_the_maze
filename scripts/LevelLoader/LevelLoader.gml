@@ -1,3 +1,18 @@
+
+//Do extra initialization on certain tiles
+function InitiateTileInstance(instance,type){
+	switch(type){
+		case tiletypes.gate_blue_open:
+		case tiletypes.gate_red_open:
+		case tiletypes.gate_green_open:
+			instance.open = true;
+			break;
+		default:
+			return;
+	}
+}
+
+
 //Initialize level, creating sprites as neccesary and creating instances
 function LoadLevel(level){
 	level_manager.curr_level = level;
@@ -28,6 +43,7 @@ function LoadLevel(level){
 			}
 			
 			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
+			InitiateTileInstance(instance,tiletype);
 			var scalex = room_width / level_width / instance.sprite_width;
 			instance.image_xscale=scalex;
 			var scaley = room_height / level_height / instance.sprite_height;
@@ -38,3 +54,4 @@ function LoadLevel(level){
 		}
 	}
 }
+

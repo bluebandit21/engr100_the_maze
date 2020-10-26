@@ -9,7 +9,7 @@ function RedLeverPull(){
 		for(var col=0; col<level_width;col++){
 			tile = ds_grid_get(level_manager.tiles,row,col);
 			type = ds_grid_get(level_manager.curr_level.map,row,col);
-			if(type == tiletypes.gate_red){
+			if(type == tiletypes.gate_red || type == tiletypes.gate_red_open){
 				tile.open = !tile.open;
 			}
 		}
@@ -24,7 +24,7 @@ function GreenLeverPull(){
 		for(var col=0; col<level_width;col++){
 			tile = ds_grid_get(level_manager.tiles,row,col);
 			type = ds_grid_get(level_manager.curr_level.map,row,col);
-			if(type == tiletypes.gate_green){
+			if(type == tiletypes.gate_green || type == tiletypes.gate_green_open){
 				tile.open = !tile.open;
 			}
 		}
@@ -37,10 +37,9 @@ function BlueLeverPull(){
 
 	for(var row = 0; row<level_height;row++){
 		for(var col=0; col<level_width;col++){
-			show_debug_message("Blue loop -- oob write?");
 			tile = ds_grid_get(level_manager.tiles,row,col);
 			type = ds_grid_get(level_manager.curr_level.map,row,col);
-			if(type == tiletypes.gate_blue){
+			if(type == tiletypes.gate_blue || type == tiletypes.gate_blue_open){
 				tile.open = !tile.open;
 			}
 		}
