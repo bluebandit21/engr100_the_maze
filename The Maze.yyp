@@ -47,7 +47,6 @@
     {"id":{"name":"spr_down","path":"sprites/spr_down/spr_down.yy",},"order":8,},
     {"id":{"name":"spr_lever_blue","path":"sprites/spr_lever_blue/spr_lever_blue.yy",},"order":16,},
     {"id":{"name":"obj_tile_lever_blue","path":"objects/obj_tile_lever_blue/obj_tile_lever_blue.yy",},"order":20,},
-    {"id":{"name":"obj_initial_global","path":"objects/obj_initial_global/obj_initial_global.yy",},"order":13,},
     {"id":{"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},"order":1,},
     {"id":{"name":"spr_right","path":"sprites/spr_right/spr_right.yy",},"order":10,},
     {"id":{"name":"obj_tile_gate_green","path":"objects/obj_tile_gate_green/obj_tile_gate_green.yy",},"order":17,},
