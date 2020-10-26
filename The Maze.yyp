@@ -46,6 +46,7 @@
     {"id":{"name":"InputFunction","path":"scripts/InputFunction/InputFunction.yy",},"order":6,},
     {"id":{"name":"PlayerMovement","path":"scripts/PlayerMovement/PlayerMovement.yy",},"order":4,},
     {"id":{"name":"spr_down","path":"sprites/spr_down/spr_down.yy",},"order":8,},
+    {"id":{"name":"obj_pausescreen","path":"objects/obj_pausescreen/obj_pausescreen.yy",},"order":23,},
     {"id":{"name":"spr_lever_blue","path":"sprites/spr_lever_blue/spr_lever_blue.yy",},"order":16,},
     {"id":{"name":"obj_tile_lever_blue","path":"objects/obj_tile_lever_blue/obj_tile_lever_blue.yy",},"order":20,},
     {"id":{"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},"order":1,},
@@ -69,7 +70,6 @@
     {"id":{"name":"obj_rightarrow","path":"objects/obj_rightarrow/obj_rightarrow.yy",},"order":8,},
     {"id":{"name":"spr_optionbutton","path":"sprites/spr_optionbutton/spr_optionbutton.yy",},"order":2,},
     {"id":{"name":"spr_gate_green","path":"sprites/spr_gate_green/spr_gate_green.yy",},"order":15,},
-    {"id":{"name":"rm_pausescreen","path":"rooms/rm_pausescreen/rm_pausescreen.yy",},"order":3,},
     {"id":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},"order":0,},
   ],
   "Options": [
@@ -90,7 +90,6 @@
     {"name":"rm_level","path":"rooms/rm_level/rm_level.yy",},
     {"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},
     {"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},
-    {"name":"rm_pausescreen","path":"rooms/rm_pausescreen/rm_pausescreen.yy",},
     {"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},
   ],
   "Folders": [
