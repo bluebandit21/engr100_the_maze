@@ -27,6 +27,7 @@
     {"id":{"name":"obj_level_3","path":"objects/obj_level_3/obj_level_3.yy",},"order":16,},
     {"id":{"name":"LevelLoader","path":"scripts/LevelLoader/LevelLoader.yy",},"order":0,},
     {"id":{"name":"spr_lever_red","path":"sprites/spr_lever_red/spr_lever_red.yy",},"order":11,},
+    {"id":{"name":"obj_level_4","path":"objects/obj_level_4/obj_level_4.yy",},"order":21,},
     {"id":{"name":"spr_back","path":"sprites/spr_back/spr_back.yy",},"order":6,},
     {"id":{"name":"spr_left","path":"sprites/spr_left/spr_left.yy",},"order":9,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
