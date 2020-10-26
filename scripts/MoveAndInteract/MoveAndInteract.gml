@@ -23,8 +23,11 @@ function GetTileStatus(row,column){
 		case tiletypes.lever_blue:
 			return tilestatus.interaction;
 		case tiletypes.gate_red:
+		case tiletypes.gate_red_open:
 		case tiletypes.gate_blue:
+		case tiletypes.gate_blue_open:
 		case tiletypes.gate_green:
+		case tiletypes.gate_green_open:
 			if(curr_tile.open){
 				return tilestatus.passable;
 			}

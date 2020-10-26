@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_playbutton",
-    "path": "sprites/spr_playbutton/spr_playbutton.yy",
+    "name": "spr_lock",
+    "path": "sprites/spr_lock/spr_lock.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,10 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_playbutton",
+  "name": "obj_lock",
   "tags": [],
   "resourceType": "GMObject",
 }

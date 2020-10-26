@@ -3,14 +3,14 @@
 function find_input(keyDirection, controlNumber){
 	var i_d = ds_map_find_value(async_load,"id");
 	if(i_d == keyDirection){
-		if ds_map_find_value(async_load, "status") >= 0
+		if ds_map_find_value(async_load, "status")
 	      {
 
 					localDirection = ds_map_find_value(async_load, "result");
 					if(check_controls(string(localDirection), global.array_of_controls))
 						global.array_of_controls[controlNumber] = localDirection;
 					else
-						show_error("Key already assigned", false);
+						show_message("Key already assigned");
 		  
 		}
 	}
@@ -33,4 +33,26 @@ function determine_switch(determiner){
 		default:
 			break;		
 	}
+}
+
+function specific_room_goto(current_room){
+	if(current_room == "rm_controls"){
+		room_goto(rm_options);
+		instance_destroy(obj_rebindable_up);
+		instance_destroy(obj_rebindable_down);
+		instance_destroy(obj_rebindable_left);
+		instance_destroy(obj_rebindable_right);
+	}
+	else
+		room_goto(rm_titlescreen);
+}
+
+function next_room() {
+	var name = asset_get_index("obj_level_" + string(global.curr_level_idx + 1));
+	if name > -1 {
+		global.curr_level_idx++;
+		room_goto(rm_level);
+	}
+	else
+		room_goto(rm_levelselect);
 }

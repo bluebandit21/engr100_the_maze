@@ -9,3 +9,7 @@ function check_controls(control,controlsArray){
 	}
 	return true;
 }
+
+function level_complete(){
+	
+}
