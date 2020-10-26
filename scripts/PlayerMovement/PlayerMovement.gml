@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerMovementUp(char){
 	with(obj_player){
-		if(keyboard_check_pressed(ord(char))){
+		if(keyboard_check(ord(char))){
 			var status=GetTileStatus(playerx, playery-1);
 			switch(status){
 				case tilestatus.blocked:
@@ -19,7 +19,7 @@ function PlayerMovementUp(char){
 }
 function PlayerMovementDown(char){
 	with(obj_player){
-		if(keyboard_check_pressed(ord(char))){
+		if(keyboard_check(ord(char))){
 		var status=GetTileStatus(playerx,playery+1);
 		switch(status){
 		case tilestatus.blocked:
@@ -37,7 +37,7 @@ function PlayerMovementDown(char){
 
 function PlayerMovementLeft(char){
 	with(obj_player){
-		if(keyboard_check_pressed(ord(char))){
+		if(keyboard_check(ord(char))){
 		var status=GetTileStatus(playerx-1,playery);
 		switch(status){
 			case tilestatus.blocked:
@@ -55,7 +55,7 @@ function PlayerMovementLeft(char){
 
 function PlayerMovementRight(char){
 	with(obj_player){
-		if(keyboard_check_pressed(ord(char))){
+		if(keyboard_check(ord(char))){
 		var status=GetTileStatus(playerx+1,playery);
 		switch(status){
 			case tilestatus.blocked:
