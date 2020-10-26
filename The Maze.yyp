@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"order":22,},
     {"id":{"name":"obj_tile_gate_blue","path":"objects/obj_tile_gate_blue/obj_tile_gate_blue.yy",},"order":18,},
     {"id":{"name":"ControlsConflictCheck","path":"scripts/ControlsConflictCheck/ControlsConflictCheck.yy",},"order":5,},
     {"id":{"name":"obj_global_async","path":"objects/obj_global_async/obj_global_async.yy",},"order":14,},
@@ -40,6 +41,7 @@
     {"id":{"name":"obj_optionbutton","path":"objects/obj_optionbutton/obj_optionbutton.yy",},"order":1,},
     {"id":{"name":"obj_tile_lever_green","path":"objects/obj_tile_lever_green/obj_tile_lever_green.yy",},"order":19,},
     {"id":{"name":"spr_mazepreview","path":"sprites/spr_mazepreview/spr_mazepreview.yy",},"order":3,},
+    {"id":{"name":"spr_lock","path":"sprites/spr_lock/spr_lock.yy",},"order":18,},
     {"id":{"name":"obj_levelselecttext","path":"objects/obj_levelselecttext/obj_levelselecttext.yy",},"order":3,},
     {"id":{"name":"InputFunction","path":"scripts/InputFunction/InputFunction.yy",},"order":6,},
     {"id":{"name":"PlayerMovement","path":"scripts/PlayerMovement/PlayerMovement.yy",},"order":4,},
