@@ -9,6 +9,7 @@
     {"id":{"name":"spr_gate_blue","path":"sprites/spr_gate_blue/spr_gate_blue.yy",},"order":1,},
     {"id":{"name":"spr_rightarrow","path":"sprites/spr_rightarrow/spr_rightarrow.yy",},"order":6,},
     {"id":{"name":"Note3","path":"notes/Note3/Note3.yy",},"order":2,},
+    {"id":{"name":"MazeSolver","path":"scripts/MazeSolver/MazeSolver.yy",},"order":7,},
     {"id":{"name":"obj_tile_lever_red","path":"objects/obj_tile_lever_red/obj_tile_lever_red.yy",},"order":7,},
     {"id":{"name":"obj_tile_wall","path":"objects/obj_tile_wall/obj_tile_wall.yy",},"order":9,},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"order":0,},
@@ -40,6 +41,7 @@
     {"id":{"name":"fnt_game","path":"fonts/fnt_game/fnt_game.yy",},"order":0,},
     {"id":{"name":"obj_optionbutton","path":"objects/obj_optionbutton/obj_optionbutton.yy",},"order":1,},
     {"id":{"name":"obj_tile_lever_green","path":"objects/obj_tile_lever_green/obj_tile_lever_green.yy",},"order":6,},
+    {"id":{"name":"obj_node","path":"objects/obj_node/obj_node.yy",},"order":0,},
     {"id":{"name":"spr_mazepreview","path":"sprites/spr_mazepreview/spr_mazepreview.yy",},"order":3,},
     {"id":{"name":"spr_lock","path":"sprites/spr_lock/spr_lock.yy",},"order":18,},
     {"id":{"name":"obj_levelselecttext","path":"objects/obj_levelselecttext/obj_levelselecttext.yy",},"order":3,},
@@ -110,6 +112,7 @@
     {"folderPath":"folders/Objects/levels.yy","order":24,"resourceVersion":"1.0","name":"levels","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/tiles.yy","order":25,"resourceVersion":"1.0","name":"tiles","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/tiles.yy","order":19,"resourceVersion":"1.0","name":"tiles","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/maze_solver_misc.yy","order":26,"resourceVersion":"1.0","name":"maze_solver_misc","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
