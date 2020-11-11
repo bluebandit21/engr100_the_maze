@@ -3,3 +3,5 @@ if (global.lock > global.curr_level_idx) {
 		room_goto(rm_level);
 	}
 }
+instance_destroy(obj_mazepreview);
+maze_sprite(1);
