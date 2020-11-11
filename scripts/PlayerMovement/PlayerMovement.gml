@@ -4,7 +4,7 @@ global.adjust_speed = 9;
 
 function PlayerMovementUp(char){
 	with(obj_player){
-		if(keyboard_check(ord(char)) && (cooldown < 1)){
+		if((keyboard_check(ord(char)) || keyboard_check(vk_up)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx, playery-1);
 			switch(status){
 				case tilestatus.blocked:
@@ -22,7 +22,7 @@ function PlayerMovementUp(char){
 }
 function PlayerMovementDown(char){
 	with(obj_player){
-			if(keyboard_check(ord(char)) && (cooldown < 1)){
+		if((keyboard_check(ord(char)) || keyboard_check(vk_down)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx,playery+1);
 			switch(status){
 			case tilestatus.blocked:
@@ -42,38 +42,38 @@ function PlayerMovementDown(char){
 
 function PlayerMovementLeft(char){
 	with(obj_player){
-		if(keyboard_check(ord(char)) && (cooldown < 1)){
-		var status=GetTileStatus(playerx-1,playery);
-		switch(status){
-			case tilestatus.blocked:
-				break;
-			case tilestatus.passable:
-				playerx-=1;
-				break;
-			case tilestatus.interaction:
-				InteractWithTile(playerx-1,playery);
-				break;
-		}
-		cooldown = global.adjust_speed
+		if((keyboard_check(ord(char)) || keyboard_check(vk_left)) && (cooldown < 1)){
+			var status=GetTileStatus(playerx-1,playery);
+			switch(status){
+				case tilestatus.blocked:
+					break;
+				case tilestatus.passable:
+					playerx-=1;
+					break;
+				case tilestatus.interaction:
+					InteractWithTile(playerx-1,playery);
+					break;
+			}
+			cooldown = global.adjust_speed
+			}
 		}
 	}
-}
 
 function PlayerMovementRight(char){
 	with(obj_player){
-		if(keyboard_check(ord(char)) && (cooldown < 1)){
-		var status=GetTileStatus(playerx+1,playery);
-		switch(status){
-			case tilestatus.blocked:
-				break;
-			case tilestatus.passable:
-				playerx+=1;
-				break;
-			case tilestatus.interaction:
-				InteractWithTile(playerx+1,playery);
-				break;
-		}
-		cooldown = global.adjust_speed;
+		if((keyboard_check(ord(char)) || keyboard_check(vk_right)) && (cooldown < 1)){
+			var status=GetTileStatus(playerx+1,playery);
+			switch(status){
+				case tilestatus.blocked:
+					break;
+				case tilestatus.passable:
+					playerx+=1;
+					break;
+				case tilestatus.interaction:
+					InteractWithTile(playerx+1,playery);
+					break;
+			}
+			cooldown = global.adjust_speed;
+			}
 		}
 	}
-}
