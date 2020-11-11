@@ -8,7 +8,7 @@ function find_input(keyDirection, controlNumber){
 
 					localDirection = ds_map_find_value(async_load, "result");
 					if(check_controls(string(localDirection), global.array_of_controls))
-						global.array_of_controls[controlNumber] = localDirection;
+						global.array_of_controls[controlNumber] = string_upper(localDirection);
 					else
 						show_message("Key already assigned");
 		  
