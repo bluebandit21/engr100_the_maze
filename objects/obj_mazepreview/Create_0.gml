@@ -1,2 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+x = 400;
+y = 220;
+image_xscale = .22;
+image_yscale = .22;

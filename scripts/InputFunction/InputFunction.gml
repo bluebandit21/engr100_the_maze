@@ -35,24 +35,3 @@ function determine_switch(determiner){
 	}
 }
 
-function specific_room_goto(current_room){
-	if(current_room == "rm_controls"){
-		room_goto(rm_options);
-		instance_destroy(obj_rebindable_up);
-		instance_destroy(obj_rebindable_down);
-		instance_destroy(obj_rebindable_left);
-		instance_destroy(obj_rebindable_right);
-	}
-	else
-		room_goto(rm_titlescreen);
-}
-
-function next_room() {
-	var name = asset_get_index("obj_level_" + string(global.curr_level_idx + 1));
-	if name > -1 {
-		global.curr_level_idx++;
-		room_goto(rm_level);
-	}
-	else
-		room_goto(rm_levelselect);
-}

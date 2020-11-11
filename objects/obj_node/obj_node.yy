@@ -19,6 +19,8 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [
+    {"varType":1,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"x","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"y","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"parent_x","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"parent_y","tags":[],"resourceType":"GMObjectProperty",},
   ],
