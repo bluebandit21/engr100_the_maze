@@ -12,11 +12,23 @@ function solveMaze(destx,desty){
 	//This is basically an unoptimized flood-fill algorithm, with some magic for teleporters
 	// It finds the coord pairs from playerx,playery to provided destx,desty
 	
+	// First, clear the previous arrows drawn (if they exist)
+	
+	show_debug_message("Begun maze solver...");
+	
+	while(instance_number(obj_maze_solver_arrow) > 0){
+		show_debug_message("Removing previous arrow");
+		instance_destroy(instance_find(obj_maze_solver_arrow,0));
+	}
+	
 	var playerx = level_manager.player.playerx;
 	var playery = level_manager.player.playery;
 	if(playerx == destx && playery == desty){
 		//Special case -- our starting point *is* our goal.
 		//TODO: Return pair of one? none? Something.
+		//Draw circle at player pos
+		show_debug_message("Maze solver called with player starting at dest");
+		return;
 	}
 	
 	
@@ -30,8 +42,8 @@ function solveMaze(destx,desty){
 	
 	
 	
-	for(var row = 0;col<width;col++){
-		for(var col = 0;row<height;row++){
+	for(var col = 0;col<width;col++){
+		for(var row = 0;row<height;row++){
 			var status = GetTileStatus(col,row);
 			if(status == tilestatus.blocked){
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile
@@ -41,19 +53,20 @@ function solveMaze(destx,desty){
 	
 	
 	ds_grid_set(grid,playerx,playery,1); //We always start exploring from where the player is.
-	var node = instance_create_layer(0,0,"mazesolver_nodes",obj_node);
+	var node = instance_create_layer(0,0,0,obj_node);
 	node.parent_x = -1;
 	node.parent_y = -1;
 	ds_grid_set(nodes,playerx,playery,node);
 	
+	show_debug_message("Beginning maze flood fill.");
 	while(true){
 		//-------------------------Locate next tile to explore--------------------------------------
 		
 		var curr_x = -1; //Current tile check x-index
 		var curr_y = -1; // ^, y-index
 		
-		for(var row = 0;col<width;col++){
-			for(var col = 0;row<height;row++){
+		for(var coll = 0;col<width;col++){
+			for(var row = 0;row<height;row++){
 				if(ds_grid_get(grid,col,row) == 1){ // Found to-explore
 					curr_x = col;
 					curr_y = row;
@@ -64,6 +77,8 @@ function solveMaze(destx,desty){
 				break;
 			}
 		}
+		
+		show_debug_message("Exploring node "+string(curr_x) + ":" + string(curr_y));
 		
 		if(curr_x == -1 or curr_y == -1){
 			show_error("Unable to locate path to coord -- fatal",true);
@@ -132,6 +147,24 @@ function solveMaze(destx,desty){
 	// Every node in the path to destx,desty has a parent x,y , which can reach it.
 	// We just have to *start* at destx,desty and loop backwards
 	
+	// We now want to draw the arrows to show the player the solution
+	
+	
+	var curr_x = destx;
+	var curr_y = desty;
+	
+	//Draw circle at destx,desty
+	show_debug_message("Beginning back-solve of maze.");
+	while(!((curr_x == playerx) and (curr_y == playery))){
+		var node = ds_grid_get(nodes, curr_x,curr_y);
+		var parentx = node.parent_x;
+		var parenty = node.parent_y;
+		show_debug_message("Current node: "+string(curr_x) + ":" + string(curr_y));
+		//Default arrow rotation is pointing straight up.
+		
+		//Draw arrow from parentx,parenty to curr_x,curr_y 
+	}
+	show_debug_message("End back-solve of maze.");
 	
 	
 }

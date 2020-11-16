@@ -40,6 +40,7 @@ function LoadLevel(level){
 				player.image_xscale = scalex;
 				var scaley = room_height / level_height / player.sprite_height;
 				player.image_yscale=scaley;
+				level_manager.player = player;
 			}
 			
 			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!

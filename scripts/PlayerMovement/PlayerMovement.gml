@@ -43,6 +43,8 @@ function PlayerMovementDown(char){
 function PlayerMovementLeft(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_left)) && (cooldown < 1)){
+			//TODO: Remove me (testing thing)
+			solveMaze(1,1);
 			var status=GetTileStatus(playerx-1,playery);
 			switch(status){
 				case tilestatus.blocked:
