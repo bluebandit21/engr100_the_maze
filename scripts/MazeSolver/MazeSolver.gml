@@ -65,7 +65,7 @@ function solveMaze(destx,desty){
 		var curr_x = -1; //Current tile check x-index
 		var curr_y = -1; // ^, y-index
 		
-		for(var coll = 0;col<width;col++){
+		for(var col = 0;col<width;col++){
 			for(var row = 0;row<height;row++){
 				if(ds_grid_get(grid,col,row) == 1){ // Found to-explore
 					curr_x = col;
@@ -101,33 +101,34 @@ function solveMaze(destx,desty){
 			var neighb_y = curr_y;
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
 				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
-			}
-			var node = instance_create_layer(0,0,"mazesolver_nodes",obj_node);
-			node.parent_x = curr_x; //We reched the neighbor from here
-			node.parent_y = curr_y;
-			ds_grid_set(nodes,neighb_x,neighb_y,node);
+				var node = instance_create_layer(0,0,0,obj_node);
+				node.parent_x = curr_x; //We reched the neighbor from here
+				node.parent_y = curr_y;
+				ds_grid_set(nodes,neighb_x,neighb_y,node);
+			}	
 		}
 		if(curr_x <= width - 2){
 			var neighb_x = curr_x + 1;
 			var neighb_y = curr_y;
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
 				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
+				var node = instance_create_layer(0,0,0,obj_node);
+				node.parent_x = curr_x; //We reched the neighbor from here
+				node.parent_y = curr_y;
+				ds_grid_set(nodes,neighb_x,neighb_y,node);
 			}
-			var node = instance_create_layer(0,0,"mazesolver_nodes",obj_node);
-			node.parent_x = curr_x; //We reched the neighbor from here
-			node.parent_y = curr_y;
-			ds_grid_set(nodes,neighb_x,neighb_y,node);
+			
 		}
 		if(curr_y >= 1){
 			var neighb_x = curr_x;
 			var neighb_y = curr_y - 1;
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
 				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
-			}
-			var node = instance_create_layer(0,0,"mazesolver_nodes",obj_node);
-			node.parent_x = curr_x; //We reched the neighbor from here
-			node.parent_y = curr_y;
-			ds_grid_set(nodes,neighb_x,neighb_y,node);
+				var node = instance_create_layer(0,0,0,obj_node);
+				node.parent_x = curr_x; //We reched the neighbor from here
+				node.parent_y = curr_y;
+				ds_grid_set(nodes,neighb_x,neighb_y,node);
+			}	
 		}
 		
 		if(curr_y <= height - 2){
@@ -135,11 +136,12 @@ function solveMaze(destx,desty){
 			var neighb_y = curr_y+1;
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
 				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
+				var node = instance_create_layer(0,0,0,obj_node);
+				node.parent_x = curr_x; //We reached the neighbor from here
+				node.parent_y = curr_y;
+				ds_grid_set(nodes,neighb_x,neighb_y,node);
 			}
-			var node = instance_create_layer(0,0,"mazesolver_nodes",obj_node);
-			node.parent_x = curr_x; //We reched the neighbor from here
-			node.parent_y = curr_y;
-			ds_grid_set(nodes,neighb_x,neighb_y,node);
+			
 		}
 	}
 	
@@ -163,6 +165,8 @@ function solveMaze(destx,desty){
 		//Default arrow rotation is pointing straight up.
 		
 		//Draw arrow from parentx,parenty to curr_x,curr_y 
+		curr_x = parentx;
+		curr_y = parenty;
 	}
 	show_debug_message("End back-solve of maze.");
 	
