@@ -66,6 +66,12 @@ function InteractWithTile(row,column){
 		case tiletypes.lever_blue:
 			BlueLeverPull();
 			break;
+		case tiletypes.tele_blue:
+		case tiletypes.tele_red:
+		case tiletypes.tele_green:
+			level_manager.player.playerx = curr_tile.link_x;
+			level_manager.player.playery = curr_tile.link_y;
+			break;
 	
 			
 	}
