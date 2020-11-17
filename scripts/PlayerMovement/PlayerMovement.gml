@@ -2,6 +2,20 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 global.adjust_speed = 9;
 
+function toggleMaze(){
+	toggled = keyboard_check_pressed(ord(global.array_of_controls[5]));
+	if toggled && global.maze_on {
+		global.maze_toggled = true;
+		global.maze_on = false;
+		toggled = false;
+	}
+
+	if toggled && !global.maze_on {
+		global.maze_toggled = false;
+		global.maze_on = true;
+		toggled = false;
+	}
+}
 function PlayerMovementUp(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_up)) && (cooldown < 1)){
@@ -17,7 +31,8 @@ function PlayerMovementUp(char){
 					break;
 		}
 		cooldown = global.adjust_speed;
-		solveMaze(1,1);
+		if(global.maze_toggled)
+			solveMaze(1,1);
 			//TODO -- should be run once after every step. Refactor to make less messy?
 			//TODO -- should only be run if maze solving toggled on.
 			//TODO make target be correctly set (i.e. not always (1,1))
@@ -39,7 +54,8 @@ function PlayerMovementDown(char){
 				break;
 			}
 			cooldown = global.adjust_speed;
-			solveMaze(1,1);
+			if(global.maze_toggled)
+				solveMaze(1,1);
 			//TODO -- should be run once after every step. Refactor to make less messy?
 			//TODO -- should only be run if maze solving toggled on.
 			//TODO make target be correctly set (i.e. not always (1,1))
@@ -64,7 +80,8 @@ function PlayerMovementLeft(char){
 					break;
 			}
 			cooldown = global.adjust_speed
-			solveMaze(1,1);
+			if(global.maze_toggled)
+				solveMaze(1,1);
 			//TODO -- should be run once after every step. Refactor to make less messy?
 			//TODO -- should only be run if maze solving toggled on.
 			//TODO make target be correctly set (i.e. not always (1,1))
@@ -88,7 +105,8 @@ function PlayerMovementRight(char){
 					break;
 			}
 			cooldown = global.adjust_speed;
-			solveMaze(1,1);
+			if(global.maze_toggled)
+				solveMaze(1,1);
 			//TODO -- should be run once after every step. Refactor to make less messy?
 			//TODO -- should only be run if maze solving toggled on.
 			//TODO make target be correctly set (i.e. not always (1,1))
