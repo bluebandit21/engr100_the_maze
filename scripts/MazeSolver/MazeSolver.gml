@@ -171,13 +171,13 @@ function solveMaze(destx,desty){
 			
 		//Create instance and scale appropriately
 		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_arrow); //TODO -- set depth correctly!
-		instance.x+= instance.sprite_width / 2;
-		instance.y+= instance.sprite_height / 2;
 		var scalex = room_width / width / instance.sprite_width;
 		instance.image_xscale=scalex;
 		var scaley = room_height / height / instance.sprite_height;
 		instance.image_yscale=scaley;
 		
+		instance.x+= instance.sprite_width / 2;
+		instance.y+= instance.sprite_height / 2;
 		//Rotate so imagine points in correct direction.
 		// tan(theta) equals delta x / delta y, since arrow points straight up by default.
 		// ergo, theta equal atan((parentx - currx) / (parenty - curry))
