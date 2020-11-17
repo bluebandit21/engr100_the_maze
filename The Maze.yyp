@@ -19,6 +19,7 @@
     {"id":{"name":"obj_rebindable_maze","path":"objects/obj_rebindable_maze/obj_rebindable_maze.yy",},"order":13,},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"order":1,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
+    {"id":{"name":"obj_level_6","path":"objects/obj_level_6/obj_level_6.yy",},"order":5,},
     {"id":{"name":"obj_level_1","path":"objects/obj_level_1/obj_level_1.yy",},"order":0,},
     {"id":{"name":"spr_pausescreen","path":"sprites/spr_pausescreen/spr_pausescreen.yy",},"order":13,},
     {"id":{"name":"spr_level_4","path":"sprites/spr_level_4/spr_level_4.yy",},"order":3,},
