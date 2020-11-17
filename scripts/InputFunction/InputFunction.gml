@@ -30,6 +30,9 @@ function determine_switch(determiner){
 		case 4:
 			find_input(obj_rebindable_right.rightKey, 4);
 			break;
+		case 5:
+			find_input(obj_rebindable_maze.mazeKey, 5);
+			break;
 		default:
 			break;		
 	}
