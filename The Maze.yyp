@@ -64,6 +64,7 @@
     {"id":{"name":"spr_playbutton","path":"sprites/spr_playbutton/spr_playbutton.yy",},"order":1,},
     {"id":{"name":"Broadcasts","path":"scripts/Broadcasts/Broadcasts.yy",},"order":6,},
     {"id":{"name":"spr_gate_red","path":"sprites/spr_gate_red/spr_gate_red.yy",},"order":3,},
+    {"id":{"name":"obj_tutorialscreen","path":"objects/obj_tutorialscreen/obj_tutorialscreen.yy",},"order":27,},
     {"id":{"name":"obj_optiontohome","path":"objects/obj_optiontohome/obj_optiontohome.yy",},"order":9,},
     {"id":{"name":"obj_rebindable_down","path":"objects/obj_rebindable_down/obj_rebindable_down.yy",},"order":12,},
     {"id":{"name":"spr_leftarrow","path":"sprites/spr_leftarrow/spr_leftarrow.yy",},"order":7,},
