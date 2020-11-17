@@ -164,7 +164,18 @@ function solveMaze(destx,desty){
 		show_debug_message("Current node: "+string(curr_x) + ":" + string(curr_y));
 		//Default arrow rotation is pointing straight up.
 		
+		
 		//Draw arrow from parentx,parenty to curr_x,curr_y 
+		var tilex = parentx*room_width / width;
+		var tiley = parenty*room_height / height;
+			
+		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_arrow); //TODO -- set depth correctly!
+		var scalex = room_width / width / instance.sprite_width;
+		instance.image_xscale=scalex;
+		var scaley = room_height / height / instance.sprite_height;
+		instance.image_yscale=scaley;
+		
+		//Rotate arrow here?
 		curr_x = parentx;
 		curr_y = parenty;
 	}
