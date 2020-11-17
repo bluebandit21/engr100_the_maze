@@ -8,7 +8,7 @@ var level_height = ds_grid_height(level_manager.curr_level.map);
 x = playerx*room_width / level_width;
 y = playery*room_height / level_height;
 
-
+toggleMaze();
 
 PlayerMovementUp(string(global.array_of_controls[1]));
 
