@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6520a0e2-8a6f-40fe-b1d4-d3b03f51be10","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "level select",
+    "path": "folders/Sprites/level select.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_rightarrow",

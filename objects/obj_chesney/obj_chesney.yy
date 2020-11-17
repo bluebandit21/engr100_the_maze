@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_rightarrow",
-    "path": "sprites/spr_rightarrow/spr_rightarrow.yy",
+    "name": "spr_disabled",
+    "path": "sprites/spr_disabled/spr_disabled.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,16 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_rightarrow","path":"objects/obj_rightarrow/obj_rightarrow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_chesney","path":"objects/obj_chesney/obj_chesney.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_chesney","path":"objects/obj_chesney/obj_chesney.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level select",
-    "path": "folders/Objects/level select.yy",
+    "name": "options menu",
+    "path": "folders/Objects/options menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_rightarrow",
+  "name": "obj_chesney",
   "tags": [],
   "resourceType": "GMObject",
 }

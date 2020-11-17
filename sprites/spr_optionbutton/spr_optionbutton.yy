@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"412635c8-9eb0-47ac-80b1-2e2c2c39a25e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "home",
+    "path": "folders/Sprites/home.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_optionbutton",
