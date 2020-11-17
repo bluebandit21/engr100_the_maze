@@ -17,6 +17,10 @@ function PlayerMovementUp(char){
 					break;
 		}
 		cooldown = global.adjust_speed;
+		solveMaze(1,1);
+			//TODO -- should be run once after every step. Refactor to make less messy?
+			//TODO -- should only be run if maze solving toggled on.
+			//TODO make target be correctly set (i.e. not always (1,1))
 		}
 	}
 }
@@ -35,7 +39,12 @@ function PlayerMovementDown(char){
 				break;
 			}
 			cooldown = global.adjust_speed;
+			solveMaze(1,1);
+			//TODO -- should be run once after every step. Refactor to make less messy?
+			//TODO -- should only be run if maze solving toggled on.
+			//TODO make target be correctly set (i.e. not always (1,1))
 			}
+			
 		}
 	}
 
@@ -43,8 +52,6 @@ function PlayerMovementDown(char){
 function PlayerMovementLeft(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_left)) && (cooldown < 1)){
-			//TODO: Remove me (testing thing)
-			solveMaze(1,1);
 			var status=GetTileStatus(playerx-1,playery);
 			switch(status){
 				case tilestatus.blocked:
@@ -57,9 +64,14 @@ function PlayerMovementLeft(char){
 					break;
 			}
 			cooldown = global.adjust_speed
-			}
+			solveMaze(1,1);
+			//TODO -- should be run once after every step. Refactor to make less messy?
+			//TODO -- should only be run if maze solving toggled on.
+			//TODO make target be correctly set (i.e. not always (1,1))
 		}
+			
 	}
+}
 
 function PlayerMovementRight(char){
 	with(obj_player){
@@ -76,6 +88,11 @@ function PlayerMovementRight(char){
 					break;
 			}
 			cooldown = global.adjust_speed;
-			}
+			solveMaze(1,1);
+			//TODO -- should be run once after every step. Refactor to make less messy?
+			//TODO -- should only be run if maze solving toggled on.
+			//TODO make target be correctly set (i.e. not always (1,1))
 		}
+		
 	}
+}
