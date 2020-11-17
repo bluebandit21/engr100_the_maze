@@ -14,6 +14,9 @@ function toggleMaze(){
 		global.maze_toggled = false;
 		global.maze_on = true;
 		toggled = false;
+		while(instance_number(obj_maze_solver_arrow) > 0){
+			instance_destroy(instance_find(obj_maze_solver_arrow,0));
+		}
 	}
 }
 function PlayerMovementUp(char){
