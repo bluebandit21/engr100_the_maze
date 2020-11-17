@@ -15,9 +15,8 @@ function solveMaze(destx,desty){
 	// First, clear the previous arrows drawn (if they exist)
 	
 	show_debug_message("Begun maze solver...");
-	
+	show_debug_message("Removing previous arrows...");
 	while(instance_number(obj_maze_solver_arrow) > 0){
-		show_debug_message("Removing previous arrow");
 		instance_destroy(instance_find(obj_maze_solver_arrow,0));
 	}
 	
@@ -158,22 +157,39 @@ function solveMaze(destx,desty){
 	//Draw circle at destx,desty
 	show_debug_message("Beginning back-solve of maze.");
 	while(!((curr_x == playerx) and (curr_y == playery))){
+		//------------Find parent coords
 		var node = ds_grid_get(nodes, curr_x,curr_y);
 		var parentx = node.parent_x;
 		var parenty = node.parent_y;
 		show_debug_message("Current node: "+string(curr_x) + ":" + string(curr_y));
-		//Default arrow rotation is pointing straight up.
 		
+		//--------------Draw arrow from parentx,parenty to curr_x,curr_y 
 		
-		//Draw arrow from parentx,parenty to curr_x,curr_y 
+		//Find current tilex, tiley (scaled to room)
 		var tilex = parentx*room_width / width;
 		var tiley = parenty*room_height / height;
 			
+		//Create instance and scale appropriately
 		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_arrow); //TODO -- set depth correctly!
+		instance.x+= instance.sprite_width / 2;
+		instance.y+= instance.sprite_height / 2;
 		var scalex = room_width / width / instance.sprite_width;
 		instance.image_xscale=scalex;
 		var scaley = room_height / height / instance.sprite_height;
 		instance.image_yscale=scaley;
+		
+		//Rotate so imagine points in correct direction.
+		// tan(theta) equals delta x / delta y, since arrow points straight up by default.
+		// ergo, theta equal atan((parentx - currx) / (parenty - curry))
+		var angle = arctan((parentx - curr_x + 0.0) / (parenty - curr_y + 0.0));
+		if(abs(angle) < 1){
+			if(parenty < curr_y){
+				//Positive zero = negative zero; make the arrow be flipped the right way in this case.
+				angle = pi;
+			}
+		}
+		angle *= 360 / 2 / pi; ///Convert rads to degrees
+		instance.image_angle = angle;
 		
 		//Rotate arrow here?
 		curr_x = parentx;
