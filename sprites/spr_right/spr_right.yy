@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b684ee01-5713-4d64-ac4a-76c3bb3437c5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "rebindable",
+    "path": "folders/Sprites/rebindable.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_right",

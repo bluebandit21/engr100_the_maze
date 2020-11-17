@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4e8d68ae-334b-449f-85eb-6264685bffaf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "home",
+    "path": "folders/Sprites/home.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playbutton",

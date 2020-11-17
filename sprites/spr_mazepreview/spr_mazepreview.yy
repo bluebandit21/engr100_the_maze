@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b205cd8c-2775-4903-831d-bbcfc1fc57e2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "level select",
+    "path": "folders/Sprites/level select.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mazepreview",

@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "level select",
+    "path": "folders/Objects/level select.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_levelselecttext",
