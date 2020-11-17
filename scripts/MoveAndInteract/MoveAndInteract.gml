@@ -24,6 +24,9 @@ function GetTileStatus(row,column){
 		case tiletypes.lever_red:
 		case tiletypes.lever_green:
 		case tiletypes.lever_blue:
+		case tiletypes.tele_blue:
+		case tiletypes.tele_green:
+		case tiletypes.tele_blue:
 			return tilestatus.interaction;
 		case tiletypes.gate_red:
 		case tiletypes.gate_red_open:
