@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "options menu",
+    "path": "folders/Objects/options menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_optiontohome",

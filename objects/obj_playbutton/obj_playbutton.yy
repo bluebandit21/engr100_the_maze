@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "home screen",
+    "path": "folders/Objects/home screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_playbutton",

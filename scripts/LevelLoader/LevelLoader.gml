@@ -40,6 +40,8 @@ function LoadLevel(level){
 			var tilex = col*room_width / level_width;
 			var tiley = row*room_height / level_height;
 			
+			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
+			
 			if(tiletype == tiletypes.start){
 				player = instance_create_depth(tilex,tiley,-1,obj_player); //Initialize player on starting square
 				//Player starts at depth -1 so they're always rendered on top.
@@ -59,7 +61,7 @@ function LoadLevel(level){
 				InitiateTileInstance(instance,tiletype);
 			}
 			
-			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
+			
 			
 			var scalex = room_width / level_width / instance.sprite_width;
 			instance.image_xscale=scalex;

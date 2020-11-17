@@ -18,4 +18,4 @@ ds_grid_set(map,3,1,tiletypes.tele_blue);
 
 
 tele_x = [1,1];
-tele_y = [1,1]
+tele_y = [1,1];

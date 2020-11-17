@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5a11c7f6-283c-41e6-839c-dea6e7d3a104","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "home",
+    "path": "folders/Sprites/home.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_titlescreen",
