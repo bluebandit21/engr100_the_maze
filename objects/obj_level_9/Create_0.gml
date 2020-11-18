@@ -19,3 +19,13 @@ ds_grid_set(map,width-2,height-2,tiletypes.finish);
 if (global.lock == 10) {
 	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
 }
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	ds_list_set(ret,0,6);
+	ds_list_set(ret,1,6);
+	return ret;
+}

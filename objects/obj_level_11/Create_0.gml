@@ -52,3 +52,64 @@ tele_y = [10,1];
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,height-2,width-2,tiletypes.finish);
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	
+	//Open green
+	//Close blue
+	//Open red
+	var ret = ds_list_create();
+	
+	
+	if(GetTileStatus(13,7) == tilestatus.passable){
+		//Green is open.
+		if(GetTileStatus(9,9) == tilestatus.blocked){
+			//Blue is shut
+			if(GetTileStatus(12,12) == tilestatus.passable){
+				//Red is open
+				//Go for the flag
+				ds_list_set(ret,0,14);
+				ds_list_set(ret,1,14);
+			}else{
+				//Go for red
+				ds_list_set(ret,0,3);
+				ds_list_set(ret,1,3);
+			}
+		}else{
+			//Blue is open. Close it
+			if(GetTileStatus(2,14) == tilestatus.passable){
+				//Can reach blue lever. Hit it.
+				ds_list_set(ret,0,7);
+				ds_list_set(ret,1,3);
+			}else{
+				//Go for red
+				ds_list_set(ret,0,3);
+				ds_list_set(ret,1,3);
+			}
+		}
+	}else{
+		//Green is shut.
+		if(GetTileStatus(9,9) == tilestatus.blocked){
+			//Blue is shut. Open it.
+			if(GetTileStatus(2,14) == tilestatus.passable){
+				//Can reach blue lever. Hit it.
+				ds_list_set(ret,0,7);
+				ds_list_set(ret,1,3);
+			}else{
+				//Go for red
+				ds_list_set(ret,0,3);
+				ds_list_set(ret,1,3);
+			}
+		}else{
+			//Blue is open. Go for the green!
+			ds_list_set(ret,0,7);
+			ds_list_set(ret,1,9);
+		}
+	}
+	return ret;
+}
+
+

@@ -43,3 +43,26 @@ ds_grid_set_region(map,10,10,10,10,tiletypes.gate_green);
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,height-2,width-2,tiletypes.finish);
+
+
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	if(GetTileStatus(10,10) == tilestatus.passable){
+		//Green is open
+		//Go for the goal!
+		ds_list_set(ret,0,14);
+		ds_list_set(ret,1,14);	
+	}else{
+		//Go for the lever!
+		ds_list_set(ret,0,2);
+		ds_list_set(ret,1,10);
+		
+	}
+	return ret;
+}
+
+
