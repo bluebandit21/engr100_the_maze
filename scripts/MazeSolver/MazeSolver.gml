@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function solveMaze(destx,desty){
-	return;
 	//Grid stores "status" of tiles 
 	// 0 -- unvisited
 	// 1 -- next-to-visit (in queue)

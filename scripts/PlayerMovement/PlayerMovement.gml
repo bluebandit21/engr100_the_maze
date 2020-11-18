@@ -30,7 +30,7 @@ function PlayerMovementUp(char){
 					playery-=1;
 					break;
 				case tilestatus.interaction:
-					InteractWithTile(playerx, playery-1);
+					InteractWithTile(playerx,playery-1);
 					break;
 		}
 		cooldown = global.adjust_speed;
@@ -79,7 +79,7 @@ function PlayerMovementLeft(char){
 					playerx-=1;
 					break;
 				case tilestatus.interaction:
-					InteractWithTile(playerx-1,playery);
+					InteractWithTile( playerx-1, playery);
 					break;
 			}
 			cooldown = global.adjust_speed
@@ -104,7 +104,7 @@ function PlayerMovementRight(char){
 					playerx+=1;
 					break;
 				case tilestatus.interaction:
-					InteractWithTile(playerx+1,playery);
+					InteractWithTile(playerx + 1,playery);
 					break;
 			}
 			cooldown = global.adjust_speed;
