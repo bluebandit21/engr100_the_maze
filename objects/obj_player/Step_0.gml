@@ -18,4 +18,6 @@ PlayerMovementRight(string(global.array_of_controls[4]));
 
 PlayerMovementLeft(string(global.array_of_controls[3]));
 
+
+
 cooldown--;
