@@ -55,6 +55,8 @@ function PlayerMovementUp(char){
 		cooldown = global.adjust_speed;
 		if(global.maze_toggled)
 			solveMaze();
+		if(global.hint_toggled)
+			giveMazeHint();
 		}
 	}
 }
@@ -91,6 +93,8 @@ function PlayerMovementDown(char){
 			cooldown = global.adjust_speed;
 			if(global.maze_toggled)
 				solveMaze();
+			if(global.hint_toggled)
+				giveMazeHint();
 			}
 			
 		}
@@ -130,6 +134,8 @@ function PlayerMovementLeft(char){
 			cooldown = global.adjust_speed
 			if(global.maze_toggled)
 				solveMaze();
+			if(global.hint_toggled)
+				giveMazeHint();
 		}
 			
 	}
@@ -168,6 +174,8 @@ function PlayerMovementRight(char){
 			cooldown = global.adjust_speed;
 			if(global.maze_toggled)
 				solveMaze();
+			if(global.hint_toggled)
+				giveMazeHint();
 		}
 		
 	}
