@@ -1,7 +1,5 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-global.adjust_speed = 9;
-
 function toggleMaze(){
 	toggled = keyboard_check_pressed(ord(global.array_of_controls[5]));
 	if toggled && global.maze_on {

@@ -1,0 +1,1 @@
+checkSpeed(7);

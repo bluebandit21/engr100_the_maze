@@ -1,4 +1,6 @@
 global.lock = 2;
+global.adjust_speed = 8;
+
 global.is_enabled = false;
 global.color_is_enabled = false;
 global.maze_toggled = false;
