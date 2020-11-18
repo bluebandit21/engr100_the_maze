@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icygate_blue",
+    "path": "sprites/spr_icygate_blue/spr_icygate_blue.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -17,17 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_level_7","path":"objects/obj_level_7/obj_level_7.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "levels",
-    "path": "folders/Objects/levels.yy",
+    "name": "tiles",
+    "path": "folders/Objects/tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_level_7",
+  "name": "obj_tile_icygate_blue",
   "tags": [],
   "resourceType": "GMObject",
 }
