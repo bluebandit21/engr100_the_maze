@@ -61,7 +61,8 @@ function solveMazeDest(destx,desty){
 			if(status == tilestatus.blocked){
 				if(destx == col && desty = row){
 					
-					show_error("Destination is blocked!", true);
+					//show_error("Destination is blocked!", true);
+					return; //TODO: DISABLE!
 				}
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile
 			}
@@ -120,7 +121,8 @@ function solveMazeDest(destx,desty){
 		show_debug_message("Exploring node "+string(curr_x) + ":" + string(curr_y));
 		
 		if(curr_x == -1 or curr_y == -1){
-			show_error("Unable to locate path to coord -- fatal",true);
+			//show_error("Unable to locate path to coord -- fatal",true);
+			return; //TODO: DISABLE!
 		}
 		
 		//-------------------------Explore the tile--------------------------------------
