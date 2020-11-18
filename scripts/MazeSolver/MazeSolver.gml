@@ -59,6 +59,26 @@ function solveMaze(destx,desty){
 	node.parent_y = -1;
 	ds_grid_set(nodes,playerx,playery,node);
 	
+	
+	//EDGE CASE MAGIC!
+	//If we start standing on a teleporter, we want to unset the teleporter.
+	// after exploring all connected locations. Otherwise, we've already visited the teleporter,
+	// so we never step through it.
+	
+	switch(ds_grid_get(level_manager.curr_level.map,playerx,playery)){
+		case tiletypes.tele_blue:
+		case tiletypes.tele_green:
+		case tiletypes.tele_red:
+			show_debug_message("Maze solving started on tele; start will be unset.");
+			var needToUnsetStart = true;
+			break;
+		default:
+			var needToUnsetStart = false;
+	}
+	
+
+
+	
 	show_debug_message("Beginning maze flood fill.");
 	while(true){
 		//-------------------------Locate next tile to explore--------------------------------------
@@ -173,6 +193,12 @@ function solveMaze(destx,desty){
 		}
 		if(ds_grid_get(grid,destx,desty)!=0){
 			break; //We've found some path; unwind.
+		}
+		if(needToUnsetStart){
+			//Handle edge case (explained in above comment)
+			show_debug_message("Handling teleport edge case (unsetting start)");
+			needToUnsetStart = false;
+			ds_grid_set(grid,playerx,playery,0); //"Unvisit" first node
 		}
 	}
 	
