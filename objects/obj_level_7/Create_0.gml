@@ -41,3 +41,14 @@ ds_grid_set(map,1,13,tiletypes.tele_blue);//Second tele -- maps to (3,1)
 
 tele_x = [1,14];
 tele_y = [13,3];
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	//Can always go for the goal!
+	ds_list_set(ret,0,14);
+	ds_list_set(ret,1,14);
+
+	return ret;
+}

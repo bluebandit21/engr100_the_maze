@@ -40,3 +40,27 @@ tele_y = [12,3];
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	if(GetTileStatus(13,6) == tilestatus.passable){
+		//Red is open
+		//Go for the goal!
+		ds_list_set(ret,0,14);
+		ds_list_set(ret,1,14);	
+	}else{
+		if(GetTileStatus(1,13) == tilestatus.passable){
+			//Green is open
+			ds_list_set(ret,0,11); //Hit red lever
+			ds_list_set(ret,1,14);
+		}else{
+			//Go for the goal!
+			ds_list_set(ret,0,3);
+			ds_list_set(ret,1,1);
+		}
+	}
+	return ret;
+}
