@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function solveMaze(){
+	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
+	
 	var level = level_manager.curr_level;
 	if(variable_instance_exists(level,"SolveNextItem")){
 		
@@ -58,6 +60,7 @@ function solveMazeDest(destx,desty){
 			var status = GetTileStatus(col,row);
 			if(status == tilestatus.blocked){
 				if(destx == col && desty = row){
+					
 					show_error("Destination is blocked!", true);
 				}
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile

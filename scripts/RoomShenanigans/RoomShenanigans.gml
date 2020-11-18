@@ -13,6 +13,7 @@ function specific_room_goto(current_room){
 }
 
 function next_room() {
+	global.isLevelLoaded = false;
 	var name = asset_get_index("obj_level_" + string(global.curr_level_idx + 1));
 	if name > -1 {
 		global.curr_level_idx++;
