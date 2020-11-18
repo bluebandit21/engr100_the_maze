@@ -99,7 +99,7 @@ function MoveWithTile(curr_player_x,curr_player_y,column, row){
 		case tiletypes.tele_blue:
 		case tiletypes.tele_red:
 		case tiletypes.tele_green:
-		
+			audio_play_sound(sound_teleporter, 0, false);
 			var ret = ds_list_create();
 			ds_list_set(ret,0,curr_tile.link_x);
 			ds_list_set(ret,1,curr_tile.link_y);
