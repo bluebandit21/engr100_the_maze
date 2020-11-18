@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.curr_level_idx == 1) {
+if (global.curr_level_idx == 1 && global.lock == 2) {
     draw_set_colour(c_white);
     draw_rectangle(150, 150, 3 * window_get_width() / 4, 3 * window_get_height() / 4, false);
 
