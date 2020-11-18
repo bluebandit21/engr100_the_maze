@@ -17,6 +17,32 @@ function solveMaze(){
 	}	
 }
 
+function giveMazeHint(){
+	while(instance_number(obj_maze_solver_circle) > 0){
+		instance_destroy(instance_find(obj_maze_solver_circle,0));
+	}
+	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
+	
+	var level = level_manager.curr_level;
+	if(variable_instance_exists(level,"SolveNextItem")){
+		
+		
+		var coords = level.SolveNextItem();
+		
+		var destx = ds_list_find_value(coords,0);
+		var desty = ds_list_find_value(coords,1);
+		
+		var tilex = destx*room_width / width;
+		var tiley = desty*room_height / height;
+			
+		//Create instance and scale appropriately
+		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_circle); //TODO -- set depth correctly!
+		var scalex = room_width / width / instance.sprite_width;
+		instance.image_xscale=scalex;
+		var scaley = room_height / height / instance.sprite_height;
+		instance.image_yscale=scaley;
+	}
+}
 
 function solveMazeDest(destx,desty){
 	//Grid stores "status" of tiles 
