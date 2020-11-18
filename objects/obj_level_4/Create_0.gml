@@ -42,3 +42,28 @@ ds_grid_set_region(map,13,12,13,12,tiletypes.gate_green);
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,height-2,width-2,tiletypes.finish);
 
+
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	if(GetTileStatus(13,12) == tilestatus.passable){
+		//Green gate is open, we don't care about the red gate. Go for the goal	
+		ds_list_set(ret,0,14);
+		ds_list_set(ret,1,14);
+	}else if(GetTileStatus(4,9) == tilestatus.passable){
+		//Need to hit green lever, but we can reach it.
+		ds_list_set(ret,0,5);
+		ds_list_set(ret,1,14);
+	}else{
+		//We need to hit the red lever so we can hit the green
+		ds_list_set(ret,0,3);
+		ds_list_set(ret,1,1);
+	}
+	return ret;
+}
+
+
+

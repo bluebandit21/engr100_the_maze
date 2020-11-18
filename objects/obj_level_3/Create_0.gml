@@ -34,3 +34,21 @@ ds_grid_set_region(map,13,3,13,3,tiletypes.gate_red);
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
+
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	if(GetTileStatus(11,11) == tilestatus.blocked){
+		//Gate is closed; we must open it with the lever (which opens other gate)
+		ds_list_set(ret,0,3); 
+		ds_list_set(ret,1,10);
+		
+	}else{
+		//Gate is open, we can go to the flag :D
+		ds_list_set(ret,0,14);
+		ds_list_set(ret,1,14);
+	}
+	return ret;
+}
