@@ -47,15 +47,28 @@ ds_grid_set(map,height-2,width-2,tiletypes.finish);
 //Solves next item to interact with based on global state. (Yikes)
 function SolveNextItem(){
 	var ret = ds_list_create();
-	if(GetTileStatus(3,4) == tilestatus.blocked){
-		//Gate is closed; we must open it with the lever		
-		ds_list_set(ret,0,6);
-		ds_list_set(ret,1,1);
-		
+	if(GetTileStatus(8,13) == tilestatus.blocked){
+		//Green is shut.
+		if(GetTileStatus(8,9) == tilestatus.blocked){
+			//Both are shut; open Red
+			ds_list_set(ret,0,5);
+			ds_list_set(ret,1,3);
+		}else{
+			//We can reach the green lever; hit it
+			ds_list_set(ret,0,9);
+			ds_list_set(ret,1,1);	
+		}	
 	}else{
-		//Gate is open, we can go to the flag :D
-		ds_list_set(ret,0,6);
-		ds_list_set(ret,1,6);
+		//Green is open
+		if(GetTileStatus(14,4) == tilestatus.blocked){
+			//"Open"-red is shut.
+			ds_list_set(ret,0,5);
+			ds_list_set(ret,1,3);
+		}else{
+			//Go for the goal!
+			ds_list_set(ret,0,14);
+			ds_list_set(ret,1,14);
+		}
 	}
 	return ret;
 }
