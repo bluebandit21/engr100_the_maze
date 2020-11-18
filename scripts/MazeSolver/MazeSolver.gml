@@ -23,9 +23,6 @@ function solveMaze(destx,desty){
 	var playerx = level_manager.player.playerx;
 	var playery = level_manager.player.playery;
 	if(playerx == destx && playery == desty){
-		//Special case -- our starting point *is* our goal.
-		//TODO: Return pair of one? none? Something.
-		//Draw circle at player pos
 		show_debug_message("Maze solver called with player starting at dest");
 		return;
 	}
@@ -45,11 +42,16 @@ function solveMaze(destx,desty){
 		for(var row = 0;row<height;row++){
 			var status = GetTileStatus(col,row);
 			if(status == tilestatus.blocked){
+				if(destx == col && desty = row){
+					show_error("Destination is blocked!", true);
+				}
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile
 			}
 		}
 	}
 	
+	
+	//TODO! Handle edge case where player is starting on a mover tile!
 	
 	ds_grid_set(grid,playerx,playery,1); //We always start exploring from where the player is.
 	var node = instance_create_layer(0,0,0,obj_node);
@@ -83,64 +85,94 @@ function solveMaze(destx,desty){
 			show_error("Unable to locate path to coord -- fatal",true);
 		}
 		
-		if(curr_x == destx && curr_y = desty){
-			break; //We're done, unwind
-		}
-		
 		//-------------------------Explore the tile--------------------------------------
 		
 		ds_grid_set(grid,curr_x,curr_y,2); //We've explored this tile now.
+
+
+		for(var index = 0;index<4;index+=1){
+			//Each of 4 cardinal directions.
+			if(index == 0){
+				//Left
+				var neighb_x = curr_x - 1;
+				var neighb_y = curr_y;
+				if(!(curr_x>=1)){
+					continue; //This would put us out of bounds.
+				}
+			}
+			if(index == 1){
+				//Right
+				var neighb_x = curr_x + 1;
+				var neighb_y = curr_y;
+				if(!(curr_x <= width - 2)){
+					continue; //This would put us out of bounds.
+				}
+			}
+			if(index == 2){
+				//Down
+				var neighb_x = curr_x;
+				var neighb_y = curr_y - 1;
+				if(!(curr_y>=1)){
+					continue; //This would put us out of bounds.
+				}
+			}
+			if(index == 3){
+				//Up
+				var neighb_x = curr_x;
+				var neighb_y = curr_y+1;
+				if(!(curr_y <= height - 2)){
+					continue; // This would put us out of bounds
+				}
+			}
 		
-		//TODO: Ice is going to royally heck with this. Fix me in the future.
-		// ("Neighboring" tiles aren't actually neighbors with slidy ice)
 		
-		// Set neigbors to explore and set parentx,y to current (we reached the neighbor from here)
-		if(curr_x >= 1){
-			var neighb_x = curr_x - 1;
-			var neighb_y = curr_y;
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
-				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
+				//We can reach the tile, but haven't yet (although it might still do magic)
 				var node = instance_create_layer(0,0,0,obj_node);
-				node.parent_x = curr_x; //We reched the neighbor from here
+				node.parent_x = curr_x; 
 				node.parent_y = curr_y;
-				ds_grid_set(nodes,neighb_x,neighb_y,node);
+				ds_grid_set(nodes,neighb_x,neighb_y,node); //We reached the neighbor from here
+					
+				var status = GetTileStatus(neighb_x,neighb_y);
+				
+				if(status == tilestatus.passable){
+					//We need to explore the tile, but it's a regular tile.
+					ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
+				}else if(status == tilestatus.interaction || status == tilestatus.blocked){
+					ds_grid_set(grid,neighb_x,neighb_y,2); //We can't actually move onto this tile
+				}else{ 
+					show_debug_message("Found mover tile at "+string(neighb_x) + ":"+string(neighb_y));
+					//This is a magic mover tile. 
+					// Mark it as already explored, and its destination as to-explore.
+					ds_grid_set(grid,neighb_x,neighb_y,2); //We can't actually stand on this tile
+					
+					var link = MoveWithTile(curr_x,curr_y,neighb_x,neighb_y); // Dest is where it takes us.
+					var linkx = ds_list_find_value(link,0);
+					var linky = ds_list_find_value(link,1);
+					show_debug_message("Move linked to "+string(linkx) + ":" + string(linky));
+					
+					
+					
+					if((ds_grid_get(grid,linkx,linky) == 0) ||
+					(linkx == neighb_x && linky == neighb_y)){
+						//If it's unvisited *or* we end up moving to the same mover tile.
+						//Mark the destination as something to explore.
+						var node = instance_create_layer(0,0,0,obj_node);
+						if((linkx == neighb_x) && (linky == neighb_y)){
+							node.parent_x = curr_x; //Mover can't link to itself
+							node.parent_y = curr_y;
+						}else{
+							node.parent_x = neighb_x; 
+							node.parent_y = neighb_y;
+						}
+						ds_grid_set(nodes,linkx,linky,node); //We reached the neighbor from here
+						ds_grid_set(grid,linkx,linky,1); //We want to explore it
+					}
+				}
 			}	
 		}
-		if(curr_x <= width - 2){
-			var neighb_x = curr_x + 1;
-			var neighb_y = curr_y;
-			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
-				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
-				var node = instance_create_layer(0,0,0,obj_node);
-				node.parent_x = curr_x; //We reched the neighbor from here
-				node.parent_y = curr_y;
-				ds_grid_set(nodes,neighb_x,neighb_y,node);
-			}
-			
-		}
-		if(curr_y >= 1){
-			var neighb_x = curr_x;
-			var neighb_y = curr_y - 1;
-			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
-				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
-				var node = instance_create_layer(0,0,0,obj_node);
-				node.parent_x = curr_x; //We reched the neighbor from here
-				node.parent_y = curr_y;
-				ds_grid_set(nodes,neighb_x,neighb_y,node);
-			}	
-		}
-		
-		if(curr_y <= height - 2){
-			var neighb_x = curr_x;
-			var neighb_y = curr_y+1;
-			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
-				ds_grid_set(grid,neighb_x,neighb_y,1); //Mark it as to-explore
-				var node = instance_create_layer(0,0,0,obj_node);
-				node.parent_x = curr_x; //We reached the neighbor from here
-				node.parent_y = curr_y;
-				ds_grid_set(nodes,neighb_x,neighb_y,node);
-			}
-			
+		if(ds_grid_get(grid,destx,desty)!=0){
+			break; //We've found some path; unwind.
 		}
 	}
 	
@@ -182,12 +214,10 @@ function solveMaze(destx,desty){
 		// tan(theta) equals delta x / delta y, since arrow points straight up by default.
 		// ergo, theta equal atan((parentx - currx) / (parenty - curry))
 		var angle = arctan((parentx - curr_x + 0.0) / (parenty - curr_y + 0.0));
-		if(abs(angle) < 1){
-			if(parenty < curr_y){
-				//Positive zero = negative zero; make the arrow be flipped the right way in this case.
-				angle = pi;
-			}
+		if(parenty < curr_y){
+			angle = angle+pi; //Rotate by 180
 		}
+		
 		angle *= 360 / 2 / pi; ///Convert rads to degrees
 		instance.image_angle = angle;
 		

@@ -87,7 +87,7 @@ function InteractWithTile(column,row){
 
 function MoveWithTile(curr_player_x,curr_player_y,column, row){
 	
-	show_debug_message("Moving with tile at row: " + string(row) + " and col: "+ string(column));
+	//show_debug_message("Moving with tile at row: " + string(row) + " and col: "+ string(column));
 	
 	var level = level_manager.curr_level;
 	var tile = ds_grid_get(level.map,column,row);
