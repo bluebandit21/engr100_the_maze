@@ -30,6 +30,11 @@ function PlayerMovementUp(char){
 				case tilestatus.interaction:
 					InteractWithTile(playerx,playery-1);
 					break;
+				case tilestatus.mover:				
+					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx,playery-1);
+					level_manager.player.playerx = ds_list_find_value(ret,0);
+					level_manager.player.playery = ds_list_find_value(ret,1);
+					break;
 		}
 		cooldown = global.adjust_speed;
 		if(global.maze_toggled)
@@ -52,6 +57,11 @@ function PlayerMovementDown(char){
 				break;
 			case tilestatus.interaction:
 				InteractWithTile(playerx,playery+1);
+				break;
+			case tilestatus.mover:			
+				var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx,playery+1);
+				level_manager.player.playerx = ds_list_find_value(ret,0);
+				level_manager.player.playery = ds_list_find_value(ret,1);
 				break;
 			}
 			cooldown = global.adjust_speed;
@@ -79,6 +89,11 @@ function PlayerMovementLeft(char){
 				case tilestatus.interaction:
 					InteractWithTile( playerx-1, playery);
 					break;
+				case tilestatus.mover:
+					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx-1,playery);		
+					level_manager.player.playerx = ds_list_find_value(ret,0);
+					level_manager.player.playery = ds_list_find_value(ret,1);
+					break;
 			}
 			cooldown = global.adjust_speed
 			if(global.maze_toggled)
@@ -103,6 +118,11 @@ function PlayerMovementRight(char){
 					break;
 				case tilestatus.interaction:
 					InteractWithTile(playerx + 1,playery);
+					break;
+				case tilestatus.mover:
+					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx+1,playery);
+					level_manager.player.playerx = ds_list_find_value(ret,0);
+					level_manager.player.playery = ds_list_find_value(ret,1);
 					break;
 			}
 			cooldown = global.adjust_speed;
