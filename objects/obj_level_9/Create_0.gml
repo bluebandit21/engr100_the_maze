@@ -15,3 +15,7 @@ ds_grid_set_region(map, 3,2,3,5, tiletypes.ice);
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
+
+if (global.lock == 10) {
+	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
+}
