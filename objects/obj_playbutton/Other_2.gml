@@ -1,5 +1,5 @@
 global.lock = 2;
-global.adjust_speed = 8;
+global.adjust_speed = 12;
 
 global.is_enabled = false;
 global.color_is_enabled = false;
