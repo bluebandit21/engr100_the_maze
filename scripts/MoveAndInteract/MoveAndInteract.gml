@@ -69,12 +69,15 @@ function InteractWithTile(column,row){
 			next_room();
 			break;
 		case tiletypes.lever_red:
+			curr_tile.flipped = !curr_tile.flipped;
 			RedLeverPull();
 			break;
 		case tiletypes.lever_green:
+			curr_tile.flipped = !curr_tile.flipped;
 			GreenLeverPull();
 			break;
 		case tiletypes.lever_blue:
+			curr_tile.flipped = !curr_tile.flipped;
 			BlueLeverPull();
 			break;
 		case tiletypes.tele_blue:
