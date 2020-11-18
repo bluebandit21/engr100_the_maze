@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_maze_toggle_off",
+    "path": "sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -18,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":63,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_global_async","path":"objects/obj_global_async/obj_global_async.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_maze_toggle","path":"objects/obj_maze_toggle/obj_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "home screen",
-    "path": "folders/Objects/home screen.yy",
+    "name": "pause screen",
+    "path": "folders/Objects/pause screen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_global_async",
+  "name": "obj_maze_toggle",
   "tags": [],
   "resourceType": "GMObject",
 }

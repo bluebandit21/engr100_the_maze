@@ -1,2 +1,14 @@
-/// @description Insert description here
-// You can write your code in this editor
+if position_meeting(mouse_x,mouse_y,obj_maze_toggle) && !global.maze_toggled{
+	object_set_sprite(obj_maze_toggle,spr_maze_toggle_on);
+	instance_destroy();
+	instance_create_depth(40,400,-16000,obj_maze_toggle);
+	global.maze_toggled = true;
+}
+else if position_meeting(mouse_x,mouse_y,obj_maze_toggle) && global.maze_toggled{
+	
+	object_set_sprite(obj_maze_toggle,spr_maze_toggle_off);
+	instance_destroy();
+	instance_create_depth(40,400,-16000,obj_maze_toggle);
+	global.maze_toggled = false;
+	removeArrows();
+}

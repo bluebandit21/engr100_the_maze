@@ -5,3 +5,4 @@ var back_obj = instance_create_depth(40, 40, -16000, obj_optiontohome);
 back_obj.image_xscale = 0.15;
 back_obj.image_yscale = 0.15;
 var sound_toggle_obj = instance_create_depth(40, 200, -16000, obj_toggle_sound);
+var sound_toggle_obj = instance_create_depth(40, 400, -16000, obj_maze_toggle);
