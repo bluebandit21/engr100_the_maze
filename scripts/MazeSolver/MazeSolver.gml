@@ -1,7 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-function solveMaze(destx,desty){
+function solveMaze(){
+	var level = level_manager.curr_level;
+	if(variable_instance_exists(level,"SolveNextItem")){
+		
+		var coords = level.SolveNextItem();
+		
+		var destx = ds_list_find_value(coords,0);
+		var desty = ds_list_find_value(coords,1);
+		solveMazeDest(destx,desty);
+	}else{
+		show_debug_message("Maze solving function not found for currently loaded level");
+	}	
+}
+
+
+function solveMazeDest(destx,desty){
 	//Grid stores "status" of tiles 
 	// 0 -- unvisited
 	// 1 -- next-to-visit (in queue)
@@ -197,7 +212,7 @@ function solveMaze(destx,desty){
 		if(needToUnsetStart){
 			//Handle edge case (explained in above comment)
 			show_debug_message("Handling teleport edge case (unsetting start)");
-			needToUnsetStart = false;
+			needToUnsetStart = false; //No need to do this twice.
 			ds_grid_set(grid,playerx,playery,0); //"Unvisit" first node
 		}
 	}

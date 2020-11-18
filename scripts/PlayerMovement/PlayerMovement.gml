@@ -38,10 +38,7 @@ function PlayerMovementUp(char){
 		}
 		cooldown = global.adjust_speed;
 		if(global.maze_toggled)
-			solveMaze(1,1);
-			//TODO -- should be run once after every step. Refactor to make less messy?
-			//TODO -- should only be run if maze solving toggled on.
-			//TODO make target be correctly set (i.e. not always (1,1))
+			solveMaze();
 		}
 	}
 }
@@ -66,10 +63,7 @@ function PlayerMovementDown(char){
 			}
 			cooldown = global.adjust_speed;
 			if(global.maze_toggled)
-				solveMaze(1,1);
-			//TODO -- should be run once after every step. Refactor to make less messy?
-			//TODO -- should only be run if maze solving toggled on.
-			//TODO make target be correctly set (i.e. not always (1,1))
+				solveMaze();
 			}
 			
 		}
@@ -97,10 +91,7 @@ function PlayerMovementLeft(char){
 			}
 			cooldown = global.adjust_speed
 			if(global.maze_toggled)
-				solveMaze(1,1);
-			//TODO -- should be run once after every step. Refactor to make less messy?
-			//TODO -- should only be run if maze solving toggled on.
-			//TODO make target be correctly set (i.e. not always (1,1))
+				solveMaze();
 		}
 			
 	}
@@ -127,10 +118,7 @@ function PlayerMovementRight(char){
 			}
 			cooldown = global.adjust_speed;
 			if(global.maze_toggled)
-				solveMaze(1,1);
-			//TODO -- should be run once after every step. Refactor to make less messy?
-			//TODO -- should only be run if maze solving toggled on.
-			//TODO make target be correctly set (i.e. not always (1,1))
+				solveMaze();
 		}
 		
 	}
