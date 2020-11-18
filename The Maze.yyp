@@ -67,6 +67,7 @@
     {"id":{"name":"spr_gate_color_green","path":"sprites/spr_gate_color_green/spr_gate_color_green.yy",},"order":15,},
     {"id":{"name":"spr_color_disabled","path":"sprites/spr_color_disabled/spr_color_disabled.yy",},"order":4,},
     {"id":{"name":"spr_mazepreview","path":"sprites/spr_mazepreview/spr_mazepreview.yy",},"order":3,},
+    {"id":{"name":"sound_bgm","path":"sounds/sound_bgm/sound_bgm.yy",},"order":0,},
     {"id":{"name":"spr_lock","path":"sprites/spr_lock/spr_lock.yy",},"order":0,},
     {"id":{"name":"obj_level_8","path":"objects/obj_level_8/obj_level_8.yy",},"order":7,},
     {"id":{"name":"obj_levelselecttext","path":"objects/obj_levelselecttext/obj_levelselecttext.yy",},"order":2,},
