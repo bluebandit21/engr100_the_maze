@@ -33,6 +33,9 @@ ds_grid_set(map,height-2,width-2,tiletypes.finish);
 ds_grid_set(map,14,3,tiletypes.tele_blue); //First tele -- maps to (2,2)
 ds_grid_set(map,1,13,tiletypes.tele_blue);//Second tele -- maps to (3,1)
 
+if (global.lock == 7) {
+	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
+}
 
 //List of dest coords for teleporters.
 // The order goes in terms of the first pair corresponding to the top-most teleporter of any type, with 
