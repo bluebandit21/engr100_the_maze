@@ -39,6 +39,7 @@ ds_grid_set(map,7,9,tiletypes.lever_green);
 ds_grid_set(map,13,7,tiletypes.gate_green);
 ds_grid_set(map,3,3,tiletypes.lever_red);
 ds_grid_set(map,2,14,tiletypes.gate_red);
+ds_grid_set(map,11,12,tiletypes.gate_red_open);
 ds_grid_set(map,7,3,tiletypes.lever_blue);
 ds_grid_set(map,9,9,tiletypes.icygate_blue_open);
 
