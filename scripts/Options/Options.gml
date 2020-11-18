@@ -22,3 +22,9 @@ function colorBlindgates(){
 		object_set_sprite(object,sprite);
 	}
 }
+function checkSpeed(speed){
+	if(global.adjust_speed != speed)
+		image_index = 0;
+	else
+		image_index = 1;
+}
