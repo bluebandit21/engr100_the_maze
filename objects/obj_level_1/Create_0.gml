@@ -57,4 +57,6 @@ ds_grid_set_region(map,2,14,2,14,tiletypes.wall);
 ds_grid_set_region(map,7,14,11,14,tiletypes.wall);
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
-instance_create_depth(0, 0, -16000, obj_tutorialscreen);
+if (global.lock == 2) {
+	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
+}
