@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function solveMaze(){
+	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
+	
 	var level = level_manager.curr_level;
 	if(variable_instance_exists(level,"SolveNextItem")){
 		
@@ -58,7 +60,9 @@ function solveMazeDest(destx,desty){
 			var status = GetTileStatus(col,row);
 			if(status == tilestatus.blocked){
 				if(destx == col && desty = row){
-					show_error("Destination is blocked!", true);
+					
+					//show_error("Destination is blocked!", true);
+					return; //TODO: DISABLE!
 				}
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile
 			}
@@ -117,7 +121,8 @@ function solveMazeDest(destx,desty){
 		show_debug_message("Exploring node "+string(curr_x) + ":" + string(curr_y));
 		
 		if(curr_x == -1 or curr_y == -1){
-			show_error("Unable to locate path to coord -- fatal",true);
+			//show_error("Unable to locate path to coord -- fatal",true);
+			return; //TODO: DISABLE!
 		}
 		
 		//-------------------------Explore the tile--------------------------------------

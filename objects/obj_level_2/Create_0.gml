@@ -27,7 +27,6 @@ function SolveNextItem(){
 		//Gate is closed; we must open it with the lever		
 		ds_list_set(ret,0,6);
 		ds_list_set(ret,1,1);
-		
 	}else{
 		//Gate is open, we can go to the flag :D
 		ds_list_set(ret,0,6);

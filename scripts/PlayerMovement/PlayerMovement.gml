@@ -40,7 +40,7 @@ function PlayerMovementUp(char){
 					level_manager.player.playerx = ds_list_find_value(ret,0);
 					level_manager.player.playery = ds_list_find_value(ret,1);
 					break;
-		}
+				}
 		cooldown = global.adjust_speed;
 		if(global.maze_toggled)
 			solveMaze();
