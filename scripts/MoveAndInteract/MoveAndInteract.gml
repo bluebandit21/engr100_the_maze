@@ -40,6 +40,12 @@ function GetTileStatus(column,row){
 				return tilestatus.passable;
 			}
 			return tilestatus.blocked;
+		case tiletypes.icygate_blue:
+		case tiletypes.icygate_blue_open:
+			if(curr_tile.open){
+				return tilestatus.interaction;
+			}
+			return tilestatus.blocked;
 		default:
 			show_error("Unknown tiletype: "+string(tile),true);
 	}
@@ -77,6 +83,9 @@ function InteractWithTile(column,row){
 			level_manager.player.playerx = curr_tile.link_x;
 			level_manager.player.playery = curr_tile.link_y;
 			break;
+		case tiletypes.icygate_blue:
+		case tiletypes.icygate_blue_open:
+		//If we're interacting with either, the gate is open and we're free to slide.
 		case tiletypes.ice:
 		
 			show_debug_message("Sliding on ice tile at row: " + string(row) + " and col: " + string(column));

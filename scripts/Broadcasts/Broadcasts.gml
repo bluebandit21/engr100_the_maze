@@ -39,8 +39,9 @@ function BlueLeverPull(){
 		for(var col=0; col<level_width;col++){
 			tile = ds_grid_get(level_manager.tiles,row,col);
 			type = ds_grid_get(level_manager.curr_level.map,row,col);
-			if(type == tiletypes.gate_blue || type == tiletypes.gate_blue_open){
-				tile.open = !tile.open;
+			if(type == tiletypes.gate_blue || type == tiletypes.gate_blue_open
+				|| type == tiletypes.icygate_blue || type == tiletypes.icygate_blue_open){
+				tile.open = !tile.open; 
 			}
 		}
 	}
