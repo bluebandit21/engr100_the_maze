@@ -3,3 +3,4 @@
 global.paused = false;
 instance_destroy(obj_optiontohome);
 instance_destroy(obj_toggle_sound);
+instance_destroy(obj_maze_toggle);

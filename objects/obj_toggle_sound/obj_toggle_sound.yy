@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "pause screen",
+    "path": "folders/Objects/pause screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_toggle_sound",

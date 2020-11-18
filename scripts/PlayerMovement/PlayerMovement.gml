@@ -1,5 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function removeArrows(){
+	while(instance_number(obj_maze_solver_arrow) > 0){
+			instance_destroy(instance_find(obj_maze_solver_arrow,0));
+		}
+}
+
 function toggleMaze(){
 	toggled = keyboard_check_pressed(ord(global.array_of_controls[5]));
 	if toggled && global.maze_on {
@@ -12,11 +18,10 @@ function toggleMaze(){
 		global.maze_toggled = false;
 		global.maze_on = true;
 		toggled = false;
-		while(instance_number(obj_maze_solver_arrow) > 0){
-			instance_destroy(instance_find(obj_maze_solver_arrow,0));
-		}
+		removeArrows();
 	}
 }
+
 function PlayerMovementUp(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_up)) && (cooldown < 1)){
