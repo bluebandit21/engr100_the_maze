@@ -125,6 +125,7 @@
     {"id":{"name":"spr_level_11","path":"sprites/spr_level_11/spr_level_11.yy",},"order":11,},
     {"id":{"name":"obj_tile_gate_red","path":"objects/obj_tile_gate_red/obj_tile_gate_red.yy",},"order":4,},
     {"id":{"name":"obj_optiontocontrol","path":"objects/obj_optiontocontrol/obj_optiontocontrol.yy",},"order":2,},
+    {"id":{"name":"sound_ice","path":"sounds/sound_ice/sound_ice.yy",},"order":3,},
     {"id":{"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},"order":2,},
     {"id":{"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},"order":2,},
     {"id":{"name":"spr_color_enabled","path":"sprites/spr_color_enabled/spr_color_enabled.yy",},"order":3,},

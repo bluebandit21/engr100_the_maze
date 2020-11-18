@@ -33,6 +33,9 @@ function PlayerMovementUp(char){
 				case tiletypes.tele_red:
 			        audio_play_sound(sound_teleporter, 0, false);
 			        break;
+				case tiletypes.ice:
+					audio_play_sound(sound_ice, 0, false);
+			        break;
 			}
 			switch(status){
 				case tilestatus.blocked:
@@ -65,6 +68,9 @@ function PlayerMovementDown(char){
 				case tiletypes.tele_green:
 				case tiletypes.tele_red:
 			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+				case tiletypes.ice:
+					audio_play_sound(sound_ice, 0, false);
 			        break;
 			}
 			switch(status){
@@ -102,6 +108,9 @@ function PlayerMovementLeft(char){
 				case tiletypes.tele_red:
 			        audio_play_sound(sound_teleporter, 0, false);
 			        break;
+				case tiletypes.ice:
+					audio_play_sound(sound_ice, 0, false);
+			        break;
 			}
 			switch(status){
 				case tilestatus.blocked:
@@ -136,6 +145,9 @@ function PlayerMovementRight(char){
 				case tiletypes.tele_green:
 				case tiletypes.tele_red:
 			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+				case tiletypes.ice:
+					audio_play_sound(sound_ice, 0, false);
 			        break;
 			}
 			switch(status){
