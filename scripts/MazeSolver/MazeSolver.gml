@@ -32,8 +32,10 @@ function giveMazeHint(){
 		var destx = ds_list_find_value(coords,0);
 		var desty = ds_list_find_value(coords,1);
 		
+		var width = ds_grid_width(level_manager.curr_level.map);
+		var height =  ds_grid_height(level_manager.curr_level.map);
 		var tilex = destx*room_width / width;
-		var tiley = desty*room_height / height;
+		var tiley = desty*room_height /height;
 			
 		//Create instance and scale appropriately
 		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_circle); //TODO -- set depth correctly!
@@ -41,6 +43,7 @@ function giveMazeHint(){
 		instance.image_xscale=scalex;
 		var scaley = room_height / height / instance.sprite_height;
 		instance.image_yscale=scaley;
+		
 	}
 }
 
