@@ -18,7 +18,8 @@ enum tiletypes{
 	gate_green_open, //gate_green, but starts open instead of shut
 	tele_blue,
 	tele_red,
-	tele_green
+	tele_green,
+	ice
 }
 
 function GetTileObjectFromTileType(type){
@@ -48,6 +49,8 @@ function GetTileObjectFromTileType(type){
 			return obj_tile_gate_green;
 		case tiletypes.tele_blue:
 			return obj_tile_tele_blue;
+		case tiletypes.ice:
+			return obj_tile_ice;
 		case tiletypes.tele_green: //Unimplemented
 		case tiletypes.tele_red: //Unimplemented
 		default:

@@ -27,6 +27,7 @@ function GetTileStatus(row,column){
 		case tiletypes.tele_blue:
 		case tiletypes.tele_green:
 		case tiletypes.tele_red:
+		case tiletypes.ice:
 			return tilestatus.interaction;
 		case tiletypes.gate_red:
 		case tiletypes.gate_red_open:
@@ -71,6 +72,17 @@ function InteractWithTile(row,column){
 		case tiletypes.tele_green:
 			level_manager.player.playerx = curr_tile.link_x;
 			level_manager.player.playery = curr_tile.link_y;
+			break;
+		case tiletypes.ice:
+			var curr_player_x = level_manager.player.playerx;
+			var curr_player_y = level_manager.player.playery;
+			
+			level_manager.player.playerx = column;
+			level_manager.player.playery = row;
+			
+			
+		
+		default: 
 			break;
 	
 			
