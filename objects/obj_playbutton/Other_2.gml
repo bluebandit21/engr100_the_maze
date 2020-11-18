@@ -6,6 +6,7 @@ global.color_is_enabled = false;
 global.maze_toggled = false;
 global.maze_on = true;
 global.sound_on = true;
+global.hint_toggled = false;
 
 global.array_of_controls[1] = "W";
 global.array_of_controls[2] = "S";
