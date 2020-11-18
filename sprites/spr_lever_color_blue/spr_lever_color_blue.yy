@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 157,
-  "height": 172,
+  "width": 200,
+  "height": 219,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"00620d87-8a5d-4165-a759-1a0aecc9fd58","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00620d87-8a5d-4165-a759-1a0aecc9fd58","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":{"name":"c11d1768-deed-4232-9ba5-5f4d9afd0e62","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_lever_color_blue","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"00620d87-8a5d-4165-a759-1a0aecc9fd58","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"26faee92-ab0c-4c3d-8cf9-4ccd0bde7530","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"26faee92-ab0c-4c3d-8cf9-4ccd0bde7530","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":{"name":"c11d1768-deed-4232-9ba5-5f4d9afd0e62","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_lever_color_blue","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"26faee92-ab0c-4c3d-8cf9-4ccd0bde7530","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d3a8288e-f678-40cc-b788-748e9301c0da","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d3a8288e-f678-40cc-b788-748e9301c0da","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"LayerId":{"name":"c11d1768-deed-4232-9ba5-5f4d9afd0e62","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_lever_color_blue","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","name":"d3a8288e-f678-40cc-b788-748e9301c0da","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_lever_color_blue","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},
@@ -36,12 +39,13 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"07bb250b-2796-404f-bce9-c8f59e34ca76","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00620d87-8a5d-4165-a759-1a0aecc9fd58","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e7b6719-d8c1-4ab8-b2ae-02f29bfaa1ff","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"26faee92-ab0c-4c3d-8cf9-4ccd0bde7530","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"02410fb6-cdac-467f-98d6-9aec9dbfd635","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3a8288e-f678-40cc-b788-748e9301c0da","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
