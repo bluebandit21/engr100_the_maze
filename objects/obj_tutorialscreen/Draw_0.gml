@@ -79,7 +79,7 @@ if (global.curr_level_idx == 9) {
 }
 
 if (global.curr_level_idx == 11) {
-    draw_set_color(c_white);
+	draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
     draw_set_color(c_black);
@@ -88,6 +88,8 @@ if (global.curr_level_idx == 11) {
     draw_text(85, 275, "Hit an ice tile");
     draw_sprite(spr_ice, 0, 350, 265);
     draw_text(430, 275, "and you will slide across the ice,");
-    draw_text(85, 350, "unable to move until the icy tiles end!");
-    draw_text(85, 450, "Press Enter to dismiss");
+    draw_text(85, 350, "stopping when you hit the closed gate");
+	draw_sprite(spr_icygate_blue, 0, 825, 340);
+	draw_text(85, 425, "If the gate is open, you'll slide through without stopping!");
+    draw_text(85, 525, "Press Enter to dismiss");
 }
