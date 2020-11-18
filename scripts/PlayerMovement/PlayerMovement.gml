@@ -26,6 +26,14 @@ function PlayerMovementUp(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_up)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx, playery-1);
+			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery-1);
+			switch(type){
+				case tiletypes.tele_blue:
+				case tiletypes.tele_green:
+				case tiletypes.tele_red:
+			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+			}
 			switch(status){
 				case tilestatus.blocked:
 					break;
@@ -51,6 +59,14 @@ function PlayerMovementDown(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_down)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx,playery+1);
+			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery+1);
+			switch(type){
+				case tiletypes.tele_blue:
+				case tiletypes.tele_green:
+				case tiletypes.tele_red:
+			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+			}
 			switch(status){
 			case tilestatus.blocked:
 				break;
@@ -79,6 +95,14 @@ function PlayerMovementLeft(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_left)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx-1,playery);
+			var type = ds_grid_get(level_manager.curr_level.map,playerx-1,playery);
+			switch(type){
+				case tiletypes.tele_blue:
+				case tiletypes.tele_green:
+				case tiletypes.tele_red:
+			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+			}
 			switch(status){
 				case tilestatus.blocked:
 					break;
@@ -106,6 +130,14 @@ function PlayerMovementRight(char){
 	with(obj_player){
 		if((keyboard_check(ord(char)) || keyboard_check(vk_right)) && (cooldown < 1)){
 			var status=GetTileStatus(playerx+1,playery);
+			var type = ds_grid_get(level_manager.curr_level.map,playerx+1,playery);
+			switch(type){
+				case tiletypes.tele_blue:
+				case tiletypes.tele_green:
+				case tiletypes.tele_red:
+			        audio_play_sound(sound_teleporter, 0, false);
+			        break;
+			}
 			switch(status){
 				case tilestatus.blocked:
 					break;
