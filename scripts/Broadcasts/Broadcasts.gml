@@ -1,7 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function RedLeverPull(){
-	show_debug_message("Red lever pullled");
+	audio_play_sound(sound_lever, 0, false);
+	show_debug_message("Red lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
 	var level_height = ds_grid_height(level_manager.curr_level.map);
 
@@ -16,7 +17,8 @@ function RedLeverPull(){
 	}
 }
 function GreenLeverPull(){
-	show_debug_message("Green lever pullled");
+	audio_play_sound(sound_lever, 0, false);
+	show_debug_message("Green lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
 	var level_height = ds_grid_height(level_manager.curr_level.map);
 
@@ -31,7 +33,8 @@ function GreenLeverPull(){
 	}
 }
 function BlueLeverPull(){
-	show_debug_message("Blue lever pullled");
+	audio_play_sound(sound_lever, 0, false);
+	show_debug_message("Blue lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
 	var level_height = ds_grid_height(level_manager.curr_level.map);
 
