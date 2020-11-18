@@ -62,7 +62,8 @@ function InteractWithTile(column,row){
 	var curr_tile =  ds_grid_get(level_manager.tiles,column,row);
 	switch(tile){
 		case tiletypes.finish:
-			global.lock = global.curr_level_idx + 2;
+			if (!global.is_enabled)
+				global.lock = global.curr_level_idx + 2;
 			next_room();
 			break;
 		case tiletypes.lever_red:
