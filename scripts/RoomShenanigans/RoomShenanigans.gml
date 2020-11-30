@@ -17,6 +17,7 @@ function next_room() {
 	var name = asset_get_index("obj_level_" + string(global.curr_level_idx + 1));
 	if name > -1 {
 		global.curr_level_idx++;
+		global.maze_toggled = false;
 		room_goto(rm_level);
 	}
 	else
