@@ -6,4 +6,4 @@ if (global.lock > global.curr_level_idx) {
 			audio_play_sound(sound_bgm,1,true);
 	}
 }
-maze_sprite(1);
+
