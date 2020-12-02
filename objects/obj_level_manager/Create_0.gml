@@ -8,3 +8,4 @@ curr_level=0;
 global.paused = false;
 
 global.isLevelLoaded = false; //Set to true *only* when rooms are finished loading.
+

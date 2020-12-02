@@ -62,6 +62,7 @@
     {"id":{"name":"obj_tile_icygate_blue","path":"objects/obj_tile_icygate_blue/obj_tile_icygate_blue.yy",},"order":12,},
     {"id":{"name":"obj_level_8","path":"objects/obj_level_8/obj_level_8.yy",},"order":10,},
     {"id":{"name":"LevelLoader","path":"scripts/LevelLoader/LevelLoader.yy",},"order":0,},
+    {"id":{"name":"obj_initialize","path":"objects/obj_initialize/obj_initialize.yy",},"order":35,},
     {"id":{"name":"obj_level_12","path":"objects/obj_level_12/obj_level_12.yy",},"order":6,},
     {"id":{"name":"spr_lever_red","path":"sprites/spr_lever_red/spr_lever_red.yy",},"order":6,},
     {"id":{"name":"spr_lever_color_blue","path":"sprites/spr_lever_color_blue/spr_lever_color_blue.yy",},"order":12,},

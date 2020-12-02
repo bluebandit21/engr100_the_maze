@@ -7,7 +7,7 @@ function removeArrows(){
 }
 
 function toggleMaze(){
-	toggled = keyboard_check_pressed(ord(global.array_of_controls[5]));
+	toggled = keyboard_check_pressed(global.array_of_controls[5]);
 	if toggled && global.maze_on {
 		global.maze_toggled = true;
 		global.maze_on = false;
@@ -24,7 +24,7 @@ function toggleMaze(){
 
 function PlayerMovementUp(char){
 	with(obj_player){
-		if((keyboard_check(ord(char)) || keyboard_check(vk_up)) && (cooldown < 1)){
+		if(keyboard_check(char) && cooldown < 1){
 			var status=GetTileStatus(playerx, playery-1);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery-1);
 			switch(type){
@@ -62,7 +62,7 @@ function PlayerMovementUp(char){
 }
 function PlayerMovementDown(char){
 	with(obj_player){
-		if((keyboard_check(ord(char)) || keyboard_check(vk_down)) && (cooldown < 1)){
+		if(keyboard_check(char) && cooldown < 1){
 			var status=GetTileStatus(playerx,playery+1);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery+1);
 			switch(type){
@@ -103,7 +103,7 @@ function PlayerMovementDown(char){
 
 function PlayerMovementLeft(char){
 	with(obj_player){
-		if((keyboard_check(ord(char)) || keyboard_check(vk_left)) && (cooldown < 1)){
+		if(keyboard_check(char) && cooldown < 1){
 			var status=GetTileStatus(playerx-1,playery);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx-1,playery);
 			switch(type){
@@ -143,7 +143,7 @@ function PlayerMovementLeft(char){
 
 function PlayerMovementRight(char){
 	with(obj_player){
-		if((keyboard_check(ord(char)) || keyboard_check(vk_right)) && (cooldown < 1)){
+		if(keyboard_check(char) && cooldown < 1){
 			var status=GetTileStatus(playerx+1,playery);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx+1,playery);
 			switch(type){
