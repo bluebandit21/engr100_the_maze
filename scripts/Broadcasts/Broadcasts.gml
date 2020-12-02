@@ -1,6 +1,7 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// Functions that handle global state change 
+// (i.e. interactions whose effects should somehow be broadcast to specific tiles)
 function RedLeverPull(){
+	// Do red lever pull event -- plays a sound and toggles state of all red gates.
 	audio_play_sound(sound_lever, 0, false);
 	show_debug_message("Red lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
@@ -17,6 +18,7 @@ function RedLeverPull(){
 	}
 }
 function GreenLeverPull(){
+	// Do green lever pull event -- plays a sound and toggles state of all green gates.
 	audio_play_sound(sound_lever, 0, false);
 	show_debug_message("Green lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
@@ -33,6 +35,7 @@ function GreenLeverPull(){
 	}
 }
 function BlueLeverPull(){
+	// Do blue lever pull event -- plays a sound and toggles state of all blue gates.
 	audio_play_sound(sound_lever, 0, false);
 	show_debug_message("Blue lever pulled");
 	var level_width = ds_grid_width(level_manager.curr_level.map);
