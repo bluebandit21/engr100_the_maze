@@ -34,14 +34,14 @@ function giveMazeHint(){
 		
 		var width = ds_grid_width(level_manager.curr_level.map);
 		var height =  ds_grid_height(level_manager.curr_level.map);
-		var tilex = destx*room_width / width;
-		var tiley = desty*room_height /height;
+		var tilex = destx*global.mazeWidth / width + global.mazeWidthOffset;
+		var tiley = desty*global.mazeHeight /height + global.mazeHeightOffset;
 			
 		//Create instance and scale appropriately
 		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_circle); //TODO -- set depth correctly!
-		var scalex = room_width / width / instance.sprite_width;
+		var scalex = global.mazeWidth / width / instance.sprite_width;
 		instance.image_xscale=scalex;
-		var scaley = room_height / height / instance.sprite_height;
+		var scaley = global.mazeHeight / height / instance.sprite_height;
 		instance.image_yscale=scaley;
 		
 	}
@@ -261,7 +261,6 @@ function solveMazeDest(destx,desty){
 	var curr_x = destx;
 	var curr_y = desty;
 	
-	//Draw circle at destx,desty
 	show_debug_message("Beginning back-solve of maze.");
 	while(!((curr_x == playerx) and (curr_y == playery))){
 		//------------Find parent coords
@@ -273,14 +272,14 @@ function solveMazeDest(destx,desty){
 		//--------------Draw arrow from parentx,parenty to curr_x,curr_y 
 		
 		//Find current tilex, tiley (scaled to room)
-		var tilex = parentx*room_width / width;
-		var tiley = parenty*room_height / height;
+		var tilex = parentx*global.mazeWidth / width + global.mazeWidthOffset;
+		var tiley = parenty*global.mazeHeight / height + global.mazeHeightOffset;
 			
 		//Create instance and scale appropriately
 		var instance = instance_create_depth(tilex,tiley,-10,obj_maze_solver_arrow); //TODO -- set depth correctly!
-		var scalex = room_width / width / instance.sprite_width;
+		var scalex = global.mazeWidth / width / instance.sprite_width;
 		instance.image_xscale=scalex;
-		var scaley = room_height / height / instance.sprite_height;
+		var scaley = global.mazeHeight / height / instance.sprite_height;
 		instance.image_yscale=scaley;
 		
 		instance.x+= instance.sprite_width / 2;

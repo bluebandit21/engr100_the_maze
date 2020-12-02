@@ -38,8 +38,8 @@ function LoadLevel(level){
 			
 			var tileobj = GetTileObjectFromTileType(tiletype);
 			
-			var tilex = col*room_width / level_width;
-			var tiley = row*room_height / level_height;
+			var tilex = col / level_width * global.mazeWidth + global.mazeWidthOffset;
+			var tiley = row / level_height * global.mazeHeight + global.mazeHeightOffset;
 			
 			var instance = instance_create_depth(tilex,tiley,0,tileobj); //TODO -- set depth correctly!
 			
@@ -48,9 +48,9 @@ function LoadLevel(level){
 				//Player starts at depth -1 so they're always rendered on top.
 				player.playerx = col;
 				player.playery= row;
-				var scalex = room_width / level_width / player.sprite_width;
+				var scalex = global.mazeWidth / level_width / player.sprite_width;
 				player.image_xscale = scalex;
-				var scaley = room_height / level_height / player.sprite_height;
+				var scaley = global.mazeHeight / level_height / player.sprite_height;
 				player.image_yscale=scaley;
 				level_manager.player = player;
 			}else if((tiletype == tiletypes.tele_blue) 
@@ -64,9 +64,9 @@ function LoadLevel(level){
 			
 			
 			
-			var scalex = room_width / level_width / instance.sprite_width;
+			var scalex = global.mazeWidth / level_width / instance.sprite_width;
 			instance.image_xscale=scalex;
-			var scaley = room_height / level_height / instance.sprite_height;
+			var scaley = global.mazeHeight / level_height / instance.sprite_height;
 			instance.image_yscale=scaley;
 			
 			ds_grid_set(level_manager.tiles,col,row,instance.id);
