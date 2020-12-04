@@ -11,12 +11,16 @@ function toggleMaze(){
 	if toggled && global.maze_on {
 		global.maze_toggled = true;
 		global.maze_on = false;
+		if(global.isLevelLoaded){
+			solveMaze();
+		}
 		toggled = false;
 	}
 
 	if toggled && !global.maze_on {
 		global.maze_toggled = false;
 		global.maze_on = true;
+		
 		toggled = false;
 		removeArrows();
 	}
