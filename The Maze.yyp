@@ -152,12 +152,12 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrder": [
-    {"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},
-    {"name":"rm_level","path":"rooms/rm_level/rm_level.yy",},
-    {"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},
-    {"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},
-    {"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},},
+    {"roomId":{"name":"rm_level","path":"rooms/rm_level/rm_level.yy",},},
+    {"roomId":{"name":"rm_options","path":"rooms/rm_options/rm_options.yy",},},
+    {"roomId":{"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},},
+    {"roomId":{"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -193,13 +193,13 @@
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.0.529",
+    "IDEVersion": "2.3.1.536",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "The Maze",
   "tags": [],
   "resourceType": "GMProject",
