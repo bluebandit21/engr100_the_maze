@@ -1,40 +1,56 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function find_input(keyDirection, controlNumber){
-	var i_d = ds_map_find_value(async_load,"id");
-	if(i_d == keyDirection){
-		if ds_map_find_value(async_load, "status")
-	      {
-
-					localDirection = ds_map_find_value(async_load, "result");
-					if(check_controls(string(localDirection), global.array_of_controls, controlNumber))
-						global.array_of_controls[controlNumber] = string_upper(localDirection);
-					else
-						show_message("Key already assigned");
-		  
+function get_control(controlNumber){
+	if(keyboard_lastkey != -1){
+		if(keyboard_lastkey == vk_enter)
+			keyboard_lastkey = global.array_of_controls[controlNumber];
+		else{
+			global.array_of_controls[controlNumber] = keyboard_lastkey;
+			keyboard_lastkey = -1;
 		}
-	}
+	} 
 }
 
-function determine_switch(determiner){
-	switch (determiner){
-		case 1:
-			find_input(obj_rebindable_up.upKey, 1);
-			break;
-		case 2:
-			find_input(obj_rebindable_down.downKey,2);
-			break;
-		case 3:
-			find_input(obj_rebindable_left.leftKey, 3);
-			break;
-		case 4:
-			find_input(obj_rebindable_right.rightKey, 4);
-			break;
-		case 5:
-			find_input(obj_rebindable_maze.mazeKey, 5);
-			break;
-		default:
-			break;		
+function print_keys(control){
+	var str2 = " ";
+	if (control >= 48 && control <= 90) {
+		return chr(control);
+	}
+	else{
+		switch (control) {
+	        case vk_enter: str2 = "Enter"; break;
+	        case vk_left: str2 = "Left"; break;
+	        case vk_right: str2 = "Right"; break;
+	        case vk_up: str2 = "Up"; break;
+	        case vk_down: str2 = "Down"; break;
+	        case vk_escape: str2 = "Escape"; break;
+	        case vk_space: str2 = "Space"; break;
+	        case vk_shift: str2 = "Shift"; break;
+	        case vk_control: str2 = "Control"; break;
+	        case vk_alt: str2 = "Alt"; break;
+	        case vk_backspace: str2 = "Backspace"; break;
+	        case vk_tab: str2 = "Tab"; break;
+	        case vk_home: str2 = "Home"; break;
+	        case vk_end: str2 = "End"; break;
+	        case vk_delete: str2 = "Delete"; break;
+	        case vk_insert: str2 = "Insert"; break;
+	        case vk_pageup: str2 = "Page Up"; break;
+	        case vk_pagedown: str2 = "Page Down"; break;
+	        case vk_pause: str2 = "Pause"; break;
+	        case vk_printscreen: str2 = "Printscreen"; break;
+	        case vk_f1: str2 = "F1"; break;
+	        case vk_f2: str2 = "F2"; break;
+	        case vk_f3: str2 = "F3"; break;
+	        case vk_f4: str2 = "F4"; break;
+	        case vk_f5: str2 = "F5"; break;
+	        case vk_f6: str2 = "F6"; break;
+	        case vk_f7: str2 = "F7"; break;
+	        case vk_f8: str2 = "F8"; break;
+	        case vk_f9: str2 = "F9"; break;
+	        case vk_f10: str2 = "F10"; break;
+	        case vk_f11: str2 = "F11"; break;
+	        case vk_f12: str2 = "F12"; break;
+		}
+		return str2;
 	}
 }
-
