@@ -12,11 +12,11 @@ if (global.curr_level_idx == 1) {
     draw_text(85, 325, "Your controls for movement are: ");
 	draw_set_font(fnt_monospaced);
 	draw_set_halign(fa_center);
-    draw_text(850, 325, print_keys(global.array_of_controls[1]));
-    draw_text(850, 365, print_keys(global.array_of_controls[3]) + " " + print_keys(global.array_of_controls[2]) + " " + print_keys(global.array_of_controls[4]));
+    draw_text(850, 325, print_keys(global.array_of_controls[0]));
+    draw_text(850, 365, print_keys(global.array_of_controls[2]) + " " + print_keys(global.array_of_controls[1]) + " " + print_keys(global.array_of_controls[3]));
 	draw_set_font(fnt_game);
 	draw_set_halign(fa_left);
-	draw_text(85, 425, "Maze solver button: " + print_keys(global.array_of_controls[5]));
+	draw_text(85, 425, "Maze solver button: " + print_keys(global.array_of_controls[4]));
     draw_text(85, 500, "Press Enter to dismiss");
 }
 

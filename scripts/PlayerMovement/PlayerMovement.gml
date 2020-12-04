@@ -1,13 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-cooldowns = array_create(4); //[Up, Down, Left, Right]
-pressTimes = array_create(4); //[Up, Down, Left, Right]
-pressTimes[0] = 0;
-pressTimes[1] = 0;
-pressTimes[2] = 0;
-pressTimes[3] = 0;
-holdTime = 10; //Adjust me!
+global.cooldowns = array_create(4); //[Up, Down, Left, Right]
+for(i=0;i<4;i++){
+		global.cooldowns[i]=0;
+	}
+global.pressTimes = array_create(4); //[Up, Down, Left, Right]
+for(i=0;i<4;i++){
+		global.pressTimes[i]=0;
+	}
+global.holdTime = 10; //Adjust me!
 
 function GetKey(key){ //[Up, Down, Left, Right] = 0,1,2,3
 	return string(global.array_of_controls[key]);
@@ -20,24 +22,24 @@ function PlayerMovement(){
 	PlayerMovementLeft(GetKey(2));
 	PlayerMovementRight(GetKey(3));
 	for(i=0;i<4;i++){
-		cooldowns[i]--;
+		global.cooldowns[i]--;
+		show_debug_message("Cool down "+string(i) + " at " + string(global.cooldowns[i]));
 	}
 }
 
 function CheckIfHeld(key){ //[Up, Down, Left, Right] = 0,1,2,3
 	if(keyboard_check(GetKey(key))){
 		//Keyboard is being held.
-		pressTimes[key]+=1;
+		global.pressTimes[key]+=1;
 	}else{
-		pressTimes[key] = 0;
+		global.pressTimes[key] = 0;
 	}
-	return pressTimes[key] > holdTime;
+	return global.pressTimes[key] > global.holdTime;
 }
 
 
 function PlayerMovementUp(){
-	with(obj_player){
-		if(CheckIfHeld(GetKey(0)) && (cooldowns[0] < 1)){
+		if((CheckIfHeld(0) && (global.cooldowns[0] < 1)) || (global.pressTimes[0] == 1)){
 			var status=GetTileStatus(playerx, playery-1);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery-1);
 			switch(type){
@@ -65,17 +67,16 @@ function PlayerMovementUp(){
 					level_manager.player.playery = ds_list_find_value(ret,1);
 					break;
 				}
-		cooldowns[0] = global.adjust_speed;
+		global.cooldowns[0] = global.adjust_speed;
 		if(global.maze_toggled)
 			solveMaze();
 		if(global.hint_toggled)
 			giveMazeHint();
-		}
 	}
 }
 function PlayerMovementDown(){
-	with(obj_player){
-		if((keyboard_check(GetKey(1))) && (cooldowns[1] < 1)){
+	
+		if((CheckIfHeld(1) && (global.cooldowns[1] < 1)) || (global.pressTimes[1] == 1)){
 			var status=GetTileStatus(playerx,playery+1);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx,playery+1);
 			switch(type){
@@ -103,20 +104,20 @@ function PlayerMovementDown(){
 				level_manager.player.playery = ds_list_find_value(ret,1);
 				break;
 			}
-			cooldowns[1] = global.adjust_speed;
+			global.cooldowns[1] = global.adjust_speed;
 			if(global.maze_toggled)
 				solveMaze();
 			if(global.hint_toggled)
 				giveMazeHint();
 			}
 			
-		}
-	}
+		
+}
 
 
 function PlayerMovementLeft(){
-	with(obj_player){
-		if(keyboard_check(GetKey(2)) && (cooldowns[2] < 1)){
+	
+		if((CheckIfHeld(2) && (global.cooldowns[2] < 1)) || (global.pressTimes[2] == 1)){
 			var status=GetTileStatus(playerx-1,playery);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx-1,playery);
 			switch(type){
@@ -144,19 +145,18 @@ function PlayerMovementLeft(){
 					level_manager.player.playery = ds_list_find_value(ret,1);
 					break;
 			}
-			cooldowns[2] = global.adjust_speed
+			global.cooldowns[2] = global.adjust_speed
 			if(global.maze_toggled)
 				solveMaze();
 			if(global.hint_toggled)
 				giveMazeHint();
 		}
 			
-	}
+	
 }
 
 function PlayerMovementRight(){
-	with(obj_player){
-		if(keyboard_check(GetKey[3]) && (cooldowns[3] < 1)){
+		if((CheckIfHeld(3) && (global.cooldowns[3] < 1)) || (global.pressTimes[3] == 1)){
 			var status=GetTileStatus(playerx+1,playery);
 			var type = ds_grid_get(level_manager.curr_level.map,playerx+1,playery);
 			switch(type){
@@ -184,14 +184,14 @@ function PlayerMovementRight(){
 					level_manager.player.playery = ds_list_find_value(ret,1);
 					break;
 			}
-			cooldowns[3] = global.adjust_speed;
+			global.cooldowns[3] = global.adjust_speed;
 			if(global.maze_toggled)
 				solveMaze();
 			if(global.hint_toggled)
 				giveMazeHint();
 		}
 		
-	}
+	
 }
 
 function toggleMaze(){

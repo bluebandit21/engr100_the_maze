@@ -1,3 +1,3 @@
 if global.draw_maze {
-	get_control(5);
+	get_control(4);
 }

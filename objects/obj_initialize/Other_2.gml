@@ -13,10 +13,10 @@ global.draw_left = false;
 global.draw_right = false;
 global.draw_maze = false;
 
-global.array_of_controls[1] = vk_up;
-global.array_of_controls[2] = vk_down;
-global.array_of_controls[3] = vk_left;
-global.array_of_controls[4] = vk_right;
-global.array_of_controls[5] = vk_space;
+global.array_of_controls[0] = vk_up;
+global.array_of_controls[1] = vk_down;
+global.array_of_controls[2] = vk_left;
+global.array_of_controls[3] = vk_right;
+global.array_of_controls[4] = vk_space;
 
 maze_sprite(1);

@@ -1,3 +1,3 @@
 if global.draw_up {
-	get_control(1);
+	get_control(0);
 }

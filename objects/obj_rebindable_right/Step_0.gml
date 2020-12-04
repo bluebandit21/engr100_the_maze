@@ -1,3 +1,3 @@
 if global.draw_right {
-	get_control(4);
+	get_control(3);
 }
