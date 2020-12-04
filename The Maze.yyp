@@ -27,6 +27,7 @@
     {"id":{"name":"obj_tile_lever_red","path":"objects/obj_tile_lever_red/obj_tile_lever_red.yy",},"order":7,},
     {"id":{"name":"spr_hint_toggled_off","path":"sprites/spr_hint_toggled_off/spr_hint_toggled_off.yy",},"order":11,},
     {"id":{"name":"spr_tele_blue","path":"sprites/spr_tele_blue/spr_tele_blue.yy",},"order":8,},
+    {"id":{"name":"fnt_monospaced","path":"fonts/fnt_monospaced/fnt_monospaced.yy",},"order":1,},
     {"id":{"name":"obj_tile_wall","path":"objects/obj_tile_wall/obj_tile_wall.yy",},"order":9,},
     {"id":{"name":"obj_rebindable_maze","path":"objects/obj_rebindable_maze/obj_rebindable_maze.yy",},"order":13,},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"order":1,},

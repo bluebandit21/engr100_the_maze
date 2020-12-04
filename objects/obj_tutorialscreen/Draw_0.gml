@@ -10,10 +10,12 @@ if (global.curr_level_idx == 1) {
     draw_text(85, 175, "You are the pink smiley face, and you must");
     draw_text(85, 250, "reach the finish flag in the lower right");
     draw_text(85, 325, "Your controls for movement are: ");
-    draw_text(805, 315, print_keys(global.array_of_controls[1]));
-    draw_text(770, 355, print_keys(global.array_of_controls[3]));
-    draw_text(810, 355, print_keys(global.array_of_controls[2]));
-    draw_text(850, 355, print_keys(global.array_of_controls[4]));
+	draw_set_font(fnt_monospaced);
+	draw_set_halign(fa_center);
+    draw_text(850, 325, print_keys(global.array_of_controls[1]));
+    draw_text(850, 365, print_keys(global.array_of_controls[3]) + " " + print_keys(global.array_of_controls[2]) + " " + print_keys(global.array_of_controls[4]));
+	draw_set_font(fnt_game);
+	draw_set_halign(fa_left);
 	draw_text(85, 425, "Maze solver button: " + print_keys(global.array_of_controls[5]));
     draw_text(85, 500, "Press Enter to dismiss");
 }
