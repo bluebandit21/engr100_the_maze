@@ -13,9 +13,6 @@ function GetTileStatus(column,row){
 	var level = level_manager.curr_level;
 	var tile = ds_grid_get(level.map,column,row);
 	var curr_tile =  ds_grid_get(level_manager.tiles,column,row);
-	if (global.paused) {
-		return tilestatus.blocked;
-	}
 	switch(tile){
 		case tiletypes.empty:
 		case tiletypes.start:
