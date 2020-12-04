@@ -1,6 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function removeArrows(){
+	//Utility function to remove maze-solver arrows.
+	while(instance_number(obj_maze_solver_arrow) > 0){
+		instance_destroy(instance_find(obj_maze_solver_arrow,0));
+	}
+}
+
 function solveMaze(){
 	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
 	
@@ -62,9 +69,7 @@ function solveMazeDest(destx,desty){
 	
 	show_debug_message("Begun maze solver...");
 	show_debug_message("Removing previous arrows...");
-	while(instance_number(obj_maze_solver_arrow) > 0){
-		instance_destroy(instance_find(obj_maze_solver_arrow,0));
-	}
+	removeArrows(); // Delete prior arrow instances
 	
 	var playerx = level_manager.player.playerx;
 	var playery = level_manager.player.playery;

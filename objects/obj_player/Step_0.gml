@@ -11,15 +11,5 @@ y = playery / level_height * global.mazeHeight + global.mazeHeightOffset;
 toggleMaze();
 
 if (!global.paused) {
-	PlayerMovementUp(string(global.array_of_controls[1]));
-
-	PlayerMovementDown(string(global.array_of_controls[2]));
-
-	PlayerMovementRight(string(global.array_of_controls[4]));
-
-	PlayerMovementLeft(string(global.array_of_controls[3]));
+	PlayerMovement();
 }
-
-
-
-cooldown--;
