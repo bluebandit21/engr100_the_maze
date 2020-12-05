@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_gate_purple",
-    "path": "sprites/spr_gate_purple/spr_gate_purple.yy",
+    "name": "spr_lever_blue",
+    "path": "sprites/spr_lever_blue/spr_lever_blue.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_tile_gate_purple","path":"objects/obj_tile_gate_purple/obj_tile_gate_purple.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_tile_gate_purple","path":"objects/obj_tile_gate_purple/obj_tile_gate_purple.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_tile_lever_blue","path":"objects/obj_tile_lever_blue/obj_tile_lever_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_tile_lever_blue","path":"objects/obj_tile_lever_blue/obj_tile_lever_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +31,7 @@
     "path": "folders/Objects/tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_tile_gate_purple",
+  "name": "obj_tile_lever_blue",
   "tags": [],
   "resourceType": "GMObject",
 }
