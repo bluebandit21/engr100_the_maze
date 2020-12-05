@@ -23,6 +23,7 @@ function GetTileStatus(column,row){
 		case tiletypes.lever_red:
 		case tiletypes.lever_green:
 		case tiletypes.lever_blue:
+		case tiletypes.lever_purple:
 			return tilestatus.interaction;
 		case tiletypes.tele_blue:
 		case tiletypes.tele_green:
@@ -35,6 +36,8 @@ function GetTileStatus(column,row){
 		case tiletypes.gate_blue_open:
 		case tiletypes.gate_green:
 		case tiletypes.gate_green_open:
+		case tiletypes.gate_purple:
+		case tiletypes.gate_purple_open:
 			if(curr_tile.open){
 				return tilestatus.passable;
 			}
@@ -74,6 +77,10 @@ function InteractWithTile(column,row){
 		case tiletypes.lever_blue:
 			curr_tile.flipped = !curr_tile.flipped;
 			BlueLeverPull();
+			break;
+		case tiletypes.lever_purple:
+			curr_tile.flipped = !curr_tile.flipped;
+			PurpleLeverPull();
 			break;
 		default: 
 			break;
