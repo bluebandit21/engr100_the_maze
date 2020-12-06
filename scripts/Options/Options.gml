@@ -3,7 +3,7 @@
 global.colors = ["blue", "red", "green","purple"];
 
 function colorBlindlevers(){
-	for(var i = 0; i<4; i++){
+	for(var i = 0; i<array_length_1d(global.colors); i++){
 		var object = asset_get_index("obj_tile_lever_" + global.colors[i]);
 		if(!global.color_is_enabled)
 			var sprite = asset_get_index("spr_lever_color_" + global.colors[i]);
@@ -13,7 +13,7 @@ function colorBlindlevers(){
 	}
 }
 function colorBlindgates(){
-	for(var i = 0; i<4; i++){
+	for(var i = 0; i<array_length_1d(global.colors); i++){
 		var object = asset_get_index("obj_tile_gate_" + global.colors[i]);
 		if(!global.color_is_enabled)
 			var sprite = asset_get_index("spr_gate_color_" + global.colors[i]);
@@ -21,4 +21,21 @@ function colorBlindgates(){
 			sprite = asset_get_index("spr_gate_" + global.colors[i]);
 		object_set_sprite(object,sprite);
 	}
+}
+
+function colorBlindIcyGates(){
+	for(var i = 0; i<array_length_1d(global.colors); i++){
+		var object = asset_get_index("obj_tile_icygate_" + global.colors[i]);
+		if(!global.color_is_enabled)
+			var sprite = asset_get_index("spr_icygate_color_" + global.colors[i]);
+		else
+			sprite = asset_get_index("spr_icygate_" + global.colors[i]);
+		object_set_sprite(object,sprite);
+	}
+}
+
+function colorBlindMode(){
+	colorBlindgates();
+	colorBlindlevers();
+	colorBlindIcyGates();
 }
