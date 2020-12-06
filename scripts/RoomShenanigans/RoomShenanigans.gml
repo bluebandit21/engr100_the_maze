@@ -22,5 +22,5 @@ function next_room() {
 		room_goto(rm_level);
 	}
 	else
-		room_goto(rm_levelselect);
+		room_goto(rm_complete);
 }
