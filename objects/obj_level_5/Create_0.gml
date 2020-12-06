@@ -49,10 +49,21 @@ function SolveNextItem(){
 	var ret = ds_list_create();
 	if(GetTileStatus(8,13) == tilestatus.blocked){
 		//Green is shut.
-		if(GetTileStatus(8,9) == tilestatus.blocked){
-			//Both are shut; open Red
-			ds_list_set(ret,0,5);
-			ds_list_set(ret,1,3);
+		
+		//Player's outside the end zone.
+		 if(GetTileStatus(8,9) == tilestatus.blocked){ 
+			//Both are shut.
+			if(level_manager.player.playerx>7){
+				//If the player just shut it behind them
+				//Go for the goal!
+				ds_list_set(ret,0,14);
+				ds_list_set(ret,1,14);
+			}
+			//open Red
+			else{
+				ds_list_set(ret,0,5);
+				ds_list_set(ret,1,3);
+			}
 		}else{
 			//We can reach the green lever; hit it
 			ds_list_set(ret,0,9);
