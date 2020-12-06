@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (global.curr_level_idx == 1) {
 	draw_set_color(c_white);
-    draw_rectangle(75, 75, window_get_width() - 300, window_get_height() - 200, false);
+    draw_rectangle(75, 75, window_get_width() - 300, window_get_height() - 100, false);
 
     draw_set_color(c_black);
     draw_set_font(fnt_game);
@@ -13,11 +13,12 @@ if (global.curr_level_idx == 1) {
 	draw_set_font(fnt_monospaced);
 	draw_set_halign(fa_center);
     draw_text(850, 325, print_keys(global.array_of_controls[0]));
-    draw_text(850, 365, print_keys(global.array_of_controls[2]) + " " + print_keys(global.array_of_controls[1]) + " " + print_keys(global.array_of_controls[3]));
+    draw_text(850, 375, print_keys(global.array_of_controls[2]) + " " + print_keys(global.array_of_controls[1]) + " " + print_keys(global.array_of_controls[3]));
 	draw_set_font(fnt_game);
 	draw_set_halign(fa_left);
 	draw_text(85, 425, "Maze solver button: " + print_keys(global.array_of_controls[4]));
-    draw_text(85, 500, "Press Enter to dismiss");
+    draw_text(85, 500, "Press Escape to pause");
+	draw_text(85, 575, "Press Enter to dismiss");
 }
 
 if (global.curr_level_idx == 2) {

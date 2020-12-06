@@ -19,21 +19,21 @@ function print_keys(control){
 	else{
 		switch (control) {
 	        case vk_enter: str2 = "Enter"; break;
-	        case vk_left: str2 = "Left"; break;
-	        case vk_right: str2 = "Right"; break;
-	        case vk_up: str2 = "Up"; break;
-	        case vk_down: str2 = "Down"; break;
-	        case vk_escape: str2 = "Escape"; break;
+	        case vk_left: str2 = "←"; break;
+	        case vk_right: str2 = "→"; break;
+	        case vk_up: str2 = "↑"; break;
+	        case vk_down: str2 = "↓"; break;
+	        case vk_escape: str2 = "Esc"; break;
 	        case vk_space: str2 = "Space"; break;
 	        case vk_shift: str2 = "Shift"; break;
-	        case vk_control: str2 = "Control"; break;
+	        case vk_control: str2 = "Ctrl"; break;
 	        case vk_alt: str2 = "Alt"; break;
 	        case vk_backspace: str2 = "Backspace"; break;
 	        case vk_tab: str2 = "Tab"; break;
 	        case vk_home: str2 = "Home"; break;
 	        case vk_end: str2 = "End"; break;
-	        case vk_delete: str2 = "Delete"; break;
-	        case vk_insert: str2 = "Insert"; break;
+	        case vk_delete: str2 = "Del"; break;
+	        case vk_insert: str2 = "Ins"; break;
 	        case vk_pageup: str2 = "Page Up"; break;
 	        case vk_pagedown: str2 = "Page Down"; break;
 	        case vk_pause: str2 = "Pause"; break;

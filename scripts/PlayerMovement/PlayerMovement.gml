@@ -12,7 +12,7 @@ for(i=0;i<4;i++){
 global.holdTime = 10; //Adjust me!
 
 function GetKey(key){ //[Up, Down, Left, Right] = 0,1,2,3
-	return string(global.array_of_controls[key]);
+	return global.array_of_controls[key];
 }
 	
 
@@ -23,7 +23,6 @@ function PlayerMovement(){
 	PlayerMovementRight(GetKey(3));
 	for(i=0;i<4;i++){
 		global.cooldowns[i]--;
-		show_debug_message("Cool down "+string(i) + " at " + string(global.cooldowns[i]));
 	}
 }
 
@@ -195,7 +194,7 @@ function PlayerMovementRight(){
 }
 
 function toggleMaze(){
-	toggled = keyboard_check_pressed(ord(global.array_of_controls[4]));
+	toggled = keyboard_check_pressed(global.array_of_controls[4]);
 	if toggled && global.maze_on {
 		global.maze_toggled = true;
 		global.maze_on = false;
