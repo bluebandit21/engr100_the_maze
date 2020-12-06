@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_icygate_blue",
-    "path": "sprites/spr_icygate_blue/spr_icygate_blue.yy",
+    "name": "spr_icygate_red",
+    "path": "sprites/spr_icygate_red/spr_icygate_red.yy",
   },
   "solid": false,
   "visible": true,
