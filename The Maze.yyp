@@ -62,6 +62,7 @@
     {"id":{"name":"spr_up","path":"sprites/spr_up/spr_up.yy",},"order":3,},
     {"id":{"name":"spr_lever_color_red","path":"sprites/spr_lever_color_red/spr_lever_color_red.yy",},"order":10,},
     {"id":{"name":"obj_level_2","path":"objects/obj_level_2/obj_level_2.yy",},"order":1,},
+    {"id":{"name":"obj_level_14","path":"objects/obj_level_14/obj_level_14.yy",},"order":13,},
     {"id":{"name":"obj_tutorialscreen","path":"objects/obj_tutorialscreen/obj_tutorialscreen.yy",},"order":32,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_icygate_color_green","path":"sprites/spr_icygate_color_green/spr_icygate_color_green.yy",},"order":24,},
