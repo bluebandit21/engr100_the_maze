@@ -45,6 +45,12 @@ function GetTileStatus(column,row){
 			
 		case tiletypes.icygate_blue:
 		case tiletypes.icygate_blue_open:
+		case tiletypes.icygate_red:
+		case tiletypes.icygate_red_open:
+		case tiletypes.icygate_green:
+		case tiletypes.icygate_green_open:
+		case tiletypes.icygate_purple:
+		case tiletypes.icygate_purple_open:
 			if(curr_tile.open){
 				return tilestatus.mover;
 			}
@@ -110,6 +116,12 @@ function MoveWithTile(curr_player_x,curr_player_y,column, row){
 			
 		case tiletypes.icygate_blue:
 		case tiletypes.icygate_blue_open:
+		case tiletypes.icygate_red:
+		case tiletypes.icygate_red_open:
+		case tiletypes.icygate_green:
+		case tiletypes.icygate_green_open:
+		case tiletypes.icygate_purple:
+		case tiletypes.icygate_purple_open:
 		//If we're interacting with either, the gate is open and we're free to slide.
 		case tiletypes.ice:
 		

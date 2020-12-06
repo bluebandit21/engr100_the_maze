@@ -5,8 +5,11 @@ function InitiateTileInstance(instance,type,arg1,arg2){
 		case tiletypes.gate_blue_open:
 		case tiletypes.gate_red_open:
 		case tiletypes.gate_green_open:
-		case tiletypes.purple_gate_open:
+		case tiletypes.gate_purple_open:
 		case tiletypes.icygate_blue_open:
+		case tiletypes.icygate_red_open:
+		case tiletypes.icygate_green_open:
+		case tiletypes.icygate_purple_open:
 			instance.open = true;
 			break;
 		case tiletypes.tele_blue:

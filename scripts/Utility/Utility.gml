@@ -24,7 +24,13 @@ enum tiletypes{
 	tele_green,
 	ice,
 	icygate_blue,
-	icygate_blue_open //icygate_blue, but starts open instead of shut
+	icygate_blue_open, //icygate_blue, but starts open instead of shut
+	icygate_red,
+	icygate_red_open, //icygate_red, but starts open instead of shut
+	icygate_green,
+	icygate_green_open, //icygate_green, but starts open instead of shut
+	icygate_purple,
+	icygate_purple_open //icygate_purple, but starts open instead of shut
 }
 
 function GetTileObjectFromTileType(type){
@@ -64,6 +70,15 @@ function GetTileObjectFromTileType(type){
 		case tiletypes.icygate_blue:
 		case tiletypes.icygate_blue_open:
 			return obj_tile_icygate_blue;
+		case tiletypes.icygate_red:
+		case tiletypes.icygate_red_open:
+			return obj_tile_icygate_red;
+		case tiletypes.icygate_green:
+		case tiletypes.icygate_green_open:
+			return obj_tile_icygate_green;
+		case tiletypes.icygate_purple:
+		case tiletypes.icygate_purple_open:
+			return obj_tile_icygate_purple;
 		case tiletypes.tele_green: //Unimplemented
 		case tiletypes.tele_red: //Unimplemented
 		default:
