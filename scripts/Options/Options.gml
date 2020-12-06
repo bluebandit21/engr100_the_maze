@@ -40,25 +40,19 @@ function colorBlindMode(){
 	colorBlindIcyGates();
 }
 
-function toggleSound(sound, is_menu){
+function toggleSound(sound, inst){
 	if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && global.sound_on{
 		audio_pause_sound(sound);
 		object_set_sprite(obj_toggle_sound,spr_sound_toggle_off);
 		instance_destroy();
-		if is_menu
-			instance_create_depth(128,320,-16000,obj_toggle_sound);
-		else
-			instance_create_depth(40,200,-16000,obj_toggle_sound);
+		instance_create_depth(inst.x,inst.y,-16000,obj_toggle_sound);
 		global.sound_on = false;
 	}
 	else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && !global.sound_on{
 		audio_play_sound(sound,1,true);
 		object_set_sprite(obj_toggle_sound,spr_sound_toggle_on);
 		instance_destroy();
-		if is_menu
-			instance_create_depth(128,320,-16000,obj_toggle_sound);
-		else
-			instance_create_depth(40,200,-16000,obj_toggle_sound);
+		instance_create_depth(inst.x,inst.y,-16000,obj_toggle_sound);
 		global.sound_on = true;
 	}
 }
