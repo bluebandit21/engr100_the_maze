@@ -14,6 +14,7 @@
     {"id":{"name":"obj_leftarrow","path":"objects/obj_leftarrow/obj_leftarrow.yy",},"order":1,},
     {"id":{"name":"spr_icygate_green","path":"sprites/spr_icygate_green/spr_icygate_green.yy",},"order":18,},
     {"id":{"name":"spr_level_7","path":"sprites/spr_level_7/spr_level_7.yy",},"order":6,},
+    {"id":{"name":"sound_end","path":"sounds/sound_end/sound_end.yy",},"order":5,},
     {"id":{"name":"obj_toggle_sound","path":"objects/obj_toggle_sound/obj_toggle_sound.yy",},"order":1,},
     {"id":{"name":"obj_maze_solver_arrow","path":"objects/obj_maze_solver_arrow/obj_maze_solver_arrow.yy",},"order":1,},
     {"id":{"name":"spr_gate_blue","path":"sprites/spr_gate_blue/spr_gate_blue.yy",},"order":1,},

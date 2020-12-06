@@ -1,1 +1,2 @@
-audio_play_sound(end_sound,1,true);
+if global.sound_on
+	audio_play_sound(sound_end,1,true);
