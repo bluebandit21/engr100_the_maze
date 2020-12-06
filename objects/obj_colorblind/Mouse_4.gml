@@ -2,8 +2,7 @@ if(position_meeting(mouse_x,mouse_y, obj_colorblind) && (!global.color_is_enable
 	object_set_sprite(obj_colorblind,spr_color_enabled);
 	instance_destroy();
 	instance_create_layer(128, 256,"Instances", obj_colorblind);
-	colorBlindlevers();
-	colorBlindgates();
+	colorBlindMode();
 	global.color_is_enabled = true;
 }
 else if(position_meeting(mouse_x,mouse_y, obj_colorblind) && (global.color_is_enabled)){
@@ -11,7 +10,6 @@ else if(position_meeting(mouse_x,mouse_y, obj_colorblind) && (global.color_is_en
 	object_set_sprite(obj_colorblind,spr_color_disabled);
 	instance_destroy();
 	instance_create_layer(128, 256,"Instances", obj_colorblind);
-	colorBlindlevers();
-	colorBlindgates();
+	colorBlindMode();
 	global.color_is_enabled = false;
 }
