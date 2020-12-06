@@ -19,4 +19,6 @@ global.array_of_controls[2] = vk_left;
 global.array_of_controls[3] = vk_right;
 global.array_of_controls[4] = vk_space;
 
+audio_play_sound(sound_menu,1,true);
+
 maze_sprite(1);

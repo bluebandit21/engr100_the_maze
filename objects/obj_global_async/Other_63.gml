@@ -1,1 +1,0 @@
-determine_switch(global.key);
