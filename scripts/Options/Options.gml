@@ -40,47 +40,36 @@ function colorBlindMode(){
 	colorBlindIcyGates();
 }
 
-function toggleSound(){
-	var current_room = room_get_name(room);
-	var sound = sound_menu; 
-	
-	switch current_room {
-		case "rm_level":
-			sound = sound_bgm;
-		case "rm_complete":
-			sound = sound_end;
-		default:
-			break;
+function toggleSound(sound){
+	if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left)) && (obj_toggle_sound.image_index == 0){
+		audio_pause_sound(sound);
+		obj_toggle_sound.image_index = 1;
+		global.sound_on = false;
 	}
-		if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left)) && (obj_toggle_sound.image_index == 0){
-			audio_pause_sound(sound);
-			obj_toggle_sound.image_index = 1;
-			global.sound_on = false;
-		}
-		else if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left))  && (obj_toggle_sound.image_index == 1){
-			audio_play_sound(sound,1,true);
-			obj_toggle_sound.image_index = 0;
-			global.sound_on = true;
-		}
+	else if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left))  && (obj_toggle_sound.image_index == 1){
+		audio_play_sound(sound,1,true);
+		obj_toggle_sound.image_index = 0;
+		global.sound_on = true;
+	}
 		
 }
 	
 function toggleMaze(){
 	with(obj_maze_toggle){
-		toggled = keyboard_check(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
+		toggled = keyboard_check_pressed(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
 		if toggled && (image_index == 0) {
-			image_index = 1;
 			if(global.isLevelLoaded){
-				solveMaze();
+				image_index = 1;
 			}
 			toggled = false;
 		}
-
 		if toggled && (image_index == 1) {
 			image_index = 0;
 			removeArrows();
 			toggled = false;
 		}
+		if image_index == 1 
+			solveMaze();
 	}
 }
 
