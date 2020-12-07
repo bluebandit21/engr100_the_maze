@@ -145,6 +145,7 @@
     {"id":{"name":"spr_lever_green","path":"sprites/spr_lever_green/spr_lever_green.yy",},"order":5,},
     {"id":{"name":"obj_tile_start","path":"objects/obj_tile_start/obj_tile_start.yy",},"order":8,},
     {"id":{"name":"spr_maze_toggle_off","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"order":9,},
+    {"id":{"name":"obj_transitionscreen","path":"objects/obj_transitionscreen/obj_transitionscreen.yy",},"order":41,},
     {"id":{"name":"obj_level_6","path":"objects/obj_level_6/obj_level_6.yy",},"order":8,},
     {"id":{"name":"spr_titlescreen","path":"sprites/spr_titlescreen/spr_titlescreen.yy",},"order":0,},
     {"id":{"name":"MoveAndInteract","path":"scripts/MoveAndInteract/MoveAndInteract.yy",},"order":2,},
