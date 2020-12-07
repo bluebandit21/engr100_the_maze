@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_hint_toggled_off",
-    "path": "sprites/spr_hint_toggled_off/spr_hint_toggled_off.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,16 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_hint_toggle","path":"objects/obj_hint_toggle/obj_hint_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "pause screen",
-    "path": "folders/Objects/pause screen.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_hint_toggle",
+  "name": "obj_transition",
   "tags": [],
   "resourceType": "GMObject",
 }

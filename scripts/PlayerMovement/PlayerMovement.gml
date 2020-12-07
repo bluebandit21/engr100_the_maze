@@ -67,10 +67,7 @@ function PlayerMovementUp(){
 					break;
 				}
 		global.cooldowns[0] = global.adjust_speed;
-		if(global.maze_toggled)
-			solveMaze();
-		if(global.hint_toggled)
-			giveMazeHint();
+	
 	}
 }
 function PlayerMovementDown(){
@@ -104,10 +101,7 @@ function PlayerMovementDown(){
 				break;
 			}
 			global.cooldowns[1] = global.adjust_speed;
-			if(global.maze_toggled)
-				solveMaze();
-			if(global.hint_toggled)
-				giveMazeHint();
+
 			}
 			
 		
@@ -145,10 +139,7 @@ function PlayerMovementLeft(){
 					break;
 			}
 			global.cooldowns[2] = global.adjust_speed
-			if(global.maze_toggled)
-				solveMaze();
-			if(global.hint_toggled)
-				giveMazeHint();
+		
 		}
 			
 	
@@ -184,31 +175,8 @@ function PlayerMovementRight(){
 					break;
 			}
 			global.cooldowns[3] = global.adjust_speed;
-			if(global.maze_toggled)
-				solveMaze();
-			if(global.hint_toggled)
-				giveMazeHint();
+		
 		}
 		
 	
-}
-
-function toggleMaze(){
-	toggled = keyboard_check_pressed(global.array_of_controls[4]);
-	if toggled && global.maze_on {
-		global.maze_toggled = true;
-		global.maze_on = false;
-		if(global.isLevelLoaded){
-			solveMaze();
-		}
-		toggled = false;
-	}
-
-	if toggled && !global.maze_on {
-		global.maze_toggled = false;
-		global.maze_on = true;
-		
-		toggled = false;
-		removeArrows();
-	}
 }

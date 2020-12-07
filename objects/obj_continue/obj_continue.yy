@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_hint_toggled_off",
-    "path": "sprites/spr_hint_toggled_off/spr_hint_toggled_off.yy",
+    "name": "spr_continue",
+    "path": "sprites/spr_continue/spr_continue.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_hint_toggle","path":"objects/obj_hint_toggle/obj_hint_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_continue","path":"objects/obj_continue/obj_continue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "pause screen",
-    "path": "folders/Objects/pause screen.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_hint_toggle",
+  "name": "obj_continue",
   "tags": [],
   "resourceType": "GMObject",
 }
