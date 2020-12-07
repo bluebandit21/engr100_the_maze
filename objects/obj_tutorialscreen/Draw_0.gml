@@ -70,7 +70,7 @@ if (global.curr_level_idx == 6) {
     draw_set_font(fnt_game);
     draw_text(85, 200, "Introducing a new mechanic: Teleporters!");
     draw_text(85, 275, "Hit a teleporter");
-	draw_sprite_ext(spr_tele_blue, 0, 375, 270, 0.05, 0.05, 0, c_white, 1);
+	draw_sprite_ext(spr_tele_blue, 0, 375, 275, 0.05, 0.05, 0, c_white, 1);
     draw_text(430, 275, "and you will warp to the other teleporter");
     draw_text(85, 350, "in the maze!");
     draw_text(85, 450, "Press Enter to dismiss");
