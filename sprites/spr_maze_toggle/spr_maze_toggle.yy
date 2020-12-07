@@ -25,10 +25,12 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"f6f054ce-d9d4-46e3-8e83-327b26de5a3b","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"spr_maze_toggle","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"c6408950-c03d-4535-a22f-f4702b15c417","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_maze_toggle","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"5066bba9-426d-42e6-847f-76b6ddbdd044","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5066bba9-426d-42e6-847f-76b6ddbdd044","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"f6f054ce-d9d4-46e3-8e83-327b26de5a3b","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"5066bba9-426d-42e6-847f-76b6ddbdd044","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"spr_maze_toggle","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"5066bba9-426d-42e6-847f-76b6ddbdd044","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"LayerId":{"name":"c6408950-c03d-4535-a22f-f4702b15c417","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_maze_toggle","path":"sprites/spr_maze_toggle/spr_maze_toggle.yy",},"resourceVersion":"1.0","name":"5066bba9-426d-42e6-847f-76b6ddbdd044","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
