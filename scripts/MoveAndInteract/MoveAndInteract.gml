@@ -70,7 +70,7 @@ function InteractWithTile(column,row){
 		case tiletypes.finish:
 			global.isMazeToggled = false;
 			global.isHintToggled = false;
-			if (!global.is_enabled)
+			if (!global.chesney)
 				global.lock = global.curr_level_idx + 2;
 			global.played = global.curr_level_idx;
 			if (asset_get_index("obj_level_" + string(global.curr_level_idx + 1)) > -1)

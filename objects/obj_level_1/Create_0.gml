@@ -57,9 +57,7 @@ ds_grid_set_region(map,2,14,2,14,tiletypes.wall);
 ds_grid_set_region(map,7,14,11,14,tiletypes.wall);
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
-if (global.played < 1) {
-	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
-}
+instance_create_depth(0, 0, -16000, obj_tutorialscreen);
 
 
 //Function declared per-level. 

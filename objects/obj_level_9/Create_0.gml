@@ -57,3 +57,56 @@ ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,height-2,width-2,tiletypes.finish);
 
 
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	//Always return the flag; we can always reach it.
+	var ret = ds_list_create();
+	
+	if(GetTileStatus(13,10) == tilestatus.passable){
+		//Blue gate is open
+		if(GetTileStatus(11,13) == tilestatus.passable){
+			//Red gate is too; Flag TIMe!
+			ds_list_set(ret,0,14);
+			ds_list_set(ret,1,14);
+		}else{
+			//Need to hit red
+			if(GetTileStatus(1,4) == tilestatus.passable){
+				//Hit red
+				ds_list_set(ret,0,3);
+				ds_list_set(ret,1,3);
+			}else{
+				//Need to hit green
+				ds_list_set(ret,0,7);
+				ds_list_set(ret,1,12);
+			}
+		}
+	}else{
+		//Need to hit blue
+		if(GetTileStatus(13,5) == tilestatus.passable){
+			//Purple's open.
+			if(GetTileStatus(2,11) == tilestatus.passable){
+				//Can hit it (red's open too)
+				ds_list_set(ret,0,13);
+				ds_list_set(ret,1,3);
+			}else{
+				//Need to hit red
+				if(GetTileStatus(1,4) == tilestatus.passable){
+					//Hit red
+					ds_list_set(ret,0,3);
+					ds_list_set(ret,1,3);
+				}else{
+					//Need to hit green
+					ds_list_set(ret,0,7);
+					ds_list_set(ret,1,12);
+				}
+			}
+			
+		}else{
+			//Need to hit purple (always accesible)
+			ds_list_set(ret,0,11);
+			ds_list_set(ret,1,10);
+		}
+	}
+	return ret;
+}
