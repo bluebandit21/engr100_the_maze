@@ -56,39 +56,34 @@ function toggleSound(sound){
 	
 function toggleMaze(){
 	with(obj_maze_toggle){
-		toggled = keyboard_check_pressed(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
-		if toggled && (image_index == 0) {
-			if(global.isLevelLoaded){
+		if(keyboard_check_pressed(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left))){
+			global.isMazeToggled = !global.isMazeToggled;
+			if(global.isMazeToggled){
 				image_index = 1;
+				if(global.isLevelLoaded){
+					solveMaze();
+				}	
+			}else{
+				image_index = 0;
+				removeArrows();
 			}
-			toggled = false;
 		}
-		if toggled && (image_index == 1) {
-			image_index = 0;
-			removeArrows();
-			toggled = false;
-		}
-		if image_index == 1 
-			solveMaze();
 	}
 }
 
 function toggleHint(){
 	with(obj_hint_toggle){
-		toggledhint = /*keyboard_check_pressed(global.array_of_controls[5]) || */(position_meeting(mouse_x,mouse_y,obj_hint_toggle) && mouse_check_button_pressed(mb_left));
-		if toggledhint && image_index == 0 {
-			image_index = 1;
-			toggledhint = false;
-		}
-		if toggledhint && image_index == 1 {
-			obj_hint_toggle.image_index = 0;
-			while(instance_number(obj_maze_solver_circle) > 0){
-				instance_destroy(instance_find(obj_maze_solver_circle,0));
+		if(/*keyboard_check_pressed(global.array_of_controls[5]) || */(position_meeting(mouse_x,mouse_y,obj_hint_toggle) && mouse_check_button_pressed(mb_left))){
+			global.isHintToggled = !global.isHintToggled;
+			if(global.isHintToggled){
+				image_index = 1;
+				if(global.isLevelLoaded){
+					giveMazeHint();
+				}
+			}else{
+				image_index = 0;
+				removeCircles();
 			}
-			toggledhint = false;
-		}
-		if image_index == 1 {
-			giveMazeHint();
 		}
 	}
 }
