@@ -8,7 +8,7 @@ if (global.curr_level_idx == 1) {
     draw_set_font(fnt_game);
     draw_text(85, 100, "Welcome to The Maze!");
     draw_text(85, 175, "You are the pink smiley face, and you must");
-    draw_text(85, 250, "reach the finish flag in the lower right");
+    draw_text(85, 250, "reach the treasure chest in the lower right");
     draw_text(85, 325, "Your controls for movement are: ");
 	draw_set_font(fnt_monospaced);
 	draw_set_halign(fa_center);
