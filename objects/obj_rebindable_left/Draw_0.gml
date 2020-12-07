@@ -2,8 +2,10 @@ draw_self();
 draw_set_colour(c_white);
 
 if pressed {
-	draw_rectangle(75, 75, window_get_width() - 300, window_get_height() - 200, false);
 	draw_set_color(c_black);
 	draw_set_font(fnt_monospaced);
-	draw_text(75, 75, "Your control for leftward movement is: " + print_keys(global.array_of_controls[2]));
- }
+	draw_set_halign(fa_center);
+	draw_text(window_get_width()/2, 37, "Your control for leftward movement is: " + print_keys(global.array_of_controls[2]));
+	draw_text(window_get_width()/2, 75, "Press Enter to save key");
+	draw_set_halign(fa_left); 
+}
