@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 633,
   "bbox_top": 0,
-  "bbox_bottom": 54,
+  "bbox_bottom": 93,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 634,
-  "height": 55,
+  "width": 434,
+  "height": 94,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"21807d7f-247e-4091-8082-d2636005f751","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2881ea15-d758-477b-a099-6618cc20198d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "options",

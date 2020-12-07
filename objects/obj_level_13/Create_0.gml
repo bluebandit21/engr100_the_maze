@@ -26,7 +26,7 @@ ds_grid_set_region(map,4,11,4,14,tiletypes.wall);
 ds_grid_set_region(map,10,1,10,7,tiletypes.wall);
 ds_grid_set_region(map,11,7,11,7,tiletypes.wall);
 ds_grid_set_region(map,12,2,13,2,tiletypes.wall);
-ds_grid_set_region(map,12,3,12,7,tiletypes.wall);
+ds_grid_set_region(map,12,4,12,7,tiletypes.wall);
 ds_grid_set_region(map,14,4,14,9,tiletypes.wall);
 ds_grid_set_region(map,10,9,13,9,tiletypes.wall);
 ds_grid_set_region(map,10,11,13,11,tiletypes.wall);
@@ -45,8 +45,10 @@ ds_grid_set_region(map,9,9,9,9,tiletypes.icygate_blue);
 
 
 ds_grid_set(map,11,1,tiletypes.tele_blue);
-ds_grid_set(map,10,10,tiletypes.tele_blue);
-tele_x = [10,11];
+ds_grid_set(map,11,2,tiletypes.wall);
+ds_grid_set(map,11,10,tiletypes.tele_blue);
+ds_grid_set(map,10,10,tiletypes.wall);
+tele_x = [11,11];
 tele_y = [10,1];
 
 
