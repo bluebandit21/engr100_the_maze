@@ -40,20 +40,70 @@ function colorBlindMode(){
 	colorBlindIcyGates();
 }
 
-function toggleSound(sound, inst){
-	if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && global.sound_on{
-		audio_pause_sound(sound);
-		object_set_sprite(obj_toggle_sound,spr_sound_toggle_off);
-		instance_destroy();
-		instance_create_depth(inst.x,inst.y,-16000,obj_toggle_sound);
-		global.sound_on = false;
+function toggleSound(sound){
+	with(obj_toggle_sound){
+		if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 0) {
+			audio_pause_sound(sound);
+			image_index = 1;
+			global.sound_on = false;
+		}
+		else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 1){
+			audio_play_sound(sound,1,true);
+			image_index = 0;
+			global.sound_on = true;
+		}
 	}
-	else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && !global.sound_on{
-		audio_play_sound(sound,1,true);
-		object_set_sprite(obj_toggle_sound,spr_sound_toggle_on);
-		instance_destroy();
-		instance_create_depth(inst.x,inst.y,-16000,obj_toggle_sound);
-		global.sound_on = true;
+}
+
+function toggleMaze(){
+	with(obj_maze_toggle){
+		toggled = keyboard_check(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
+		if toggled && (image_index == 0) {
+			image_index = 1;
+			if(global.isLevelLoaded){
+				solveMaze();
+			}
+			toggled = false;
+		}
+
+		if toggled && (image_index == 1) {
+			image_index = 0;
+			removeArrows();
+			toggled = false;
+		}
+	}
+}
+
+function toggleHint(){
+	with(obj_hint_toggle){
+		toggledhint = /*keyboard_check_pressed(global.array_of_controls[5]) || */(position_meeting(mouse_x,mouse_y,obj_hint_toggle) && mouse_check_button_pressed(mb_left));
+		if toggledhint && image_index == 0 {
+			image_index = 1;
+			toggledhint = false;
+		}
+		if toggledhint && image_index == 1 {
+			obj_hint_toggle.image_index = 0;
+			while(instance_number(obj_maze_solver_circle) > 0){
+				instance_destroy(instance_find(obj_maze_solver_circle,0));
+			}
+			toggledhint = false;
+		}
+		if image_index == 1 {
+			giveMazeHint();
+		}
+	}
+}
+
+function chesneyMode(){
+	with(obj_chesney){
+		if(position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
+			global.lock = 100;
+			image_index = 1;
+		}
+		else if (position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
+			global.lock = 2;
+			image_index = 0;
+		}
 	}
 }
 	

@@ -11,5 +11,6 @@ y = playery / level_height * global.mazeHeight + global.mazeHeightOffset;
 
 if (!global.paused) {
 	PlayerMovement();
+	toggleHint();
 	toggleMaze();
 }

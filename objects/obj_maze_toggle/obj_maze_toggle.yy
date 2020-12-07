@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_maze_toggle_off",
-    "path": "sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",
+    "name": "spr_maze_toggle",
+    "path": "sprites/spr_maze_toggle/spr_maze_toggle.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_maze_toggle","path":"objects/obj_maze_toggle/obj_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_maze_toggle","path":"objects/obj_maze_toggle/obj_maze_toggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

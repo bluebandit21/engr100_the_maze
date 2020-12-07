@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_disabled",
-    "path": "sprites/spr_disabled/spr_disabled.yy",
+    "name": "spr_chesney",
+    "path": "sprites/spr_chesney/spr_chesney.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_chesney","path":"objects/obj_chesney/obj_chesney.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_chesney","path":"objects/obj_chesney/obj_chesney.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_chesney","path":"objects/obj_chesney/obj_chesney.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

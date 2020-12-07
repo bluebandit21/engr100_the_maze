@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_sound_toggle_on",
-    "path": "sprites/spr_sound_toggle_on/spr_sound_toggle_on.yy",
+    "name": "spr_sound_toggle",
+    "path": "sprites/spr_sound_toggle/spr_sound_toggle.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,6 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_toggle_sound","path":"objects/obj_toggle_sound/obj_toggle_sound.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_toggle_sound","path":"objects/obj_toggle_sound/obj_toggle_sound.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
