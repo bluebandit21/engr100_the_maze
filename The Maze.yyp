@@ -130,6 +130,7 @@
     {"id":{"name":"spr_lever_blue","path":"sprites/spr_lever_blue/spr_lever_blue.yy",},"order":4,},
     {"id":{"name":"obj_levelmenu","path":"objects/obj_levelmenu/obj_levelmenu.yy",},"order":14,},
     {"id":{"name":"obj_tile_lever_blue","path":"objects/obj_tile_lever_blue/obj_tile_lever_blue.yy",},"order":5,},
+    {"id":{"name":"spr_adjust_speed","path":"sprites/spr_adjust_speed/spr_adjust_speed.yy",},"order":39,},
     {"id":{"name":"Options","path":"scripts/Options/Options.yy",},"order":10,},
     {"id":{"name":"spr_ice","path":"sprites/spr_ice/spr_ice.yy",},"order":9,},
     {"id":{"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},"order":1,},
