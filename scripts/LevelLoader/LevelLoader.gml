@@ -33,7 +33,9 @@ function LoadLevel(level){
 	level_manager.tiles = ds_grid_create(level_width,level_height);
 	
 	var tele_coord_idx = 0; // Which set of coords to grab
-	
+	var transparency = instance_create_depth(global.mazeWidthOffset,global.mazeHeightOffset,1,obj_partial_transparency);
+	transparency.image_xscale = global.mazeWidth / transparency.sprite_width;
+	transparency.image_yscale = global.mazeHeight / transparency.sprite_height;
 	for(var row = 0; row<level_height;row++){
 		for(var col=0; col<level_width;col++){
 			
