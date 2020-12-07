@@ -26,6 +26,7 @@ function InitiateTileInstance(instance,type,arg1,arg2){
 
 //Initialize level, creating sprites as neccesary and creating instances
 function LoadLevel(level){
+	room_persistent = true; //Make game screen be persistent until we intentionally turn it off.
 	level_manager.curr_level = level;
 	var level_width = ds_grid_width(level.map);
 	var level_height = ds_grid_height(level.map);
@@ -79,3 +80,11 @@ function LoadLevel(level){
 	}
 }
 
+
+
+function ExitToMainMenu(){
+	room_persistent = false;
+	room_set_persistent(rm_level,false);
+	global.paused = false;
+	room_goto(rm_titlescreen);
+}
