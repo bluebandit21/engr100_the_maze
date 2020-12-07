@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 204,
+  "bbox_right": 433,
   "bbox_top": 0,
-  "bbox_bottom": 53,
+  "bbox_bottom": 93,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 205,
-  "height": 54,
+  "width": 434,
+  "height": 94,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"LayerId":{"name":"f6f054ce-d9d4-46e3-8e83-327b26de5a3b","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_maze_toggle_off","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a088d3c5-6a33-4ba2-9dba-9fe0dc247957","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a088d3c5-6a33-4ba2-9dba-9fe0dc247957","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"LayerId":{"name":"c6408950-c03d-4535-a22f-f4702b15c417","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_maze_toggle_off","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","name":"a088d3c5-6a33-4ba2-9dba-9fe0dc247957","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_maze_toggle_off","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cdba5f3f-b185-47b3-b2cb-8d3116128597","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"294a8e29-3ad3-442e-8d0d-93dbc6924e39","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d5273065-2cd8-4eec-ad53-d989d3f4274d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a088d3c5-6a33-4ba2-9dba-9fe0dc247957","path":"sprites/spr_maze_toggle_off/spr_maze_toggle_off.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f6f054ce-d9d4-46e3-8e83-327b26de5a3b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c6408950-c03d-4535-a22f-f4702b15c417","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "options",

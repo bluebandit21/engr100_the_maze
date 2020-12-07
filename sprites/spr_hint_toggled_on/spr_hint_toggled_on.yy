@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 201,
+  "bbox_right": 433,
   "bbox_top": 0,
-  "bbox_bottom": 51,
+  "bbox_bottom": 93,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 202,
-  "height": 52,
+  "width": 434,
+  "height": 94,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3d6a4c27-2b57-41c0-8a6e-0fb8d8d27f4c","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d6a4c27-2b57-41c0-8a6e-0fb8d8d27f4c","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"LayerId":{"name":"8cee33d8-b9ee-49c4-ab91-bca57dec46e7","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_hint_toggled_on","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","name":"3d6a4c27-2b57-41c0-8a6e-0fb8d8d27f4c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"13f465f2-9b24-44f4-8ea1-f8c52c883811","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"13f465f2-9b24-44f4-8ea1-f8c52c883811","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"LayerId":{"name":"79abf525-2b1e-4732-8d78-fd92aa6f5f8a","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_hint_toggled_on","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","name":"13f465f2-9b24-44f4-8ea1-f8c52c883811","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_hint_toggled_on","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4c0ba71d-5146-4453-ab81-c817cde623a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d6a4c27-2b57-41c0-8a6e-0fb8d8d27f4c","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f9deeff3-842e-4cde-b19b-fcce08b5745b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13f465f2-9b24-44f4-8ea1-f8c52c883811","path":"sprites/spr_hint_toggled_on/spr_hint_toggled_on.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8cee33d8-b9ee-49c4-ab91-bca57dec46e7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"79abf525-2b1e-4732-8d78-fd92aa6f5f8a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "options",

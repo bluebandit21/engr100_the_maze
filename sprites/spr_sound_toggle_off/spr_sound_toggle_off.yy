@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 204,
+  "bbox_right": 433,
   "bbox_top": 0,
-  "bbox_bottom": 52,
+  "bbox_bottom": 93,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 205,
-  "height": 53,
+  "width": 434,
+  "height": 94,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"25274639-9bfb-4682-87d0-2873a851499d","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25274639-9bfb-4682-87d0-2873a851499d","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"LayerId":{"name":"d5ec2b29-f838-4422-91ea-3fb630a1937e","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_sound_toggle_off","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","name":"25274639-9bfb-4682-87d0-2873a851499d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9af07aec-8afe-477c-af0d-5a4b0ea168a9","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9af07aec-8afe-477c-af0d-5a4b0ea168a9","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"LayerId":{"name":"7ca6ff2e-d35a-417a-abdd-5b235ac2c9fb","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_sound_toggle_off","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","name":"9af07aec-8afe-477c-af0d-5a4b0ea168a9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_sound_toggle_off","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b9ecc650-1fc7-4fe1-9ddc-1f34e928d4ab","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25274639-9bfb-4682-87d0-2873a851499d","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7138464a-c5ef-4f6f-9dfd-955a66d233e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9af07aec-8afe-477c-af0d-5a4b0ea168a9","path":"sprites/spr_sound_toggle_off/spr_sound_toggle_off.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d5ec2b29-f838-4422-91ea-3fb630a1937e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ca6ff2e-d35a-417a-abdd-5b235ac2c9fb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "options",
