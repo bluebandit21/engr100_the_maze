@@ -5,7 +5,7 @@ global.colors = ["blue", "red", "green","purple"];
 function colorBlindlevers(){
 	for(var i = 0; i<array_length_1d(global.colors); i++){
 		var object = asset_get_index("obj_tile_lever_" + global.colors[i]);
-		if(!global.color_is_enabled)
+		if(!global.color)
 			var sprite = asset_get_index("spr_lever_color_" + global.colors[i]);
 		else
 			sprite = asset_get_index("spr_lever_" + global.colors[i]);
@@ -15,7 +15,7 @@ function colorBlindlevers(){
 function colorBlindgates(){
 	for(var i = 0; i<array_length_1d(global.colors); i++){
 		var object = asset_get_index("obj_tile_gate_" + global.colors[i]);
-		if(!global.color_is_enabled)
+		if(!global.color)
 			var sprite = asset_get_index("spr_gate_color_" + global.colors[i]);
 		else
 			sprite = asset_get_index("spr_gate_" + global.colors[i]);
@@ -26,7 +26,7 @@ function colorBlindgates(){
 function colorBlindIcyGates(){
 	for(var i = 0; i<array_length_1d(global.colors); i++){
 		var object = asset_get_index("obj_tile_icygate_" + global.colors[i]);
-		if(!global.color_is_enabled)
+		if(!global.color)
 			var sprite = asset_get_index("spr_icygate_color_" + global.colors[i]);
 		else
 			sprite = asset_get_index("spr_icygate_" + global.colors[i]);
@@ -41,16 +41,18 @@ function colorBlindMode(){
 }
 
 function toggleSound(sound){
-	with(obj_toggle_sound){
-		if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 0) {
-			audio_pause_sound(sound);
-			image_index = 1;
-			global.sound_on = false;
-		}
-		else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 1){
-			audio_play_sound(sound,1,true);
-			image_index = 0;
-			global.sound_on = true;
+	if !global.choosing_speed{
+		with(obj_toggle_sound){
+			if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 0) {
+				audio_pause_sound(sound);
+				image_index = 1;
+				global.sound_on = false;
+			}
+			else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 1){
+				audio_play_sound(sound,1,true);
+				image_index = 0;
+				global.sound_on = true;
+			}
 		}
 	}
 }
@@ -90,34 +92,38 @@ function toggleHint(){
 }
 
 function chesneyMode(){
-	with(obj_chesney){
-		if(position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
-			global.prev_lock = global.lock;
-			global.lock = 100;
-			global.chesney = true;
-			image_index = 1;
-			object_set_sprite(obj_player,spr_chesney);
-		}
-		else if (position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
-			global.lock = global.prev_lock;
-			global.chesney = false;
-			image_index = 0;
-			object_set_sprite(obj_player,spr_player);
+	if !global.choosing_speed{
+		with(obj_chesney){
+			if(position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
+				global.prev_lock = global.lock;
+				global.lock = 100;
+				global.chesney = true;
+				image_index = 1;
+				object_set_sprite(obj_player,spr_chesney);
+			}
+			else if (position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
+				global.lock = global.prev_lock;
+				global.chesney = false;
+				image_index = 0;
+				object_set_sprite(obj_player,spr_player);
+			}
 		}
 	}
 }
 
 function toggleColorBlind(){
-	with(obj_colorblind){
-		if(position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
-			colorBlindMode();
-			global.color = true;
-			image_index = 1;
-		}
-		else if (position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
-			colorBlindMode();
-			global.color = false;
-			image_index = 0;
+	if !global.choosing_speed{
+		with(obj_colorblind){
+			if(position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
+				colorBlindMode();
+				global.color = true;
+				image_index = 1;
+			}
+			else if (position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
+				colorBlindMode();
+				global.color = false;
+				image_index = 0;
+			}
 		}
 	}
 }

@@ -1,2 +1,4 @@
-if position_meeting(mouse_x,mouse_y,obj_adjust_speed)
+if position_meeting(mouse_x,mouse_y,obj_adjust_speed){
 	pressed = true;
+	global.choosing_speed = true;
+}

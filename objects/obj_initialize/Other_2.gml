@@ -6,7 +6,8 @@ global.adjust_speed = 12;
 global.sound_on = true;
 global.chesney = false;
 global.color = false;
-global.paused = false;
+global.paused = false
+global.choosing_speed = false;
 
 global.array_of_controls[0] = vk_up;
 global.array_of_controls[1] = vk_down;
