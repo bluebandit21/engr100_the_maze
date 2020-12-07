@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_color_disabled",
-    "path": "sprites/spr_color_disabled/spr_color_disabled.yy",
+    "name": "spr_adjust_speed",
+    "path": "sprites/spr_adjust_speed/spr_adjust_speed.yy",
   },
   "solid": false,
   "visible": true,
