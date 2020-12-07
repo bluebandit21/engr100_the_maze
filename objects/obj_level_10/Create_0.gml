@@ -1,68 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-var width = 16; // TODO -- Make this not hardcoded?
-var height = 16;// TODO -- Make this not hardcoded?
+var width = 8; // TODO -- Make this not hardcoded?
+var height = 8;// TODO -- Make this not hardcoded?
 map = ds_grid_create(width,height);
 ds_grid_set_region(map,0,0,width-1,height-1,tiletypes.empty);
 ds_grid_set_region(map,0,0,width-1,0,tiletypes.wall);
 ds_grid_set_region(map,0,height-1,width-1,height-1,tiletypes.wall);
 ds_grid_set_region(map,0,0,0,height-1,tiletypes.wall);
 ds_grid_set_region(map,width-1,0,width-1,height-1,tiletypes.wall);
-ds_grid_set_region(map,1,2,4,2,tiletypes.wall);
-ds_grid_set_region(map,2,4,6,4,tiletypes.wall);
-ds_grid_set_region(map,6,1,6,3,tiletypes.wall);
-ds_grid_set_region(map,1,6,6,6,tiletypes.wall);
-ds_grid_set_region(map,6,7,6,8,tiletypes.wall);
-ds_grid_set_region(map,2,8,3,8,tiletypes.wall);
-ds_grid_set_region(map,3,9,3,11,tiletypes.wall);
-ds_grid_set_region(map,1,10,1,11,tiletypes.wall);
-ds_grid_set_region(map,2,11,2,11,tiletypes.wall);
-ds_grid_set_region(map,2,13,3,13,tiletypes.wall);
-ds_grid_set_region(map,7,8,7,11,tiletypes.wall);
-ds_grid_set_region(map,5,10,5,11,tiletypes.wall);
-ds_grid_set_region(map,6,11,6,11,tiletypes.wall);
-ds_grid_set_region(map,5,13,8,13,tiletypes.wall);
-ds_grid_set_region(map,8,1,8,4,tiletypes.wall);
-ds_grid_set_region(map,9,4,9,4,tiletypes.wall);
-ds_grid_set_region(map,8,6,9,6,tiletypes.wall);
-ds_grid_set_region(map,9,7,9,14,tiletypes.wall);
-ds_grid_set_region(map,10,2,13,2,tiletypes.wall);
-ds_grid_set_region(map,13,3,13,4,tiletypes.wall);
-ds_grid_set_region(map,11,4,12,4,tiletypes.wall);
-ds_grid_set_region(map,11,6,14,6,tiletypes.wall);
-ds_grid_set_region(map,11,7,11,13,tiletypes.wall);
-ds_grid_set_region(map,13,8,13,14,tiletypes.wall);
+ds_grid_set_region(map,1,2,2,6,tiletypes.wall);
+ds_grid_set_region(map,4,2,6,5,tiletypes.wall);
 
-ds_grid_set_region(map, 8,5,13,5, tiletypes.ice);
-ds_grid_set_region(map, 2,12,7,12, tiletypes.ice);
-
-ds_grid_set_region(map,2,10,2,10,tiletypes.lever_green);
-ds_grid_set_region(map,10,10,10,10,tiletypes.gate_green);
-
+ds_grid_set_region(map, 3,2,3,5, tiletypes.ice);
 
 ds_grid_set(map,1,1,tiletypes.start);
-ds_grid_set(map,height-2,width-2,tiletypes.finish);
+ds_grid_set(map,width-2,height-2,tiletypes.finish);
 
-
+if (global.lock == 10) {
+	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
+}
 
 
 //Function declared per-level. 
 //Solves next item to interact with based on global state. (Yikes)
 function SolveNextItem(){
 	var ret = ds_list_create();
-	if(GetTileStatus(10,10) == tilestatus.passable){
-		//Green is open
-		//Go for the goal!
-		ds_list_set(ret,0,14);
-		ds_list_set(ret,1,14);	
-	}else{
-		//Go for the lever!
-		ds_list_set(ret,0,2);
-		ds_list_set(ret,1,10);
-		
-	}
+	ds_list_set(ret,0,6);
+	ds_list_set(ret,1,6);
 	return ret;
 }
-
-
