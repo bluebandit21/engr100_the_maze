@@ -108,7 +108,10 @@ if (global.curr_level_idx == 13) {
     draw_sprite(spr_ice, 0, 350, 265);
     draw_text(430, 275, "and you will slide across the ice,");
     draw_text(85, 350, "stopping when you hit the closed gate");
-	draw_sprite(spr_icygate_blue, 0, 825, 340);
+	if (global.color)
+		draw_sprite(spr_icygate_color_blue, 0, 825, 340);
+	else
+		draw_sprite(spr_icygate_blue, 0, 825, 340);
 	draw_text(85, 425, "If the gate is open, you'll slide through without stopping!");
     draw_text(85, 525, "Press Enter to dismiss");
 }
