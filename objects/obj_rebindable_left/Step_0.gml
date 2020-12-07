@@ -1,3 +1,3 @@
-if global.draw_left {
+if pressed {
 	get_control(2);
 }

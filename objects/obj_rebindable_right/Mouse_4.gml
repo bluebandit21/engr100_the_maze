@@ -1,4 +1,4 @@
 if position_meeting(mouse_x,mouse_y,obj_rebindable_right){
 	keyboard_lastkey = -1;
-	global.draw_right = true;
+	pressed = true;
 }
