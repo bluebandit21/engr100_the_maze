@@ -70,7 +70,10 @@ function InteractWithTile(column,row){
 		case tiletypes.finish:
 			if (!global.is_enabled)
 				global.lock = global.curr_level_idx + 2;
-			room_goto(rm_transition);
+			if (asset_get_index("obj_level_" + string(global.curr_level_idx + 1)) > -1)
+				room_goto(rm_transition);
+			else
+				room_goto(rm_complete);
 			break;
 		case tiletypes.lever_red:
 			curr_tile.flipped = !curr_tile.flipped;
