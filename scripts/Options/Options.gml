@@ -57,7 +57,7 @@ function toggleSound(sound){
 
 function toggleMaze(){
 	with(obj_maze_toggle){
-		toggled = keyboard_check(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
+		toggled = keyboard_check_pressed(global.array_of_controls[4]) || (position_meeting(mouse_x,mouse_y,obj_maze_toggle) && mouse_check_button_pressed(mb_left));
 		if toggled && (image_index == 0) {
 			image_index = 1;
 			if(global.isLevelLoaded){
