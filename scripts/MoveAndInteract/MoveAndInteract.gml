@@ -130,8 +130,8 @@ function MoveWithTile(curr_player_x,curr_player_y,column, row){
 			var delta_x = column - curr_player_x;
 			var delta_y = row - curr_player_y;
 			
-			show_debug_message("Sliding delta_x: " + string(delta_x));
-			show_debug_message("Sliding delta_y: " + string(delta_y));
+			// show_debug_message("Sliding delta_x: " + string(delta_x));
+			// show_debug_message("Sliding delta_y: " + string(delta_y));
 			
 			var next_tile_x = delta_x + column;
 			var next_tile_y = delta_y + row;
@@ -139,7 +139,7 @@ function MoveWithTile(curr_player_x,curr_player_y,column, row){
 			
 			var next_tile_status = GetTileStatus(next_tile_x,next_tile_y);
 			
-			show_debug_message("Trying to slide to row: " + string(next_tile_y) + " and col: " + string(next_tile_x)); 
+			// show_debug_message("Trying to slide to row: " + string(next_tile_y) + " and col: " + string(next_tile_x)); 
 			
 			switch(next_tile_status){
 				case tilestatus.blocked:
