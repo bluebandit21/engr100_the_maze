@@ -99,13 +99,13 @@ function chesneyMode(){
 				global.lock = 100;
 				global.chesney = true;
 				image_index = 1;
-				object_set_sprite(obj_player,spr_chesney);
+				//object_set_sprite(obj_player,spr_chesney);
 			}
 			else if (position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
 				global.lock = global.prev_lock;
 				global.chesney = false;
 				image_index = 0;
-				object_set_sprite(obj_player,spr_player);
+				//object_set_sprite(obj_player,spr_player);
 			}
 		}
 	}
