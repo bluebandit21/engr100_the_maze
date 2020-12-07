@@ -68,8 +68,11 @@ function InteractWithTile(column,row){
 	var curr_tile =  ds_grid_get(level_manager.tiles,column,row);
 	switch(tile){
 		case tiletypes.finish:
+			global.isMazeToggled = false;
+			global.isHintToggled = false;
 			if (!global.is_enabled)
 				global.lock = global.curr_level_idx + 2;
+			global.played = global.curr_level_idx;
 			if (asset_get_index("obj_level_" + string(global.curr_level_idx + 1)) > -1)
 				room_goto(rm_transition);
 			else

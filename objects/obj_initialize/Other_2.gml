@@ -1,4 +1,6 @@
 global.lock = 2;
+global.prev_lock = 2;
+global.played = 0;
 global.adjust_speed = 12;
 
 global.color_is_enabled = false;
@@ -18,3 +20,6 @@ global.array_of_controls[4] = vk_space;
 audio_play_sound(sound_menu,1,true);
 
 maze_sprite(1);
+
+global.isHintToggled = false;
+global.isMazeToggled = false;

@@ -8,7 +8,6 @@ var level_height = ds_grid_height(level_manager.curr_level.map);
 x = playerx / level_width * global.mazeWidth + global.mazeWidthOffset;
 y = playery / level_height * global.mazeHeight + global.mazeHeightOffset;
 
-
 if (!global.paused) {
 	PlayerMovement();
 	toggleMaze();

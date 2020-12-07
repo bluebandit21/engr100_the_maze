@@ -36,6 +36,14 @@ function CheckIfHeld(key){ //[Up, Down, Left, Right] = 0,1,2,3
 	return global.pressTimes[key] > global.holdTime;
 }
 
+function PulseSolvers(){
+	if(global.isMazeToggled){
+		solveMaze();
+	}
+	if(global.isHintToggled){
+		giveMazeHint();
+	}
+}
 
 function PlayerMovementUp(){
 		if((CheckIfHeld(0) && (global.cooldowns[0] < 1)) || (global.pressTimes[0] == 1)){
@@ -67,7 +75,7 @@ function PlayerMovementUp(){
 					break;
 				}
 		global.cooldowns[0] = global.adjust_speed;
-	
+		PulseSolvers();
 	}
 }
 function PlayerMovementDown(){
@@ -101,8 +109,8 @@ function PlayerMovementDown(){
 				break;
 			}
 			global.cooldowns[1] = global.adjust_speed;
-
-			}
+			PulseSolvers();
+		}
 			
 		
 }
@@ -139,7 +147,7 @@ function PlayerMovementLeft(){
 					break;
 			}
 			global.cooldowns[2] = global.adjust_speed
-		
+			PulseSolvers();
 		}
 			
 	
@@ -175,7 +183,7 @@ function PlayerMovementRight(){
 					break;
 			}
 			global.cooldowns[3] = global.adjust_speed;
-		
+			PulseSolvers();
 		}
 		
 	
