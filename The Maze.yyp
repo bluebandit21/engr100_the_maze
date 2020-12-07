@@ -37,6 +37,7 @@
     {"id":{"name":"obj_tile_wall","path":"objects/obj_tile_wall/obj_tile_wall.yy",},"order":9,},
     {"id":{"name":"obj_rebindable_maze","path":"objects/obj_rebindable_maze/obj_rebindable_maze.yy",},"order":13,},
     {"id":{"name":"spr_icygate_color_blue","path":"sprites/spr_icygate_color_blue/spr_icygate_color_blue.yy",},"order":23,},
+    {"id":{"name":"spr_endscreen","path":"sprites/spr_endscreen/spr_endscreen.yy",},"order":3,},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},"order":1,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"obj_level_7","path":"objects/obj_level_7/obj_level_7.yy",},"order":5,},
