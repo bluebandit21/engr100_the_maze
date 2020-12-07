@@ -18,6 +18,7 @@ function next_room() {
 	if name > -1 {
 		global.curr_level_idx++;
 		global.maze_toggled = false;
+		global.hint_toggled = false;
 		global.maze_on = true;
 		room_goto(rm_level);
 	}

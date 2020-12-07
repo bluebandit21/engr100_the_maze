@@ -50,3 +50,65 @@ tele_y = [5,3];
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
+
+//Function declared per-level. 
+//Solves next item to interact with based on global state. (Yikes)
+function SolveNextItem(){
+	var ret = ds_list_create();
+	if((GetTileStatus(14,8) == tilestatus.passable)
+		&& (GetTileStatus(14,9) == tilestatus.passable)){
+		//Both purple & blue are open.
+		//Go for the goal!
+		ds_list_set(ret,0,14);
+		ds_list_set(ret,1,14);	
+	}else if(GetTileStatus(14,9) == tilestatus.passable){
+		//Blue is open. We need to go for purple
+		if(GetTileStatus(8,8) == tilestatus.passable){
+			//Red restricting access to purple is open. Go for purple lever
+			ds_list_set(ret,0,8);
+			ds_list_set(ret,1,9);	
+		}else{
+			//Red is closed for some reason. Hit its lever
+			if(GetTileStatus(12,6) == tilestatus.passable){
+				//Green gate restricting is open. Red is a-o-k
+				ds_list_set(ret,0,12);
+				ds_list_set(ret,1,14);	
+			}else{
+				//Guess we have to hit green.
+				// We can always reach is because purple is open on the left, shut on right	
+				ds_list_set(ret,0,1);
+				ds_list_set(ret,1,7);	
+			}
+		}
+	}else{
+		//Blue is closed. Go for it.
+		if(GetTileStatus(14,2) == tilestatus.passable){
+			//Can reach blue lever.
+			ds_list_set(ret,0,10);
+			ds_list_set(ret,1,3);	
+		}else{
+			//Go for red lever
+			if(GetTileStatus(12,6) == tilestatus.passable){
+				//Green gate restricting is open. Red is a-o-k
+				ds_list_set(ret,0,12);
+				ds_list_set(ret,1,14);	
+			}else{
+				//We need to open the green gate
+				if(GetTileStatus(1,13) == tilestatus.passable){
+					//We can reach the green lever
+					ds_list_set(ret,0,1);
+					ds_list_set(ret,1,7);	
+				}else{
+					//Gusss we're hitting purple. (We can always reach it.)
+					ds_list_set(ret,0,8);
+					ds_list_set(ret,1,9);	
+				}
+			}
+		}
+		
+	}
+	
+	return ret;
+}
+
+

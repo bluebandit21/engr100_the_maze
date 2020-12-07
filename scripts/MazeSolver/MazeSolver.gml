@@ -7,6 +7,11 @@ function removeArrows(){
 		instance_destroy(instance_find(obj_maze_solver_arrow,0));
 	}
 }
+function removeCircles(){
+	while(instance_number(obj_maze_solver_circle) > 0){
+		instance_destroy(instance_find(obj_maze_solver_circle,0));
+	}
+}	
 
 function solveMaze(){
 	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
@@ -25,9 +30,7 @@ function solveMaze(){
 }
 
 function giveMazeHint(){
-	while(instance_number(obj_maze_solver_circle) > 0){
-		instance_destroy(instance_find(obj_maze_solver_circle,0));
-	}
+	removeCircles(); // Delete prior circle instances
 	if(!global.isLevelLoaded) return; //Don't even try to solve a maze when the maze doesn't exist yet.
 	
 	var level = level_manager.curr_level;
@@ -94,7 +97,7 @@ function solveMazeDest(destx,desty){
 			var status = GetTileStatus(col,row);
 			if(status == tilestatus.blocked){
 				if(destx == col && desty = row){	
-					show_error("Destination is blocked!",false);
+					show_debug_message("Destination is blocked!");
 					return; //TODO: DISABLE!
 				}
 				ds_grid_set(grid,col,row,2); //We'll never be able to reach that tile
@@ -106,7 +109,7 @@ function solveMazeDest(destx,desty){
 	//TODO! Handle edge case where player is starting on a mover tile!
 	
 	ds_grid_set(grid,playerx,playery,1); //We always start exploring from where the player is.
-	var node = instance_create_layer(0,0,0,obj_node);
+	var node = instance_create_depth(0,0,0,obj_node);
 	node.parent_x = -1;
 	node.parent_y = -1;
 	ds_grid_set(nodes,playerx,playery,node);
@@ -154,8 +157,8 @@ function solveMazeDest(destx,desty){
 		show_debug_message("Exploring node "+string(curr_x) + ":" + string(curr_y));
 		
 		if(curr_x == -1 or curr_y == -1){
-			show_error("Unable to locate path to coord -- fatal",false);
-			return; //TODO: DISABLE!
+			show_debug_message("Unable to locate path to coord -- fatal");
+			return;
 		}
 		
 		//-------------------------Explore the tile--------------------------------------
@@ -201,7 +204,7 @@ function solveMazeDest(destx,desty){
 		
 			if(ds_grid_get(grid,neighb_x,neighb_y) == 0){
 				//We can reach the tile, but haven't yet (although it might still do magic)
-				var node = instance_create_layer(0,0,0,obj_node);
+				var node = instance_create_depth(0,0,0,obj_node);
 				node.parent_x = curr_x; 
 				node.parent_y = curr_y;
 				ds_grid_set(nodes,neighb_x,neighb_y,node); //We reached the neighbor from here
