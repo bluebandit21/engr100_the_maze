@@ -7,3 +7,4 @@ draw_set_halign(fa_center);
 draw_text(window_get_width() / 2, window_get_height() / 2 - 75, "Congratulations! You have completed level " + string(global.curr_level_idx));
 draw_text(window_get_width() / 2, window_get_height() / 2, "Click Continue to continue to level " + string(global.curr_level_idx + 1) + ",");
 draw_text(window_get_width() / 2, window_get_height() / 2 + 75, "or click Quit to return to level select");
+draw_set_halign(fa_left);
