@@ -18,7 +18,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_level_15","path":"objects/obj_level_15/obj_level_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_level_16","path":"objects/obj_level_16/obj_level_16.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -27,7 +27,7 @@
     "path": "folders/Objects/levels.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_level_15",
+  "name": "obj_level_16",
   "tags": [],
   "resourceType": "GMObject",
 }
