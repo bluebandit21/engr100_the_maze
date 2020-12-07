@@ -233,7 +233,7 @@ function solveMazeDest(destx,desty){
 					(linkx == neighb_x && linky == neighb_y)){
 						//If it's unvisited *or* we end up moving to the same mover tile.
 						//Mark the destination as something to explore.
-						var node = instance_create_layer(0,0,0,obj_node);
+						var node = instance_create_depth(0,0,0,obj_node);
 						if((linkx == neighb_x) && (linky == neighb_y)){
 							node.parent_x = curr_x; //Mover can't link to itself
 							node.parent_y = curr_y;

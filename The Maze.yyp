@@ -139,6 +139,7 @@
     {"id":{"name":"spr_disabled","path":"sprites/spr_disabled/spr_disabled.yy",},"order":2,},
     {"id":{"name":"obj_speed_mid","path":"objects/obj_speed_mid/obj_speed_mid.yy",},"order":12,},
     {"id":{"name":"spr_partial_transparency","path":"sprites/spr_partial_transparency/spr_partial_transparency.yy",},"order":35,},
+    {"id":{"name":"obj_level_15","path":"objects/obj_level_15/obj_level_15.yy",},"order":14,},
     {"id":{"name":"spr_gate_color_red","path":"sprites/spr_gate_color_red/spr_gate_color_red.yy",},"order":13,},
     {"id":{"name":"spr_lever_green","path":"sprites/spr_lever_green/spr_lever_green.yy",},"order":5,},
     {"id":{"name":"obj_tile_start","path":"objects/obj_tile_start/obj_tile_start.yy",},"order":8,},
