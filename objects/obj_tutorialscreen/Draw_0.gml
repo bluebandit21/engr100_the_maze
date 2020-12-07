@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (global.curr_level_idx == 1) {
+    draw_set_color(c_black);
+    draw_rectangle(70, 70, window_get_width() - 295, window_get_height() - 95, false);
+
 	draw_set_color(c_white);
     draw_rectangle(75, 75, window_get_width() - 300, window_get_height() - 100, false);
 
-    draw_set_color(c_black);
+	draw_set_color(c_black);
     draw_set_font(fnt_game);
     draw_text(85, 100, "Welcome to The Maze!");
     draw_text(85, 175, "You are the pink smiley face, and you must");
@@ -22,6 +25,9 @@ if (global.curr_level_idx == 1) {
 }
 
 if (global.curr_level_idx == 2) {
+    draw_set_color(c_black);
+    draw_rectangle(70, 145, window_get_width() - 70, 3 * window_get_height() / 4 + 5, false);
+
     draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
@@ -54,6 +60,9 @@ if (global.curr_level_idx == 2) {
 }
 
 if (global.curr_level_idx == 6) {
+    draw_set_color(c_black);
+    draw_rectangle(70, 145, window_get_width() - 70, 3 * window_get_height() / 4 + 5, false);
+
     draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
@@ -61,13 +70,16 @@ if (global.curr_level_idx == 6) {
     draw_set_font(fnt_game);
     draw_text(85, 200, "Introducing a new mechanic: Teleporters!");
     draw_text(85, 275, "Hit a teleporter");
-	draw_sprite_ext(spr_tele_blue, 0, 375, 270, 0.05, 0.05, 0, c_white, 1);
+	draw_sprite_ext(spr_tele_blue, 0, 375, 275, 0.05, 0.05, 0, c_white, 1);
     draw_text(430, 275, "and you will warp to the other teleporter");
     draw_text(85, 350, "in the maze!");
     draw_text(85, 450, "Press Enter to dismiss");
 }
 
 if (global.curr_level_idx == 10) {
+    draw_set_color(c_black);
+    draw_rectangle(70, 145, window_get_width() - 70, 3 * window_get_height() / 4 + 5, false);
+
     draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
@@ -82,6 +94,9 @@ if (global.curr_level_idx == 10) {
 }
 
 if (global.curr_level_idx == 13) {
+    draw_set_color(c_black);
+    draw_rectangle(70, 145, window_get_width() - 70, 3 * window_get_height() / 4 + 5, false);
+
 	draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
