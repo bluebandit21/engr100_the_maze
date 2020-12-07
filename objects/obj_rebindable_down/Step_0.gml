@@ -1,3 +1,3 @@
-if global.draw_down {
+if pressed {
 	get_control(1);
 }

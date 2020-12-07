@@ -1,3 +1,3 @@
-if global.draw_maze {
+if pressed {
 	get_control(4);
 }

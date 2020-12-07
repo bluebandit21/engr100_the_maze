@@ -21,8 +21,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_speed_mid","path":"objects/obj_speed_mid/obj_speed_mid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_speed_mid","path":"objects/obj_speed_mid/obj_speed_mid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_mid_speed","path":"objects/obj_mid_speed/obj_mid_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_mid_speed","path":"objects/obj_mid_speed/obj_mid_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_mid_speed","path":"objects/obj_mid_speed/obj_mid_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +32,7 @@
     "path": "folders/Objects/options menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_speed_mid",
+  "name": "obj_mid_speed",
   "tags": [],
   "resourceType": "GMObject",
 }

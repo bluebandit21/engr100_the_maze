@@ -1,3 +1,3 @@
-if global.draw_up {
+if pressed {
 	get_control(0);
 }

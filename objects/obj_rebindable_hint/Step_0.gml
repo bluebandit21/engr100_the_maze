@@ -1,3 +1,3 @@
-if global.draw_hint{
+if pressed {
 	get_control(5);
 }

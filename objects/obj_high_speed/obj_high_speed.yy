@@ -21,8 +21,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_speed_low","path":"objects/obj_speed_low/obj_speed_low.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_speed_low","path":"objects/obj_speed_low/obj_speed_low.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_high_speed","path":"objects/obj_high_speed/obj_high_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_high_speed","path":"objects/obj_high_speed/obj_high_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_high_speed","path":"objects/obj_high_speed/obj_high_speed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +32,7 @@
     "path": "folders/Objects/options menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_speed_low",
+  "name": "obj_high_speed",
   "tags": [],
   "resourceType": "GMObject",
 }

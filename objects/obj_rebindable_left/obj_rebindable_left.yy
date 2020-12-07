@@ -25,6 +25,7 @@
     {"isDnD":false,"eventNum":13,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_rebindable_left","path":"objects/obj_rebindable_left/obj_rebindable_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_rebindable_left","path":"objects/obj_rebindable_left/obj_rebindable_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_rebindable_left","path":"objects/obj_rebindable_left/obj_rebindable_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_rebindable_left","path":"objects/obj_rebindable_left/obj_rebindable_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
