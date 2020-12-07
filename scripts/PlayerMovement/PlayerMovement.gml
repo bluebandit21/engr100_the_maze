@@ -11,6 +11,8 @@ for(i=0;i<4;i++){
 	}
 global.holdTime = 10; //Adjust me!
 
+global.lastActionWasInteraction = false;
+
 function GetKey(key){ //[Up, Down, Left, Right] = 0,1,2,3
 	return global.array_of_controls[key];
 }
@@ -63,12 +65,18 @@ function PlayerMovementUp(){
 				case tilestatus.blocked:
 					break;
 				case tilestatus.passable:
+					global.lastActionWasInteraction = false;
 					playery-=1;
 					break;
 				case tilestatus.interaction:
+					if(global.lastActionWasInteraction && CheckIfHeld(0)){
+						break; //Avoid hold-spamming levers.
+					}
 					InteractWithTile(playerx,playery-1);
+					global.lastActionWasInteraction = true;
 					break;
-				case tilestatus.mover:				
+				case tilestatus.mover:		
+					global.lastActionWasInteraction = false;
 					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx,playery-1);
 					level_manager.player.playerx = ds_list_find_value(ret,0);
 					level_manager.player.playery = ds_list_find_value(ret,1);
@@ -97,12 +105,18 @@ function PlayerMovementDown(){
 			case tilestatus.blocked:
 				break;
 			case tilestatus.passable:
+				global.lastActionWasInteraction = false;
 				playery+=1;
 				break;
 			case tilestatus.interaction:
+				if(global.lastActionWasInteraction && CheckIfHeld(1)){
+					break; //Avoid hold-spamming levers.
+				}
+				global.lastActionWasInteraction = true;
 				InteractWithTile(playerx,playery+1);
 				break;
-			case tilestatus.mover:			
+			case tilestatus.mover:	
+				global.lastActionWasInteraction = false;
 				var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx,playery+1);
 				level_manager.player.playerx = ds_list_find_value(ret,0);
 				level_manager.player.playery = ds_list_find_value(ret,1);
@@ -136,14 +150,20 @@ function PlayerMovementLeft(){
 					break;
 				case tilestatus.passable:
 					playerx-=1;
+					global.lastActionWasInteraction = false;
 					break;
 				case tilestatus.interaction:
+					if(global.lastActionWasInteraction && CheckIfHeld(2)){
+						break; //Avoid hold-spamming levers.
+					}
 					InteractWithTile( playerx-1, playery);
+					global.lastActionWasInteraction = true;
 					break;
 				case tilestatus.mover:
 					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx-1,playery);		
 					level_manager.player.playerx = ds_list_find_value(ret,0);
 					level_manager.player.playery = ds_list_find_value(ret,1);
+					global.lastActionWasInteraction = false;
 					break;
 			}
 			global.cooldowns[2] = global.adjust_speed
@@ -172,14 +192,20 @@ function PlayerMovementRight(){
 					break;
 				case tilestatus.passable:
 					playerx+=1;
+					global.lastActionWasInteraction = false;
 					break;
 				case tilestatus.interaction:
+					if(global.lastActionWasInteraction && CheckIfHeld(3)){
+						break; //Avoid hold-spamming levers.
+					}
 					InteractWithTile(playerx + 1,playery);
+					global.lastActionWasInteraction = true;
 					break;
 				case tilestatus.mover:
 					var ret = MoveWithTile(level_manager.player.playerx,level_manager.player.playery, playerx+1,playery);
 					level_manager.player.playerx = ds_list_find_value(ret,0);
 					level_manager.player.playery = ds_list_find_value(ret,1);
+					global.lastActionWasInteraction = false;
 					break;
 			}
 			global.cooldowns[3] = global.adjust_speed;

@@ -17,6 +17,7 @@
     {"id":{"name":"sound_end","path":"sounds/sound_end/sound_end.yy",},"order":5,},
     {"id":{"name":"obj_toggle_sound","path":"objects/obj_toggle_sound/obj_toggle_sound.yy",},"order":1,},
     {"id":{"name":"obj_maze_solver_arrow","path":"objects/obj_maze_solver_arrow/obj_maze_solver_arrow.yy",},"order":1,},
+    {"id":{"name":"spr_chesney","path":"sprites/spr_chesney/spr_chesney.yy",},"order":37,},
     {"id":{"name":"spr_gate_blue","path":"sprites/spr_gate_blue/spr_gate_blue.yy",},"order":1,},
     {"id":{"name":"rm_transition","path":"rooms/rm_transition/rm_transition.yy",},"order":5,},
     {"id":{"name":"spr_rightarrow","path":"sprites/spr_rightarrow/spr_rightarrow.yy",},"order":2,},
