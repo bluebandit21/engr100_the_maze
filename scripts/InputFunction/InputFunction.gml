@@ -2,11 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function get_control(controlNumber){
 	if(keyboard_lastkey != -1){
-		if(keyboard_lastkey == vk_enter)
-			keyboard_lastkey = global.array_of_controls[controlNumber];
+		if(check_controls(keyboard_lastkey, controlNumber))
+			show_message("Key already in use");
 		else{
-			global.array_of_controls[controlNumber] = keyboard_lastkey;
-			keyboard_lastkey = -1;
+			if(keyboard_lastkey == vk_enter)
+				keyboard_lastkey = global.array_of_controls[controlNumber];
+			else{
+				global.array_of_controls[controlNumber] = keyboard_lastkey;
+				keyboard_lastkey = -1;
+			}
 		}
 	} 
 }
