@@ -5,7 +5,6 @@
 tiles=0;
 player=0;
 curr_level=0;
-global.paused = false;
 if (!variable_global_exists("is_enabled"))
 	global.is_enabled = false;
 
