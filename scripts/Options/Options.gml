@@ -106,4 +106,17 @@ function chesneyMode(){
 		}
 	}
 }
+
+function toggleColorBlind(){
+	with(obj_colorblind){
+			if(position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
+			colorBlindMode();
+			image_index = 1;
+		}
+		else if (position_meeting(mouse_x,mouse_y, obj_colorblind) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
+			colorBlindMode();
+			image_index = 0;
+		}
+	}
+}
 	

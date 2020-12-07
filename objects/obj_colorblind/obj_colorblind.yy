@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_color_disabled",
-    "path": "sprites/spr_color_disabled/spr_color_disabled.yy",
+    "name": "spr_color",
+    "path": "sprites/spr_color/spr_color.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,7 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_colorblind","path":"objects/obj_colorblind/obj_colorblind.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_colorblind","path":"objects/obj_colorblind/obj_colorblind.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_colorblind","path":"objects/obj_colorblind/obj_colorblind.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
