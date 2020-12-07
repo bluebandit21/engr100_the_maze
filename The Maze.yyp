@@ -83,6 +83,7 @@
     {"id":{"name":"spr_enabled","path":"sprites/spr_enabled/spr_enabled.yy",},"order":1,},
     {"id":{"name":"obj_colorblind","path":"objects/obj_colorblind/obj_colorblind.yy",},"order":10,},
     {"id":{"name":"spr_left","path":"sprites/spr_left/spr_left.yy",},"order":1,},
+    {"id":{"name":"rm_manual","path":"rooms/rm_manual/rm_manual.yy",},"order":4,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":7,},
     {"id":{"name":"rm_complete","path":"rooms/rm_complete/rm_complete.yy",},"order":3,},
     {"id":{"name":"St","path":"notes/St/St.yy",},"order":1,},
@@ -185,6 +186,7 @@
     {"name":"rm_levelselect","path":"rooms/rm_levelselect/rm_levelselect.yy",},
     {"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},
     {"name":"rm_complete","path":"rooms/rm_complete/rm_complete.yy",},
+    {"name":"rm_manual","path":"rooms/rm_manual/rm_manual.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
