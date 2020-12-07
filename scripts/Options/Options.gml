@@ -74,7 +74,7 @@ function toggleMaze(){
 
 function toggleHint(){
 	with(obj_hint_toggle){
-		if(/*keyboard_check_pressed(global.array_of_controls[5]) || */(position_meeting(mouse_x,mouse_y,obj_hint_toggle) && mouse_check_button_pressed(mb_left))){
+		if(keyboard_check_pressed(global.array_of_controls[5]) || (position_meeting(mouse_x,mouse_y,obj_hint_toggle) && mouse_check_button_pressed(mb_left))){
 			global.isHintToggled = !global.isHintToggled;
 			if(global.isHintToggled){
 				image_index = 1;
@@ -92,13 +92,12 @@ function toggleHint(){
 function chesneyMode(){
 	with(obj_chesney){
 		if(position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 0){
-			global.prev_lock = global.lock;
 			global.lock = 100;
 			global.chesney = true;
 			image_index = 1;
 		}
 		else if (position_meeting(mouse_x,mouse_y, obj_chesney) && mouse_check_button_pressed(mb_left)) && (image_index == 1) {
-			global.lock = global.prev_lock;
+			global.lock = 2;
 			global.chesney = false;
 			image_index = 0;
 		}
