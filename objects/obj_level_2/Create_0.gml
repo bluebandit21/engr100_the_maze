@@ -15,9 +15,7 @@ ds_grid_set_region(map,3,4,3,4,tiletypes.gate_green);
 
 ds_grid_set(map,1,1,tiletypes.start);
 ds_grid_set(map,width-2,height-2,tiletypes.finish);
-if (global.played < 3) {
-	instance_create_depth(0, 0, -16000, obj_tutorialscreen);
-}
+instance_create_depth(0, 0, -16000, obj_tutorialscreen);
 
 //Function declared per-level. 
 //Solves next item to interact with based on global state. (Yikes)

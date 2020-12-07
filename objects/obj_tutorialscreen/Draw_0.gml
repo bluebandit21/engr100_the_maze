@@ -36,21 +36,22 @@ if (global.curr_level_idx == 2) {
     draw_text(85, 200, "Introducing a new mechanic: Gates/Levers!");
     draw_text(85, 275, "Hit a lever");
 
-    if (global.color_is_enabled) {
+    if (global.color) {
 		draw_rectangle(300, 265, 360, 325, false);
 		draw_sprite_ext(spr_lever_color_green, 0, 305, 265, 0.2, 0.2, 0, c_white, 1);
-	} else
+	} else {
 		draw_sprite(spr_lever_green, 0, 295, 265);
+	}
 
     draw_text(375, 275, "and the gate");
 
-    if (global.color_is_enabled) {
+    if (global.color) {
 		draw_rectangle(625, 260, 675, 310, false);
 		draw_sprite_ext(spr_gate_color_green, 0, 630, 258, 0.25, 0.25, 0, c_white, 1);
 	} else
 		draw_sprite(spr_gate_green, 0, 625, 260);
 
-    if (global.color_is_enabled)
+    if (global.color)
 		draw_text(695, 275, "with the same shape will open");
 	else
 		draw_text(695, 275, "with the same color will open");
