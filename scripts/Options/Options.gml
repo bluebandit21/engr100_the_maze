@@ -41,17 +41,18 @@ function colorBlindMode(){
 }
 
 function toggleSound(sound){
-	if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left)) && (obj_toggle_sound.image_index == 0){
-		audio_pause_sound(sound);
-		obj_toggle_sound.image_index = 1;
-		global.sound_on = false;
+	with(obj_toggle_sound){
+		if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 0) {
+			audio_pause_sound(sound);
+			image_index = 1;
+			global.sound_on = false;
+		}
+		else if position_meeting(mouse_x,mouse_y,obj_toggle_sound) && (image_index == 1){
+			audio_play_sound(sound,1,true);
+			image_index = 0;
+			global.sound_on = true;
+		}
 	}
-	else if (position_meeting(mouse_x,mouse_y,obj_toggle_sound) && mouse_check_button_pressed(mb_left))  && (obj_toggle_sound.image_index == 1){
-		audio_play_sound(sound,1,true);
-		obj_toggle_sound.image_index = 0;
-		global.sound_on = true;
-	}
-		
 }
 	
 function toggleMaze(){
