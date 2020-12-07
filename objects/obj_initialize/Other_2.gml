@@ -1,4 +1,6 @@
 global.lock = 2;
+global.prev_lock = 2;
+global.played = 0;
 global.adjust_speed = 12;
 
 global.color_is_enabled = false;

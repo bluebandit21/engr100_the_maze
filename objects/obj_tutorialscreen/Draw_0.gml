@@ -61,13 +61,13 @@ if (global.curr_level_idx == 6) {
     draw_set_font(fnt_game);
     draw_text(85, 200, "Introducing a new mechanic: Teleporters!");
     draw_text(85, 275, "Hit a teleporter");
-    draw_sprite(spr_tele_blue, 0, 370, 265);
+	draw_sprite_ext(spr_tele_blue, 0, 375, 270, 0.05, 0.05, 0, c_white, 1);
     draw_text(430, 275, "and you will warp to the other teleporter");
     draw_text(85, 350, "in the maze!");
     draw_text(85, 450, "Press Enter to dismiss");
 }
 
-if (global.curr_level_idx == 9) {
+if (global.curr_level_idx == 10) {
     draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
@@ -81,7 +81,7 @@ if (global.curr_level_idx == 9) {
     draw_text(85, 450, "Press Enter to dismiss");
 }
 
-if (global.curr_level_idx == 11) {
+if (global.curr_level_idx == 13) {
 	draw_set_color(c_white);
     draw_rectangle(75, 150, window_get_width() - 75, 3 * window_get_height() / 4, false);
 
