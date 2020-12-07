@@ -1,4 +1,4 @@
-if position_meeting(mouse_x, mouse_y, obj_optiontohome) {
+if position_meeting(mouse_x, mouse_y, obj_optiontohome) && (!global.choosing_speed && !global.adjusting_controls) {
 	if (variable_global_exists("paused")) {
 		if (global.paused && room == rm_level) {
 			instance_destroy(obj_pausescreen, true);

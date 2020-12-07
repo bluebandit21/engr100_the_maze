@@ -13,6 +13,7 @@ function get_control(controlNumber){
 			}
 		}
 	} 
+	global.adjusting_controls = true;
 }
 
 function print_keys(control){
